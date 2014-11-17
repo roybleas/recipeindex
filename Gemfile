@@ -40,7 +40,7 @@ group :production do
 end
 
 gem 'bootstrap-sass'
-# sass dependancy requires sprockets <2.12
+# sass dependancy requires sprockets 2.11.0 and sass-rails to 4.0.2 
 gem 'sprockets', '2.11.0' 
 gem 'faker'
 gem 'will_paginate'
