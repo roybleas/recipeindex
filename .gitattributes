@@ -1,0 +1,13 @@
+# These files are text and should be normalized (convert crlf =&gt; lf)
+Gemfile			text 
+Procfile		text
+.gitignore	text
+*.rb 				text
+*.erb     	text
+*.yml     	text
+
+# Images should be treated as binary
+*.png     -text
+*.jepg    -text
+*.jpg			-text
+*.sqlite3 -text
