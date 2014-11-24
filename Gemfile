@@ -45,14 +45,23 @@ group :production do
   gem 'unicorn'
 end
 
-gem 'bootstrap-sass'
-# sass dependancy requires sprockets 2.11.0 and sass-rails to 4.0.2 
+
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'sass-rails', '>= 3.2'
 gem 'sprockets', '2.11.0' 
+# gem 'autoprefixer-rails'
+
+# gem 'bootstrap-sass'
+# sass dependancy requires sprockets 2.11.0 and sass-rails to 4.0.2 
+# gem 'sprockets', '2.11.0' 
+
 gem 'faker'
 gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+# gem 'bootstrap-will_paginate'
+# autoprefixer recommended for bootstrap
+# gem 'autoprefixer-rails' 
 
-gem 'sass-rails', '~> 4.0.2'
+# gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
