@@ -1,0 +1,41 @@
+require 'rails_helper'
+
+RSpec.describe User, :type => :model do
+  
+	it "is invalid without a name" do
+		pending(" Not yet implemented")
+		# expect { User.create! }.to raise_error(ActiveRecord::RecordInvalid)
+		
+	end
+	
+	it "is invalid without a screen name" 
+		
+
+	
+	it "is valid with a name and screen name" do
+		pending(" Not yet implemented")
+		#user = User.create!(name: "Example user") 
+		#expect(user).to respond_to(:name)
+		
+	end
+
+	it "is valid with a different name but duplicate screen name" do
+		pending(" Not yet implemented")
+		#user2 = User.create!(name: "Example user two ok") 
+		#expect(user2).to respond_to(:name)
+		
+	end
+	
+	it "is invalid with a duplicate name" do
+		pending(" Not yet implemented")
+ 		# user3 = User.create(name: "Example user duplicate")
+		# expect(user3).to be_valid
+
+		# user3a = User.create(name: "Example user duplicate")
+		# expect(user3a).not_to be_valid
+		# user3a.valid?
+		# expect(user3a.errors[:name]).to include("has already been taken")
+			
+		
+	end
+end

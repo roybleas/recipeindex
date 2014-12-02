@@ -47,4 +47,12 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+  
+  # Set failure color to not red 
+  config.failure_color = :magenta
+  config.tty = true
+  # WARNING: You must use ANSICON 1.31 or later (http://adoxa.3eeweb.com/ansicon/)
+  # only appears when using config.color = true, so commented it out
+  # colors appear without this
+  # config.color = true
 end

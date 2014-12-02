@@ -33,6 +33,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
+    annotate (2.6.5)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
     autoprefixer-rails (4.0.1)
       execjs
@@ -67,10 +71,10 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
-    factory_girl (4.5.0)
+    factory_girl (4.4.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
-      factory_girl (~> 4.5.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
@@ -96,6 +100,8 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     kgio (2.9.2)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     listen (2.8.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -234,6 +240,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  annotate
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.1)
@@ -242,17 +249,18 @@ DEPENDENCIES
   childprocess
   coffee-rails (~> 4.0.0)
   database_cleaner!
-  factory_girl_rails
-  faker
+  factory_girl_rails (~> 4.4.1)
+  faker (~> 1.4.3)
   guard
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
+  launchy (~> 2.4.2)
   pg (= 0.15.1)
   rails (= 4.1.4)
   rails_12factor (= 0.0.2)
   rb-notifu (= 0.0.4)
-  rspec-rails
+  rspec-rails (~> 3.1.0)
   sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
   selenium-webdriver

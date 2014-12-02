@@ -12,12 +12,15 @@ group :development, :test do
 	
 	gem 'sqlite3'
 	gem 'guard'
-  gem 'rspec-rails'
+  gem 'rspec-rails', "~> 3.1.0"
+  gem 'annotate' 
   gem 'guard-rspec'
   
   gem 'spork-rails'
   # gem 'guard-spork'
   gem 'childprocess'
+  
+  gem 'factory_girl_rails', "~> 4.4.1"
   
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 	gem 'tzinfo' 
@@ -27,11 +30,12 @@ end
 
 
 group :test do
-	
+	gem "faker", "~> 1.4.3"
   gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'factory_girl_rails'
+  
   gem 'database_cleaner',github: 'bmabey/database_cleaner'
+  gem "launchy", "~> 2.4.2"
   
   # Uncomment these lines on Windows.
   gem 'rb-notifu', '0.0.4'
@@ -49,17 +53,13 @@ end
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '>= 3.2'
 gem 'sprockets', '2.11.0' 
+# autoprefixer recommended for bootstrap
 gem 'autoprefixer-rails'
 
-# gem 'bootstrap-sass'
-# sass dependancy requires sprockets 2.11.0 and sass-rails to 4.0.2 
-# gem 'sprockets', '2.11.0' 
-
-gem 'faker'
 gem 'will_paginate'
 # gem 'bootstrap-will_paginate'
-# autoprefixer recommended for bootstrap
-# gem 'autoprefixer-rails' 
+
+
 
 # gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
