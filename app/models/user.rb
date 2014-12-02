@@ -12,7 +12,7 @@
 
 class User < ActiveRecord::Base
 	
-	validates :name, presence: true, uniqueness: true
+	validates :name, presence: true, uniqueness: true, length: { maximum: 50 }
 	validates :screen_name, presence: true, length: { maximum: 20 }
 		
 	has_secure_password

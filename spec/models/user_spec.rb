@@ -75,6 +75,16 @@ RSpec.describe User, :type => :model do
   	expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
   end
   
+  it "is invalid to have a user name > 50 characters" do
+  	user = User.new(
+  		name: "a" * 51,
+  		screen_name: "test screen name",
+  		password: "foobar", password_confirmation: "foobar"
+  		)
+  	user.valid?
+  	expect(user.errors[:name]).to include("is too long (maximum is 50 characters)")
+  end
+  	
   it "is invalid to have a screen name > 20 characters" do
   	user = User.new(
   		name: 'Test User',
