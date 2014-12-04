@@ -1,4 +1,51 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
+
+/* Form login */
+fieldset.login  {
+	background-color: #f1f1f1;
+	border: none;
+	border-radius: 2px;
+	margin: 30px 0px 12px 30px;
+	overflow: hidden;
+	width: 600px;
+	padding: 0,50px,20px,20px;
+}
+ul.login {
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+	list-style: none;
+	margin: 20px;
+	padding: 12px;
+}
+.login ul li {
+	margin: 0.5em 0;
+}
+.login li input {
+	font-size: 100%;
+}
+.login label {
+	display: inline-block;
+	padding: 3px 6px;
+	text-align: right;
+	width: 150px;
+	vertical-align: top;
+	
+}
+
+.login li label + input {
+	font-size: 100%;
+	width: 15em;
+}
+.login h2 {
+	background-color: #008080;
+	color: #fff;
+	padding: 10px 15px;
+	margin: 0;
+}
+	
 
 @mixin box_sizing {
 	-moz-box-sizing:		border-box;

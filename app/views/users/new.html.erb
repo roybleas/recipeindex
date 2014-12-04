@@ -1,10 +1,9 @@
-<h1>Sign up</h1>
-
-
-<ul>
-
-	<%= form_for(@user) do |f| %>
-		<li>
+<div class="login">
+	<%= form_for(:session, url: login_path)  do |f| %>
+		<fieldset class="login" >
+			<h2 class="login" >Sign up</h2>
+			<ul class="login">
+				<li>
 			<%= f.label :name %>
 			<%= f.text_field :name %>
 		</li>
@@ -23,5 +22,11 @@
 		<li>
 			<%= f.submit "Create account", class: "btn btn-primary" %>
 		</li>		
+			</ul>	
+		</fieldset>
 	<% end %>
-</ul>
+</div>
+<p> Already have an account. <%= link_to "Log in now", login_path %></p>
+
+
+
