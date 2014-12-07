@@ -21,3 +21,6 @@ recipeindex.ROY-PC.Roy.pui
 
 #my workfile
 mywork.log
+
+#document temp files
+.~lock.*.odt#
