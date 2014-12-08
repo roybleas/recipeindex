@@ -12,6 +12,11 @@
 					<%= f.password_field :password %>
 				</li>
 				<li>
+					<%= f.label "" %>
+					<%= f.check_box :remember_me %>
+					Remember me on this computer
+				</li>
+				<li>
 					<%= f.submit "Log in", class: "btn btn-primary loginbutton" %>
 				</li>		
 			</ul>	
