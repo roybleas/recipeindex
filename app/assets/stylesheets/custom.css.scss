@@ -2,6 +2,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* forms */
+
+
+/* error messges */
+#error_explanation {
+	color: red;
+	ul {
+		color: red;
+		margin: 0 0 30px 0;
+	}
+}
 
 /* Form login */
 fieldset.login  {
@@ -26,8 +37,10 @@ ul.login {
 .login li input {
 	font-size: 100%;
 }
+
+
 .login label {
-	display: inline-block;
+	/* display: inline-block; */
 	padding: 3px 6px;
 	text-align: right;
 	width: 150px;
@@ -35,16 +48,48 @@ ul.login {
 	
 }
 
-.login li label + input {
-	font-size: 100%;
-	width: 15em;
+input.loginwidth {
+	width:25em;
+	display: inline;
 }
+
+.login li label + input {
+	width:15em;
+	font-size: 100%;
+}
+
+
 .login h2 {
 	background-color: #008080;
 	color: #fff;
 	padding: 10px 15px;
 	margin: 0;
 }
+
+.field_with_errors label {
+  display: inline-block;
+	padding: 3px 6px;
+	text-align: right;
+	width: 150px;
+	vertical-align: top;
+}
+
+.field_with_errors input[type="text"]{
+	/*display: inline; */
+  border: 2px solid red;
+  width:15em;width:15em;
+}
+.field_with_errors input[type="password"] {
+	display: inline;
+  border: 2px solid red;
+  width:15em;
+}
+
+ div.field_with_errors {
+	display: inline;
+} 
+
+
 	
 
 @mixin box_sizing {

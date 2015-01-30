@@ -30,7 +30,6 @@ end
 
 
 group :test do
-	gem "faker", "~> 1.4.3"
   gem 'selenium-webdriver'
   gem 'capybara'
   
@@ -57,8 +56,9 @@ gem 'sprockets', '2.11.0'
 gem 'autoprefixer-rails'
 
 gem 'will_paginate'
-# gem 'bootstrap-will_paginate'
+gem 'bootstrap-will_paginate'
 
+gem "faker", "~> 1.4.3"
 
 
 # gem 'sass-rails', '~> 4.0.2'

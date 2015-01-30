@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208022417) do
+ActiveRecord::Schema.define(version: 20150127021105) do
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141208022417) do
     t.string   "screen_name"
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.boolean  "admin"
   end
 
 end

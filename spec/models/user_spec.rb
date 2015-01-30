@@ -8,6 +8,8 @@
 #  updated_at      :datetime
 #  screen_name     :string(255)
 #  password_digest :string(255)
+#  remember_digest :string(255)
+#  admin           :boolean
 #
 
 require 'rails_helper'
@@ -93,5 +95,20 @@ RSpec.describe User, :type => :model do
   		)
   	user.valid?
   	expect(user.errors[:screen_name]).to include("is too long (maximum is 20 characters)")
+  end
+  
+  it "can be created with Factory Girl" do
+  	user = FactoryGirl.build(:user)
+  	expect(user).to be_valid
+  end
+  
+  it "is valid for user with nil digest to return a false authentication test" do
+  	user = User.new(
+  		name: 'A Test User',
+  		screen_name: 'Testme',
+  		password: "foobar", password_confirmation: "foobar"
+  		)
+
+    expect(user.authenticated?(''))
   end
 end

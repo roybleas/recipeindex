@@ -43,6 +43,8 @@ GEM
     bcrypt (3.1.9-x86-mingw32)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -244,6 +246,7 @@ DEPENDENCIES
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.1)
+  bootstrap-will_paginate
   byebug
   capybara
   childprocess

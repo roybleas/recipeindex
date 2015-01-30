@@ -55,4 +55,8 @@ RSpec.configure do |config|
   # only appears when using config.color = true, so commented it out
   # colors appear without this
   # config.color = true
+  
+  # Include Factory Girl syntax to simplify calls to factories
+	config.include FactoryGirl::Syntax::Methods
+  
 end
