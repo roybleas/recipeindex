@@ -22,3 +22,6 @@ User.create!(name:  "Roy User",
                password:              password,
                password_confirmation: password)
 end
+
+Publication.create!(title: "Delicious", published: "Monthly")
+
