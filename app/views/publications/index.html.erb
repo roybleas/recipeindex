@@ -1,0 +1,12 @@
+<h1>Publications</h1>
+<ul class="publication">
+  <% @publications.each do |publication| %>
+    <li>
+      <%=   publication.title %>
+      <% if publication.published.present? %>
+	      Published: 
+	      <%= publication.published %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
