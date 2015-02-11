@@ -11,14 +11,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202025345) do
+ActiveRecord::Schema.define(version: 20150210004810) do
+
+  create_table "issuedescriptions", force: true do |t|
+    t.string   "title"
+    t.string   "full_title"
+    t.integer  "seq"
+    t.integer  "publication_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "issuedescriptions", ["publication_id"], name: "index_issuedescriptions_on_publication_id"
+
+  create_table "issues", force: true do |t|
+    t.string   "title"
+    t.integer  "publication_id"
+    t.integer  "issueyear_id"
+    t.integer  "issuedescription_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "no"
+  end
+
+  add_index "issues", ["issuedescription_id"], name: "index_issues_on_issuedescription_id"
+  add_index "issues", ["issueyear_id"], name: "index_issues_on_issueyear_id"
+  add_index "issues", ["publication_id"], name: "index_issues_on_publication_id"
+
+  create_table "issueyears", force: true do |t|
+    t.integer  "year"
+    t.integer  "publication_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "issueyears", ["publication_id"], name: "index_issueyears_on_publication_id"
+
+  create_table "meals", force: true do |t|
+    t.string   "description"
+    t.integer  "seq"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "publications", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "published"
+    t.string   "description"
   end
+
+  create_table "recipes", force: true do |t|
+    t.string   "title"
+    t.integer  "page"
+    t.string   "url"
+    t.integer  "issue_id"
+    t.integer  "meal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "recipes", ["issue_id"], name: "index_recipes_on_issue_id"
+  add_index "recipes", ["meal_id"], name: "index_recipes_on_meal_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

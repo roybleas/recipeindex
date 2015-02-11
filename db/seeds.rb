@@ -23,5 +23,5 @@ User.create!(name:  "Roy User",
                password_confirmation: password)
 end
 
-Publication.create!(title: "Delicious", published: "Monthly")
+Publication.create!(title: "Delicious", published: "Monthly", description: "ABC food magazine.")
 

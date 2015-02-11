@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: publications
+#
+#  id          :integer          not null, primary key
+#  title       :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  published   :string(255)
+#  description :string(255)
+#
+
 require 'rails_helper'
 
 RSpec.describe Publication, :type => :model do
@@ -32,5 +44,13 @@ RSpec.describe Publication, :type => :model do
   		expect(publication).to be_valid
   	end
   	
+  	it "is valid without a description" do
+  		publication = Publication.new(title:	'A publication title without description', description: nil)
+  		expect(publication).to be_valid
+  	end
   	
+  	it "is valid without a description" do
+  		publication = Publication.new(title:	'A publication title without description', description: 'Has a description')
+  		expect(publication).to be_valid
+  	end
 end

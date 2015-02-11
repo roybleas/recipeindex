@@ -3,10 +3,15 @@
   <% @publications.each do |publication| %>
     <li>
       <%=   publication.title %>
+    </li>
       <% if publication.published.present? %>
+      <li>
 	      Published: 
 	      <%= publication.published %>
+	     </li>
       <% end %>
+    <li>
+    	<%= publication.description %>
     </li>
   <% end %>
 </ul>

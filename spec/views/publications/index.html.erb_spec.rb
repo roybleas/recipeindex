@@ -39,4 +39,14 @@ RSpec.describe "publications/index.html.erb", :type => :view do
     expect(rendered).to_not match /Published:/
 		expect(rendered).to_not match /Monthly/
   end
+  
+  it "shows a description of publication" do
+  	assign(:publications,[ 
+      Publication.new(:title => "Delicious", :published => "Monthly",
+       :description => "This is a description for the monthly publication Delicious" )
+			])
+		render
+		expect(rendered).to match /This is a description for the monthly publication Delicious/
+	end
+		
 end
