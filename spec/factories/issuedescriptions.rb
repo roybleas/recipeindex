@@ -14,10 +14,26 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
+	
   factory :issuedescription do
-    title "MyString"
-    full_title "MyString"
+    title "Feb-Mar"
+    full_title "February-March"
     seq 1
-    publication nil
-  end
+    publication
+	 
+	 	 # issuedescription_with_years will create issue data after the issuedescription has been created
+		factory :issuedescription_with_years, class: Issuedescription do
+	  	title "Apr-May"
+    	full_title "April-May"
+    	seq 2
+    	
+	  	ignore do
+    		issues_count 5
+    	end
+    	
+	   	after(:create) do |issuedescription , evaluator|
+	    	create_list(:issue, evaluator.issues_count, issuedescription: issuedescription)
+	    end
+	   end
+	end
 end

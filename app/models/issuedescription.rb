@@ -14,6 +14,7 @@
 class Issuedescription < ActiveRecord::Base
   belongs_to :publication
   has_many :issues
+  has_many :issuemonths
   
   validates :title, presence: true
   validates :full_title, presence: true

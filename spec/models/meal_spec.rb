@@ -32,8 +32,7 @@ RSpec.describe Meal, :type => :model do
   it "is valid to have many recipies" do
   	meal = Meal.new(description: 'Mains', seq: 20)
   	desc =  Issuedescription.new(title: 'Apr', full_title: 'April', seq: 3)
-  	yr = Issueyear.new(year: 2013)
-  	issue =  desc.issues.new(title: '78', issueyear_id: yr.id)
+  	issue =  desc.issues.new(title: '78', year: 2004)
   	recipe = issue.recipes.new(title: 'rack of pork with cider apples', page: 64, meal_id: meal.id)
   
   	expect(recipe).to be_valid

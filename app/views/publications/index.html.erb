@@ -1,17 +1,17 @@
-<h1>Publications</h1>
-<ul class="publication">
-  <% @publications.each do |publication| %>
-    <li>
-      <%=   publication.title %>
-    </li>
-      <% if publication.published.present? %>
-      <li>
-	      Published: 
-	      <%= publication.published %>
-	     </li>
-      <% end %>
-    <li>
-    	<%= publication.description %>
-    </li>
+<h1>Recipe Finder - Publications</h1>
+
+<% @publications.each do |publication| %>
+  <h2>
+  	<%=   publication.title %>
+  </h2>
+  <p>
+    <%= publication.description %>
+  </p>
+  <% if publication.published.present? %> 
+	  <p>
+			Published: 
+		  <%= publication.published %>
+		</p>
   <% end %>
-</ul>
+<% end %>
+

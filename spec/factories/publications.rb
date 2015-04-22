@@ -14,7 +14,9 @@
 
 FactoryGirl.define do
   factory :publication do
-    title "Delicious"
+    title  "DeliciousTest"
+    published "Monthly"
+   	description "ABC food magazine."
   end
 end
 

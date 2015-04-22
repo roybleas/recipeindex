@@ -26,6 +26,17 @@
 	    	<li role="presentation"><%= link_to "Log out", logout_path, method: :delete %></li>
 	  </li>
 		</ul>
+		<% if admin_user? %>
+			<li role="presentation" class="dropdown">
+		    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+		      Admin
+		    </a>
+		    <ul class="dropdown-menu" role="menu">
+		    	<li role="presentation"> <%= link_to "Publications", admin_pages_home_path %> </li>
+		    	<li class="divider"></li>	
+		  	</li>
+				</ul>
+			<% end %>
 	<% else %>
 		<li role="presentation"> <%= link_to "Log in", login_path %> </li>
 	<% end %>

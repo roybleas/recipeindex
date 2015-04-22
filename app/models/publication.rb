@@ -12,8 +12,6 @@
 
 class Publication < ActiveRecord::Base
 	has_many :issuedescriptions
-	has_many :issues
-	has_many :issueyears
-	
+	has_many :issues, through: :issuedescriptions
 	validates :title, presence: true, uniqueness: true
 end

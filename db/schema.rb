@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210004810) do
+ActiveRecord::Schema.define(version: 20150414081441) do
 
   create_table "issuedescriptions", force: true do |t|
     t.string   "title"
@@ -24,28 +24,25 @@ ActiveRecord::Schema.define(version: 20150210004810) do
 
   add_index "issuedescriptions", ["publication_id"], name: "index_issuedescriptions_on_publication_id"
 
+  create_table "issuemonths", force: true do |t|
+    t.integer  "monthindex"
+    t.integer  "issuedescription_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "issuemonths", ["issuedescription_id"], name: "index_issuemonths_on_issuedescription_id"
+
   create_table "issues", force: true do |t|
     t.string   "title"
-    t.integer  "publication_id"
-    t.integer  "issueyear_id"
     t.integer  "issuedescription_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "no"
+    t.integer  "year"
   end
 
   add_index "issues", ["issuedescription_id"], name: "index_issues_on_issuedescription_id"
-  add_index "issues", ["issueyear_id"], name: "index_issues_on_issueyear_id"
-  add_index "issues", ["publication_id"], name: "index_issues_on_publication_id"
-
-  create_table "issueyears", force: true do |t|
-    t.integer  "year"
-    t.integer  "publication_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "issueyears", ["publication_id"], name: "index_issueyears_on_publication_id"
 
   create_table "meals", force: true do |t|
     t.string   "description"

@@ -21,3 +21,5 @@ archer:
   name: Joe Grundy
   screen_name: Joe
   password_digest: <%= User.digest('password') %>
+
+
