@@ -1,0 +1,8 @@
+<h1>Recipe Administration</h1>
+<ul class="publication">
+  <% @publications.each do |publication| %>
+    <li>
+    <%= link_to publication.title , edit_publication_path(publication)%>
+    </li>  
+  <% end %>
+</ul>

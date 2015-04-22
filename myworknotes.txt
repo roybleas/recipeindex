@@ -1,0 +1,35 @@
+@yearsByPublication = Publication.includes(:issueyears).order(title: :asc).order("issueyears.year").all
+
+
+
+<div class="container">
+	<h1>Recipe Finder - Publication Indexes</h1>
+		<% if @yearsByPublication.length == 0 %>
+	  	<p> No publications added to the index yet. </p>
+	  <% else %>
+			<% @yearsByPublication.each do |publication| %>
+			  <h2>
+			  	<%=   publication.title %>
+			  </h2>
+			  <p>
+			    <%= publication.description %>
+			  
+			  	<% if publication.published.present? %> 
+				  
+					</br>Published: 
+					  <%= publication.published %>
+			  	<% end %>
+				</p>
+			  <% if publication.issueyears.length == 0 %>
+			  	<p> No indexes available for this publication </p>
+			  <% else %>
+			  	<p>Indexes available for the following 
+			  		<%= "year".pluralize(publication.issues.length) %>:
+			  	</p> 
+			  	<% publication.issueyears.each do |yr| %>
+			  		<a href="#" ><button type="button" class="btn btn-default"><%= yr.year %></button></a>
+			  	<% end %>
+		 	<% end %>
+		<% end %>
+	<% end %>
+</div>

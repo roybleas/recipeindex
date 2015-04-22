@@ -1,0 +1,32 @@
+<div class="container">
+	<h1>Recipe Finder - Publication Indexes</h1>
+		<% if @pubs.length == 0 %>
+	  	<p> No publications added to the index yet. </p>
+	  <% else %>
+			<% @pubs.each do |publication| %>
+			  <h2>
+			  	<%=   publication.title %>
+			  </h2>
+			  <p>
+			    <%= publication.description %>
+			  
+			  	<% if publication.published.present? %> 
+				  
+					</br>Published: 
+					  <%= publication.published %>
+			  	<% end %>
+				</p>
+				<% pub_issues = Issue.for_issuemonth_and_publication(@mnth,publication.id).all %>
+			  <% if pub_issues.length == 0 %>
+			  	<p> No indexes available for this publication </p>
+			  <% else %>
+			  	<p>Indexes available for the following 
+			  		<%= "year".pluralize(pub_issues.length) %>:
+			  	</p> 
+			  	<% pub_issues.each do |yr| %>
+			  		<a href="<%= issue_path(yr) %>" ><button type="button" class="btn btn-default"><%= yr.year %></button></a>
+			  	<% end %>
+		 	<% end %>
+		<% end %>
+	<% end %>
+</div>
