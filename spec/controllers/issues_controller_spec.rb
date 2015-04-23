@@ -36,26 +36,107 @@ RSpec.describe IssuesController, :type => :controller do
     
     it "assigns the requested publications to @pub" do
     	issue = create(:issue)
-    	pub = Publication.find(issue.id)
+    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
     	get :show, id:issue
     	expect(assigns(:pub)).to eq pub
     end
     
-    it "assigns the requested years to @years" do
+    it "assigns the previous year and next year to null when only one issue year" do
     
-    	issue = create(:issue)
-    	# find the publication created
-    	pub = Publication.find(issue.id)
-    	# use the publication to create several issue records for different years
-    	isdesc = FactoryGirl.create(:issuedescription_with_years, publication: pub, issues_count: 2)
-    	# create an issue record for the same year ar first but different issuedescription to ensure distinct
-    	is2 = FactoryGirl.create(:issue, issuedescription: isdesc, year: issue.year)
+    	issue = FactoryGirl.create(:issue, year: 2005)	   	
 			
     	get :show, id:issue
-    	expect(assigns(:years).count).to eq (Issue.select(:year).distinct.count)
+    	expect(assigns(:year_before)).to eq nil
+    	expect(assigns(:year_after)).to eq nil
     	
     end
     
+    it "assigns the previous year to null and next year to following year" do
+    
+    	issue = FactoryGirl.create(:issue, year: 2010)
+    	# find the publication created
+    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	# use the publication to create several issue records for different years
+    	isdesc = FactoryGirl.create(:issuedescription_with_years, publication: pub, issues_count: 2)
+    	issue = isdesc.issues.first
+			
+    	get :show, id:issue
+    	expect(assigns(:year_before)).to eq nil
+    	expect(assigns(:year_after).year).to eq (issue.year + 1)
+    	
+    end
+
+    it "assigns the previous year to earlier year and next year to null when latest year" do
+    
+    	issue = FactoryGirl.create(:issue, year: 2010)
+    	# find the publication created
+    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	# use the publication to create several issue records for different years
+    	isdesc = FactoryGirl.create(:issuedescription_with_years, publication: pub, issues_count: 2)
+    	issue = isdesc.issues.last
+			
+    	get :show, id:issue
+    	expect(assigns(:year_before).year).to eq (issue.year - 1)
+    	expect(assigns(:year_after)).to eq nil
+    end
+    
+    it "assigns the previous year to earlier year and next year to following year when not first or latest year" do
+    
+    	issue = FactoryGirl.create(:issue, year: 2010)
+    	# find the publication created
+    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	# use the publication to create several issue records for different years
+    	isdesc = FactoryGirl.create(:issuedescription_with_years, publication: pub, issues_count: 5)
+    	issue = isdesc.issues[2]
+			
+    	get :show, id:issue
+    	expect(assigns(:year_before).year).to eq (issue.year - 1)
+    	expect(assigns(:year_after).year).to eq (issue.year + 1)
+    end
+
+		it "assigns previous_issue from previous issuedescription sequence " do
+			pub = FactoryGirl.create(:publication, title: "Test sequence")
+			lastseq = 4
+			firstyear = 2004
+			lastyear = firstyear + 2
+			(1...lastseq).each { |s|
+				isdesc = FactoryGirl.create(:issuedescription, publication: pub, seq: s)
+				(firstyear...lastyear).each {|yr| FactoryGirl.create(:issue, issuedescription: isdesc, year: yr) }
+    	}
+    	isdescs = Issuedescription.where("publication_id = ?",pub.id).order(seq: :asc)
+    	
+    	issue = isdescs[0].issues.first
+    	issue_prev = isdescs[-1].issues.where(year: issue.year).take
+    	issue_next = isdescs[1].issues.where(year: issue.year).take
+    	
+    	get :show, id:issue
+    	
+    	expect(assigns(:previous_issuedescription).id).to eq issue_prev.id
+    	expect(assigns(:next_issuedescription).id).to eq issue_next.id
+    	
+    	
+    	issue = isdescs[-1].issues.last 
+    	
+    	issue_prev = isdescs[-2].issues.where(year: issue.year).take
+    	issue_next = isdescs[0].issues.where(year: issue.year).take
+    	
+    	get :show, id:issue
+    	
+    	expect(assigns(:previous_issuedescription).id).to eq issue_prev.id
+    	expect(assigns(:next_issuedescription).id).to eq issue_next.id
+    	
+			issue = isdescs[1].issues.where(year: (firstyear + 1)).take
+    	
+    	issue_prev = isdescs[0].issues.where(year: issue.year).take
+    	issue_next = isdescs[2].issues.where(year: issue.year).take
+    	
+    	get :show, id:issue
+    	
+    	expect(assigns(:previous_issuedescription).id).to eq issue_prev.id
+    	expect(assigns(:next_issuedescription).id).to eq issue_next.id
+    	
+    end
+    	
     it "renders the :show template" do
     	
 			issue = create(:issue)

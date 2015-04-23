@@ -1,4 +1,4 @@
-@yearsByPublication = Publication.includes(:issueyears).order(title: :asc).order("issueyears.year").all
+@years = Issue.select(:year).distinct.joins(:publication).where("publications.id = ?",@pub.id).all
 
 
 

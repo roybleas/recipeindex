@@ -1,2 +1,44 @@
-<h1>Issues#show</h1>
-<p>Find me in app/views/issues/show.html.erb</p>
+<div class="container">
+  <h1><%= @pub.title %><small> Issue:
+  <% if not @issue.no.nil? %>
+    <%= @issue.no %>
+  <% else %>
+  	<% if not @issue.title.nil? %>
+  		<%= @issue.title %>
+  	<% end %>
+  <% end %>
+   </small></h1>
+  <h2>
+  	<a href="<%= issue_path(@previous_issuedescription)%>)"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  	<a href=#"><%= @issuedesc.title %> </a>
+  	<a href="<%= issue_path(@next_issuedescription)%>)"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  	<% if @year_before.nil? %>
+  		<span class="glyphicon glyphicon-chevron-left"></span>
+  	<% else %>
+  		<a href="<%= issue_path(@year_before)%>)"> <span class="glyphicon glyphicon-chevron-left"></span></a>
+  	<% end %>
+  	<a href=#"><%= @issue.year %></a>
+  	<% if @year_after.nil? %>
+  		<span class="glyphicon glyphicon-chevron-right"></span>
+  	<% else %>
+  		<a href="<%= issue_path(@year_after) %>)"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  	<% end %>
+    </h2>
+<h3>Recipes</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Page</th>
+        <th>Recipe</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @recipes.each do |recipe| %>
+	      <tr>
+	        <td><%= recipe.page %></td>
+	        <td><%= recipe.title %></td>
+	      </tr>
+	     <% end %>
+    </tbody>
+  </table>
+</div>

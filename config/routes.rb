@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get 'admin_pages/home'
 
+	resources :users
   get 'signup' => 'users#new'
-  resources :users
   get 	'login'		=> 'sessions#new'
   post 	'login'		=> 'sessions#create'
   delete 'logout'	=> 'sessions#destroy'
@@ -17,7 +17,11 @@ Rails.application.routes.draw do
   	resources :publications, only: [:index]
 	end
 	
-	resources :issues, only: [:index, :show]
+	resources :issues, only: [:index, :show] do
+  member do
+    get 'years'
+  end
+end
 	
 	
   

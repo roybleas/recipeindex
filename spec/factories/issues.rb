@@ -20,4 +20,8 @@ FactoryGirl.define do
     issuedescription
   end
 
+	factory :issue_without_description, class: Issue do
+		sequence(:year, 1998)
+  	sequence(:no, 100)
+	end
 end
