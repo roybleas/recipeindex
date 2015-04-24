@@ -139,9 +139,57 @@ RSpec.describe IssuesController, :type => :controller do
     	
     it "renders the :show template" do
     	
-			issue = create(:issue)
+			issue = create(:issue, year: 2001)
 			get :show, id: issue
 			expect(response).to render_template :show
+		end
+  end
+  
+  describe "GET show years" do
+    it "returns http success" do
+      issue = create(:issue, year: 2001)
+      get :years, id:issue
+      expect(response).to have_http_status(:success)
+    end
+    
+    it "assigns the requested publications to @pub" do
+    	issue = create(:issue, year: 2001)
+    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	get :years, id:issue
+    	expect(assigns(:pub)).to eq pub
+    end
+    
+    it "assigns the an issue record to @yrs" do
+    	issue = create(:issue, year: 2001)
+    	
+    	get :years, id:issue
+    	expect(assigns(:years).first.year).to eq issue.year
+    end
+    
+    it "assigns the an multiple issue record to @yrs in ascending order" do
+    	
+    	# important need to set id as error in SQL not picked up as issuedescription.id happens 
+    	# to be the same as issue.id
+    	issuedesc = create(:issuedescription, id: 21)
+    	firstyear = 2004
+			lastyear = firstyear + 3
+			    	
+    	lastyear.downto(firstyear) {|yr| create(:issue, issuedescription: issuedesc, year: yr) }
+    	issue = issuedesc.issues.take
+    	
+    	get :years, id:issue
+    	expect(assigns(:years).first.year).to eq firstyear
+    	expect(assigns(:years).last.year).to eq lastyear
+    end
+    
+    
+    
+    
+    it "renders the :years template" do
+    	
+			issue = create(:issue)
+			get :years, id: issue
+			expect(response).to render_template :years
 		end
   end
 

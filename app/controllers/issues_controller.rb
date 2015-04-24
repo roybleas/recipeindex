@@ -52,13 +52,14 @@ class IssuesController < ApplicationController
   end
   
   def years
-  	issue_id = params[:id]
-  	@issue = Issue.find(issue_id)
-  	@issuedesc = Issuedescription.joins(:issues).where("issues.id = ?", issue_id).take
-  	@pub = Publication.joins(:issues).where("issues.id = ?", issue_id).take
-  	years = Issue.select(:year).joins(:issuedescription).where("issuedescription.id = ?",@issuedesc.id).all
+  	@issue_id = params[:id].to_i
+  	@pub = Publication.joins(:issues).where("issues.id = ?", @issue_id).take
+  	@years = Issue.joins(
+  		"inner join issuedescriptions on issues.issuedescription_id = issuedescriptions.id" \
+  		" inner join issues as I2 on issuedescriptions.id = I2.issuedescription_id" \
+  		).where("I2.id = ?",@issue_id).order(year: :asc).all
   	
-  	
+  	render 'years'
 	end
   
   private 
