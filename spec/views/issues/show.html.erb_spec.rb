@@ -40,6 +40,13 @@ RSpec.describe "issues/show.html.erb", :type => :view do
 	  	expect(rendered).to match /102/
 	  	expect(rendered).to match /Baked kumara/
 	  end
+	  it "displays a recipe with a link " do
+	  	assign(:recipes, [ Recipe.new(page: 103, title: "Baked Alaska", url: "www.awebsite.com.au/recipe1.html")])
+	  	render 
+	  	expect(rendered).to match /103/
+	  	expect(rendered).to match /Baked Alaska/
+	  	expect(rendered).to match /href="www.awebsite.com.au\/recipe1.html"/
+	  end
 	  
 	  
 	end

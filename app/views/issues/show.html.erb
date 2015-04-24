@@ -36,7 +36,13 @@
     	<% @recipes.each do |recipe| %>
 	      <tr>
 	        <td><%= recipe.page %></td>
-	        <td><%= recipe.title %></td>
+	        <td>
+	        <% if recipe.url.nil? %>
+	        	<%= recipe.title %>
+	        <% else %>
+	        	<a href="<%= recipe.url %>"><%= recipe.title %></a>
+	        <% end %>
+	        </td>
 	      </tr>
 	     <% end %>
     </tbody>
