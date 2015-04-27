@@ -61,7 +61,20 @@ class IssuesController < ApplicationController
   	
   	render 'years'
 	end
-  
+	
+	def descriptions
+		@issue_id = params[:id].to_i
+		issue = Issue.find(@issue_id)
+  	@pub = Publication.joins(:issues).where("issues.id = ?", @issue_id).take
+  	
+  	@descriptions = Issuedescription.includes(:issues)\
+  		.where("issues.year = ? and publication_id = ?",issue.year,@pub.id).references(:issues)\
+  		.order(seq: :asc)
+  		
+  	render 'descriptions'
+  end
+  	
+  	
   private 
   
   	def issue_params

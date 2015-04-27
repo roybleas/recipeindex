@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 	resources :issues, only: [:index, :show] do
   member do
     get 'years'
+    get 'descriptions'
   end
 end
 	

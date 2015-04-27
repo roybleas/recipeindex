@@ -33,3 +33,13 @@
 		<% end %>
 	<% end %>
 </div>
+
+assign(:descriptions,
+   		 [
+      	stub_model(Issuedescription, :full_title => "April" 
+      		issue => stub_model(Issue, :id => 1)
+      		),
+      	stub_model(Issuedescription, :full_title => ">May"
+      		issue => stub_model(Issue, :id => 2)
+      		)
+    		])

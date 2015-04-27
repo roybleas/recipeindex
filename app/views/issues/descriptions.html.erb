@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><%= @pub.title %> </h1>
+  <h2><small>Issue 
+		<%= "title".pluralize(@descriptions.length) %>:
+	</small></h2> 
+	<% @descriptions.each do |description| %>
+	<% 	if description.issues.first.id == @issue_id %>
+	<% 		btn_type = "btn btn-primary" %>
+	<%	else %>
+	<% 		btn_type = "btn btn-default" %>
+	<% 	end %>
+	<a href="<%= issue_path(description) %>" ><button type="button" class="<%= btn_type %>"><%= description.full_title %></button></a>
+	<% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><%= @pub.title %> </h1>
+  <p>Indexes available for the following 
+		<%= "year".pluralize(@years.length) %>:
+	</p> 
+	<% @years.each do |yr| %>
+	<% 	if yr.id == @issue_id %>
+	<% 		btn_type = "btn btn-primary" %>
+	<%	else %>
+	<% 		btn_type = "btn btn-default" %>
+	<% 	end %>
+	<a href="<%= issue_path(yr) %>" ><button type="button" class="<%= btn_type %>"><%= yr.year %></button></a>
+	<% end %>
+</div>

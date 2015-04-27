@@ -166,7 +166,7 @@ RSpec.describe IssuesController, :type => :controller do
     	expect(assigns(:years).first.year).to eq issue.year
     end
     
-    it "assigns the an multiple issue record to @yrs in ascending order" do
+    it "assigns multiple issue record to @yrs in ascending order" do
     	
     	# important need to set id as error in SQL not picked up as issuedescription.id happens 
     	# to be the same as issue.id
@@ -182,14 +182,109 @@ RSpec.describe IssuesController, :type => :controller do
     	expect(assigns(:years).last.year).to eq lastyear
     end
     
-    
-    
-    
     it "renders the :years template" do
     	
 			issue = create(:issue)
 			get :years, id: issue
 			expect(response).to render_template :years
+		end
+  end
+  
+   describe "GET show descriptions" do
+    it "returns http success" do
+      issue = create(:issue, year: 2001)
+      get :descriptions, id:issue
+      expect(response).to have_http_status(:success)
+    end
+    
+    it "assigns the requested publications to @pub" do
+    	issue = create(:issue, year: 2001)
+    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	get :descriptions, id:issue
+    	expect(assigns(:pub)).to eq pub
+    end
+    
+    
+    it "assigns the issuedescription records to @issuedescs in ascending order seq for an issue" do
+    	
+    	# important need to set id as error in SQL not picked up as issuedescription.id happens 
+    	# to be the same as issue.id
+    	
+    	pub = create(:publication, title: 'Test Publication 1' )
+    	pub2 = create(:publication, title: 'Test Publication 2' )
+    	year1 = 2002
+    	year2 = 2004
+    	firstseq = 1
+    	lastseq = firstseq + 4
+    	
+    	issuedesc = create(:issuedescription, id: 30,publication: pub, seq: firstseq)
+    	
+    	create(:issue_without_description, issuedescription: issuedesc, year: year1)
+    	#the following issue is passed to controller
+    	issue = create(:issue_without_description, issuedescription: issuedesc, year: year2)
+    	
+    	#create a set of issue descriptions with a couple of issues each
+			((firstseq+1)..lastseq).each { |s|
+				issuedesc = create(:issuedescription, id: (issuedesc.id + s), publication: pub, seq: s)
+				create(:issue_without_description, issuedescription: issuedesc, year: year1)
+				create(:issue_without_description, issuedescription: issuedesc, year: year2)
+			}
+    	get :descriptions, id:issue
+    	
+    	expect(assigns(:descriptions).first.seq).to eq firstseq
+    	expect(assigns(:descriptions).last.seq).to eq lastseq
+    	expect(assigns(:descriptions).first.issues.first.year).to eq year2
+    	expect(assigns(:descriptions).last.issues.first.year).to eq year2
+    end
+    
+    it "assigns the issuedescription records for a single publication to @issuedescs " do
+    	
+    	# important need to set id as error in SQL not picked up as issuedescription.id happens 
+    	# to be the same as issue.id
+    	
+    	pub = create(:publication, title: 'Test Publication 1' )
+    	pub2 = create(:publication, title: 'Test Publication 2' )
+    	year1 = 2006
+    	year2 = 2007
+    	firstseq = 1
+    	lastseq = firstseq + 2
+    	issuedesc = create(:issuedescription, id: 40,publication: pub2, seq: firstseq)
+    	
+    	create(:issue_without_description, issuedescription: issuedesc, year: year1)
+    	#the following issue is passed to controller
+    	issue = create(:issue_without_description, issuedescription: issuedesc, year: year2)
+    	
+    	#create a set of issue descriptions with a couple of issues each
+			((firstseq+1)..lastseq).each { |s|
+				issuedesc = create(:issuedescription, id: (issuedesc.id + s), publication: pub2, seq: s)
+				create(:issue_without_description, issuedescription: issuedesc, year: year1)
+				create(:issue_without_description, issuedescription: issuedesc, year: year2)
+			}
+			
+			firstseq2 = lastseq
+    	lastseq2 = firstseq2 + 2
+			 #create a second set of issue descriptions for a different publication
+			((firstseq2)..lastseq2).each { |s|
+				issuedesc = create(:issuedescription, id: (issuedesc.id + s), publication: pub, seq: s)
+				create(:issue_without_description, issuedescription: issuedesc, year: year1)
+				create(:issue_without_description, issuedescription: issuedesc, year: year2)
+			}
+			issuedesc = create(:issuedescription,publication: pub2, seq: lastseq2 +1)
+			create(:issue_without_description, issuedescription: issuedesc, year: year2)
+			
+    	get :descriptions, id:issue
+    	
+    	expect(assigns(:descriptions).first.seq).to eq firstseq
+    	expect(assigns(:descriptions).last.seq).to eq lastseq2 + 1
+    	expect(assigns(:descriptions).last.publication_id).to eq pub2.id
+    end
+    
+    
+    it "renders the :descriptions template" do
+    	
+			issue = create(:issue, year:2001)
+			get :descriptions, id: issue
+			expect(response).to render_template :descriptions
 		end
   end
 
