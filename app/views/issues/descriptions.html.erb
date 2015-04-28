@@ -9,6 +9,6 @@
 	<%	else %>
 	<% 		btn_type = "btn btn-default" %>
 	<% 	end %>
-	<a href="<%= issue_path(description) %>" ><button type="button" class="<%= btn_type %>"><%= description.full_title %></button></a>
+	<a href="<%= issue_path(description.issues.first) %>" ><button type="button" class="<%= btn_type %>"><%= description.full_title %></button></a>
 	<% end %>
 </div>

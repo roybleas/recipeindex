@@ -1,25 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe "issues/descriptions.html.erb", :type => :view do
-	context "with Publication " do
+	context "with View of Issue descriptions " do
     before(:each) do
-      assign(:pub, Publication.new(title: "Delicious"))
-   		assign(:issue_id,1)
-   		assign(:descriptions,
-   		 [
-      	double(:Issuedescription, :full_title => "April", :seq => 7,
-      		:issue => double(:Issue, :id => 1)
-      		)
-    		])
-	
+      assign(:pub, create(:publication, title: "My test publication title"))
+   		descs =  [create(:issuedescription_with_single_issue, full_title: "April")]
+   		assign(:issue_id,descs.first.issues.first.id)
+ 			assign(:descriptions, descs)
    	end
 	
 	  it "displays a publication title" do
 	    render
-			expect(rendered).to match /Delicious/
+			expect(rendered).to match /My test publication title/
 	  end
 	 
-	 it "displays a button for an issue description" do	  	
+	 it "displays a button for an issue description" do	 	
 	  	render
 	  	expect(rendered).to match /April/
 	  	expect(rendered).to match /btn-primary/
@@ -27,20 +22,21 @@ RSpec.describe "issues/descriptions.html.erb", :type => :view do
 	  end
 	  
 	  it "displays a button for multiple issue descriptions " do
-	  	assign(:descriptions,
-   		 [
-      	double(:Issuedescription, :full_title => "April", :seq => 7,
-      		:issue => double(:Issue, :id => 1)
-      		),
-      	double(:Issuedescription, :full_title => "May", :seq => 8,
-      		:issue => double(:Issue, :id => 2)
-      		)
-    		])
-	  	assign(:issue_id, 2)
-	  	render 
+	  	descs =  [create(:issuedescription_with_single_issue, full_title: "April", issue_id: 124),
+	  		create(:issuedescription_with_single_issue, full_title: "May", issue_id: 125)]
+	  	puts descs.last.inspect
+	  	assign(:descriptions, descs)
+	  	assign(:issue_id , descs.last.issues.first.id)
+	  	
+  		render 
 	  	expect(rendered).to match /May/
 	  	expect(rendered).to match /btn-primary/
 	  	expect(rendered).to match /btn-default/
+	  end
+	  
+	  it "display a link to the issue with the issue id" do
+	  	render
+	  	expect(rendered).to match /\/issues\/123/
 	  end
 	end
 end

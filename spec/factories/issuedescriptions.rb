@@ -36,4 +36,17 @@ FactoryGirl.define do
 	    end
 	   end
 	end
+	
+	factory :issuedescription_with_single_issue, class: Issuedescription do
+		title "Jun"
+    full_title "June"
+    seq 5
+    
+    ignore do
+    	issue_id 123
+    end
+    after(:create) do |issuedescription, evaluator|
+	  	create(:issue, id: evaluator.issue_id, issuedescription: issuedescription, year: 2010)
+	  end
+	end
 end

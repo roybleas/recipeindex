@@ -4,14 +4,14 @@ RSpec.describe "issues/years.html.erb", :type => :view do
 	
 	context "with Publication,Issue " do
     before(:each) do
-      assign(:pub, Publication.new(title: "Delicious"))
+      assign(:pub, create(:publication, title: "My test publication title"))
    		assign(:issue_id,1)
    		assign(:years, [create(:issue_without_description, year: 2000)])
    	end
 	
 	  it "displays a publication title" do
 	    render
-			expect(rendered).to match /Delicious/
+			expect(rendered).to match /My test publication title/
 	  end
 
 	  it "displays an a description for a single year index " do
@@ -47,5 +47,9 @@ RSpec.describe "issues/years.html.erb", :type => :view do
 	  	expect(rendered).to match /btn-default/
 	  end
 	  
+	  it "display a link to the issue with the issue id" do
+	  	render
+	  	expect(rendered).to match /\/issues\/1/
+	  end
 	end
 end
