@@ -14,7 +14,7 @@
 
 class Recipe < ActiveRecord::Base
   belongs_to :issue
-  belongs_to :meal
+ 	has_many :category_recipes
   
   validates :issue, presence: true
   validates :title, :page, presence: true
