@@ -7,7 +7,6 @@
 #  page       :integer
 #  url        :string(255)
 #  issue_id   :integer
-#  meal_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
 #

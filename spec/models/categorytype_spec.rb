@@ -28,4 +28,20 @@ RSpec.describe Categorytype, :type => :model do
   	cattype.valid?
   	expect(cattype.errors[:name]).to include("can't be blank")
   end 
+  
+  it "is invalid with a duplicate code" do
+  	cattype = Categorytype.create(code: "A", name: "a category type name")
+  	expect(cattype).to be_valid
+  	cattype = Categorytype.new(code: "A", name: "another category type name")
+  	cattype.valid?
+  	expect(cattype.errors[:code]).to include("has already been taken")
+  end 
+  
+  it "is invalid with a duplicate code" do
+  	cattype = Categorytype.create(code: "A", name: "a category type name")
+  	expect(cattype).to be_valid
+  	cattype = Categorytype.new(code: "B", name: "a category type name")
+  	cattype.valid?
+  	expect(cattype.errors[:name]).to include("has already been taken")
+  end 
 end
