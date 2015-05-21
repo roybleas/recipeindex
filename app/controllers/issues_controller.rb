@@ -46,7 +46,7 @@ class IssuesController < ApplicationController
   	@previous_issuedescription = Issue.joins(:issuedescription).where("issuedescriptions.seq = ? and year = ?",previous_sequence,@issue.year).take
   	@next_issuedescription = Issue.joins(:issuedescription).where("issuedescriptions.seq = ? and year = ?",next_sequence,@issue.year).take
   	
-  	@recipies = Recipe.where("issue_id = ?", issue_id).order(title: :asc).all
+  	@recipes = Recipe.where("issue_id = ?", issue_id).order('lower(title) asc').all
   	
   	render 'show'
   end

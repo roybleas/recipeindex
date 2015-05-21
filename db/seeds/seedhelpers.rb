@@ -1,4 +1,4 @@
-
+require 'csv'
 
 class IssuedescriptionsGenerator
 	#class to generate a row for each month linked to issue description
@@ -129,4 +129,221 @@ class IssueyearGenerator
 			issue_number += 1
 		end
 	end
+end
+
+class RecipeImporter
+	#class to load recipes from extracr file
+	def initialize(pub,yr,mag_title)
+		# store publication  
+		@pub = pub
+		# store the year of publication
+		@yr = yr
+		# or the issuenumber range
+		@issueNumRange = yr
+		# store the short name used in the extract file
+		@mag_title = mag_title
+	end
+	
+	def load_recipes_by_year
+		
+		filename = "#{@mag_title}_#{@yr}_idx_recipes.csv"
+		fileInput = Rails.root.join('db','seeds','dbloadfiles',filename)
+		
+		if validFileHeader?(fileInput,filename)
+							
+			# Fetch all the issues for the year for the passed publication
+			is_descs = @pub.issuedescriptions.select(:title).eager_load(:issues).where('issues.year = ?',@yr).order(:title).all
+			
+			# Header : 
+			#	type		- content of the row
+			# action	- type of action to the database	
+			# issue		- the issue for the year where the recipe is found
+			# page		- the page in the issue where the recipe is found
+			# recipe	- the recipe title
+			CSV.foreach(fileInput, {col_sep: "\t", headers: :true}) do |row|
+				case row["type"]
+				when "H"
+					# header row checked above so ignore
+				when "R"
+						#recipe
+						case row["action"]
+							when "c"
+								#create record 
+								
+								# The delicious December issue is combined with January
+								# So a quick fix to convert to double issue
+								this_issue = row["issue"].gsub("Dec","Dec-Jan")
+								
+								issue = find_issue(is_descs,this_issue)
+								if !issue.nil?
+									issue.recipes.create(title: row["recipe"], page: row["page"])
+								else
+									puts "Issue #{row['issue']} not found"
+								end
+							else
+								puts "Unknown action record #{row['action']}"
+						end
+				else
+						puts "Unknown type #{row['recipe']}"
+				
+				end
+			end			
+		end
+	end
+
+	def load_recipes_by_issue
+		
+		filename = "#{@mag_title}_#{@yr}_idx_recipes.csv"
+		fileInput = Rails.root.join('db','seeds','dbloadfiles',filename)
+		
+		if validFileHeader?(fileInput,filename)
+							
+				# Fetch all the issues for the year for the passed publication
+				is_descs = @pub.issuedescriptions.select(:title).eager_load(:issues).where('issues.year = ?',@yr).order(:title).all
+				
+				# Header : 
+				#	type		- content of the row
+				# action	- type of action to the database	
+				# issue		- the issue for the year where the recipe is found
+				# page		- the page in the issue where the recipe is found
+				# recipe	- the recipe title
+				
+			current_issue_number = 0
+			current_issue = nil
+				
+			CSV.foreach(fileInput, {col_sep: "\t", headers: :true}) do |row|
+				
+				case row["type"]
+				when "H"
+					# header row checked above so ignore
+				when "R"
+					#recipe
+					case row["action"]
+					when "c"
+						#create record 
+						if current_issue_number != row['issue'].to_i
+							#if there is a change of issue look up the new from the database
+							current_issue_number = row['issue'].to_i
+							current_issue =  @pub.issues.find_by(no: current_issue_number)
+							if current_issue.nil?
+								puts "Issue #{row['issue']} not found"
+							end
+						end
+									
+						if !current_issue.nil?
+							current_issue.recipes.create(title: row["recipe"], page: row["page"])
+						end
+									
+					else
+						puts "Unknown action record #{row['action']}"
+					end
+					
+				else
+					puts "Unknown type #{row['recipe']}"
+				end
+				
+			end
+			
+		end
+	end
+
+	
+	private
+	
+	def validFileHeader?(fileInput,filename)
+		# the initial line to veify it is the correct style of file to process
+		
+		valid_file = false
+	
+		if !File.exists?(fileInput)
+			puts "Missing file #{fileInput}"
+		else
+			puts "Loading #{filename}"
+		
+			file = File.open(fileInput, "r")
+			#Read over csv header line
+			line = file.readline
+			# read file header details
+			line = file.readline
+			this_header = line.chomp.split("\t")
+			
+			# lookup style of data, by year or by issue number
+			filestyle = this_header[3]   
+			case filestyle
+				when 'byyear' 
+						
+					yr = header_line_byyear(line)
+					if yr != @yr
+						puts "Invalid year record #{line} in #{fileInput}"
+					else 
+						valid_file = true
+					end
+				when 'byissueno' 
+					isnos = header_line_byissue(line)
+					
+					if isnos != @issueNumRange
+						puts "Invalid issue range #{line} in #{fileInput}"
+					else
+						valid_file = true
+					end
+				else
+					puts "Invalid header record #{line} missing filestyle in #{fileInput}"
+			end
+			file.close
+		end
+		return valid_file
+	end
+	
+	
+	def find_issue(issuedescriptions, is_title)
+		is = nil
+
+		issuedescriptions.each do |row|
+			if row[:title] == is_title
+	 			is = row.issues.first
+	 			break
+	 		end
+		end
+	
+		return is 
+	end
+	
+	def file_data(line)
+		# confirms the passed line contains a title 
+		if line.match(/recipe index/) then
+			# does it contain keyword  for by year
+			if line.match(/year/) then
+				return :byYear
+			end
+		end
+	end
+	
+	
+	def header_line_byyear(line)
+		# confirms the passed line contains a title and a 4 digit year value
+		
+		if line.match(/recipe index/) then
+			#fetch year and convert to integer
+			match_yr =  line.match(/\s*\d{4}/)
+			if match_yr 
+				return match_yr[0].to_i
+			end
+		end
+		
+		return 0
+	end
+	
+	def header_line_byissue(line)
+		# confirms the passed line contains a title and a range of numbers
+		if line.match(/recipe index/) then
+			#fetch range of issue numbers
+			match_issue_range =  line.match(/\d{1,3}-\d{1,3}/)
+			if match_issue_range
+				return match_issue_range[0]
+			end
+		end
+		
+		return 0
+	end
+	
 end

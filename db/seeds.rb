@@ -59,13 +59,17 @@ unless pubDish.issuedescriptions.exists?(title: 'Feb-Mar') then
 end
 
 descDel = pubDel.issuedescriptions.find_by_title('Feb')
-[{:yr => 2007, :no => 57},{:yr => 2008, :no => 68},{:yr => 2009, :no => 79}].each do |issue|
+[{:yr => 2007, :no => 57},{:yr => 2008, :no => 68},{:yr => 2006, :no => 46}].each do |issue|
  	IssueyearGenerator.new(pubDel, issue[:yr]).gen_issues_by_number(issue[:no]) unless descDel.issues.exists?(year: issue[:yr]) 
+	mag_title = "del"
+	RecipeImporter.new(pubDel,issue[:yr],mag_title).load_recipes_by_year unless pubDel.recipes.where('year = ?',issue[:yr]).count > 0
 end	
 
 descDish = pubDish.issuedescriptions.find_by_title('Feb-Mar')
-[{:yr => 2004, :no => 1},{:yr => 2012, :no => 40},{:yr => 2010, :no => 28}].each do |issue|
+[{:yr => 2010, :no => 28, :noRange => '28-33'}].each do |issue|
  	IssueyearGenerator.new(pubDish, issue[:yr]).gen_issues_by_number(issue[:no]) unless descDish.issues.exists?(year: issue[:yr]) 
+	mag_title = "dish"
+	RecipeImporter.new(pubDish,issue[:noRange],mag_title).load_recipes_by_issue
 end	
 
 	

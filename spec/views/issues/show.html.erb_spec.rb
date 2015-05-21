@@ -5,7 +5,7 @@ RSpec.describe "issues/show.html.erb", :type => :view do
 	context "with Publication,Issue " do
     before(:each) do
       assign(:pub, Publication.new(title: "Delicious"))
-   		assign(:issue,Issue.new(no: 123, year: 2001))
+   		assign(:issue,Issue.create(no: 123, year: 2001))
    		assign(:issuedesc,Issuedescription.new(title: "April"))
    		assign(:previous_issuedescription, FactoryGirl.create(:issue_without_description, year: 2000))
    		assign(:next_issuedescription, FactoryGirl.create(:issue_without_description, year: 2002))
@@ -23,7 +23,7 @@ RSpec.describe "issues/show.html.erb", :type => :view do
 	  	expect(rendered).to match /123/
 	  end
 	  it "display an issue title" do
-	  	assign(:issue,Issue.new(title: "OneTwoThree", year: 2001))
+	  	assign(:issue,Issue.create(title: "OneTwoThree", year: 2001))
 	  	render
 	  	expect(rendered).to match /OneTwoThree/
 	  end

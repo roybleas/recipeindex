@@ -9,15 +9,16 @@
   <% end %>
    </small></h1>
   <h2>
-  	<a href="<%= issue_path(@previous_issuedescription)%>)"><span class="glyphicon glyphicon-chevron-left"></span></a>
-  	<a href=#"><%= @issuedesc.title %> </a>
-  	<a href="<%= issue_path(@next_issuedescription)%>)"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  	<a href="<%= issue_path(@previous_issuedescription)%>"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  	puts @issue.inspect
+  	<a href=" <%= descriptions_issue_path(@issue) %>"><%= @issuedesc.title %> </a>
+  	<a href="<%= issue_path(@next_issuedescription)%>"><span class="glyphicon glyphicon-chevron-right"></span></a>
   	<% if @year_before.nil? %>
   		<span class="glyphicon glyphicon-chevron-left"></span>
   	<% else %>
-  		<a href="<%= issue_path(@year_before)%>)"> <span class="glyphicon glyphicon-chevron-left"></span></a>
+  		<a href="<%= issue_path(@year_before)%>"> <span class="glyphicon glyphicon-chevron-left"></span></a>
   	<% end %>
-  	<a href=#"><%= @issue.year %></a>
+  	<a href="<%= years_issue_path(@issue)%>"><%= @issue.year %></a>
   	<% if @year_after.nil? %>
   		<span class="glyphicon glyphicon-chevron-right"></span>
   	<% else %>
@@ -28,14 +29,13 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Page</th>
         <th>Recipe</th>
+        <th>Page</th>
       </tr>
     </thead>
     <tbody>
     	<% @recipes.each do |recipe| %>
 	      <tr>
-	        <td><%= recipe.page %></td>
 	        <td>
 	        <% if recipe.url.nil? %>
 	        	<%= recipe.title %>
@@ -43,6 +43,7 @@
 	        	<a href="<%= recipe.url %>"><%= recipe.title %></a>
 	        <% end %>
 	        </td>
+	        <td><%= recipe.page %></td>
 	      </tr>
 	     <% end %>
     </tbody>
