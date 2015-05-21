@@ -10,7 +10,6 @@
    </small></h1>
   <h2>
   	<a href="<%= issue_path(@previous_issuedescription)%>"><span class="glyphicon glyphicon-chevron-left"></span></a>
-  	puts @issue.inspect
   	<a href=" <%= descriptions_issue_path(@issue) %>"><%= @issuedesc.title %> </a>
   	<a href="<%= issue_path(@next_issuedescription)%>"><span class="glyphicon glyphicon-chevron-right"></span></a>
   	<% if @year_before.nil? %>

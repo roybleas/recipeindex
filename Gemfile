@@ -1,16 +1,21 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+
+	gem 'pg', '0.18.1'
+  gem 'rails_12factor', '0.0.2'
 
 group :development, :test do
 
 	#in place of debugger trying byebug
 	gem 'byebug'
 	
-	gem 'sqlite3'
+	#gem 'sqlite3'
+	
+	
 	gem 'guard'
   gem 'rspec-rails', "~> 3.1.0"
   gem 'annotate' 
@@ -39,13 +44,13 @@ group :test do
   
   # Uncomment these lines on Windows.
   gem 'rb-notifu', '0.0.4'
-  gem 'wdm', '0.1.0'
+  #gem 'wdm', '0.1.0'
   
 end
 
 group :production do
-	gem 'pg', 						'0.17.1'
-  gem 'rails_12factor', '0.0.2'
+	#gem 'pg', 						'0.17.1'
+  #gem 'rails_12factor', '0.0.2'
   gem 'unicorn',  			'4.8.3'
 end
 
