@@ -6,7 +6,7 @@ ruby '2.1.4'
 gem 'rails', '4.1.4'
 
 	gem 'pg', '0.18.1'
-  gem 'rails_12factor', '0.0.2'
+
 
 group :development, :test do
 
@@ -50,8 +50,10 @@ end
 
 group :production do
 	
-  #gem 'rails_12factor'
-  gem 'unicorn',  			'4.8.3'
+  gem 'rails_12factor'
+  #gem 'unicorn',  			'4.8.3'
+  gem 'puma'
+  gem 'rack-timeout'
 end
 
 
