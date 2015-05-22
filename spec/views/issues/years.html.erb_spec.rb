@@ -5,8 +5,11 @@ RSpec.describe "issues/years.html.erb", :type => :view do
 	context "with Publication,Issue " do
     before(:each) do
       assign(:pub, create(:publication, title: "My test publication title"))
-   		assign(:issue_id,1)
-   		assign(:years, [create(:issue_without_description, year: 2000)])
+   		yr = create(:issue_without_description, year: 2000)
+   		assign(:issue_id,yr.id)
+   		assign(:years, [yr])
+   		@issue_id = yr.id
+
    	end
 	
 	  it "displays a publication title" do
@@ -49,7 +52,7 @@ RSpec.describe "issues/years.html.erb", :type => :view do
 	  
 	  it "display a link to the issue with the issue id" do
 	  	render
-	  	expect(rendered).to match /\/issues\/1/
+	  	expect(rendered).to match /\/issues\/#{@issue_id}/
 	  end
 	end
 end
