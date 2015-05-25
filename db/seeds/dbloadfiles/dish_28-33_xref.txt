@@ -12,5 +12,3 @@ xref:Sauces, salsas and dips  xref: butters, flavoured
 xref:     Sausages  xref: chorizo
 xref:     Seafood  xref: calamari and squid; fish; mussels; prawns
 xref:     Shallots  xref:onions and shallots
-xref:Squid  xref:calamari and squid
-xref:Vegetables  xref: names of individual vegetables

@@ -1,167 +1,158 @@
 category	recipe
-ingredient:	 Almonds
-ingredient:	 Anchovies
-ingredient:	 Apples
-ingredient:	 Apricots
-ingredient:	 Artichokes, globe
-ingredient:	 Artichokes, Jerusalem
-ingredient:	 Asparagus
-ingredient:	 Avocados
-ingredient:	 Bacon
-ingredient:	 Bananas
-ingredient:	 Barley
-ingredient:	 Basil
-ingredient:	 Beans, dried and green
-ingredient:	 Beansprouts
-ingredient:	 Beef
-ingredient:	 Beetroot
-ingredient:	 Berries
-category:	Biscuits, cookies and slices
-ingredient:	 Blue cheese
-ingredient:	 Bocconcini and mozzarella
-ingredient:	 Bok choy
-category:	Breads and yeast baking
-category:	Brining
-ingredient:	 Brussels sprouts
-category:	Burgers, filled breads, sandwiches and wraps
-category:	Butters, flavoured
-ingredient:	 Cabbage
-category:	Cakes and loaves
-ingredient:	 Calamari and squid
-ingredient:	 Capers
-ingredient:	 Capsicums
-ingredient:	 Caraway seeds
-ingredient:	 Carrots
-ingredient:	 Cashew nuts
-ingredient:	 Caulifower
-ingredient:	 Cavolo nero
-ingredient:	 Celeriac
-ingredient:	 Celery
-category:	       Cheese 
-ingredient:	 Cherries
-ingredient:	 Chicken
-ingredient:	 Chickpeas
-ingredient:	 Chillies
-ingredient:	 Chocolate
-ingredient:	 Chorizo
-category:	Chutneys, pickles and relishes
-ingredient:	 Coconut
-ingredient:	 Coffee
-ingredient:	 Coriander
-ingredient:	 Corn
-category:	Cornichons and gherkins
-ingredient:	 Couscous
-ingredient:	 Cranberries
-ingredient:	 Crème fraîche
-ingredient:	 Cucumber
-ingredient:	 Dates
-category:	Desserts and puddings 
-category:	Dressings and mayonnaise
-ingredient:	 Drinks
-ingredient:	 Duck
-ingredient:	 Eggplants
-ingredient:	 Eggs
-ingredient:	 Edamame beans
-ingredient:	 Fennel
-ingredient:	 Feta
-ingredient:	 Figs
-category:	Fish 
-ingredient:	 Garlic
-ingredient:	 Ginger
-ingredient:	 Grapefruit
-ingredient:	 Grapes
-ingredient:	 Ham
-ingredient:	 Hazelnuts
-ingredient:	 Honey
-category:	Ice cream and frozen desserts
-ingredient:	 Kumara
-ingredient:	 Lamb
-ingredient:	 Leeks
-ingredient:	 Lemongrass
-ingredient:	 Lemons
-ingredient:	 Lentils
-ingredient:	 Lettuce
-ingredient:	 Limes
-ingredient:	 Mangos
-category:	Marinades
-ingredient:	 Mascarpone
-ingredient:	 Melons
-ingredient:	 Meringue
-ingredient:	 Mint
-ingredient:	 Mushrooms
-ingredient:	 Mussels
-ingredient:	 Mustard
-ingredient:	 Nectarines
-ingredient:	 Noodles
-ingredient:	 Olives
-ingredient:	 Onions and shallots
-ingredient:	 Oranges
-category:	Pancakes and hotcakes
-ingredient:	 Pancetta
-ingredient:	 Papaya
-ingredient:	 Parsley
-ingredient:	 Parsnips
-ingredient:	 Passionfruit
-category:	Pasta and gnocchi 
-category:	Pastries
-ingredient:	 Peaches
-ingredient:	 Peanuts
-ingredient:	 Pears
-ingredient:	 Peas, dried
-ingredient:	 Peas, green
-category:	Pies
-ingredient:	 Pine nuts
-ingredient:	 Pineapple
-ingredient:	 Pistachios
-category:	Pizzas and flatbreads
-ingredient:	 Plums
-ingredient:	 Polenta
-ingredient:	 Pomegranate molasses
-ingredient:	 Poppy seeds
-ingredient:	 Pork
-ingredient:	 Potatoes
-ingredient:	 Prawns
-category:	Preserves 
-ingredient:	 Prosciutto
-ingredient:	 Pumpkin
-ingredient:	 Pumpkin seeds
-ingredient:	 Quinces
-ingredient:	 Quinoa
-ingredient:	 Rabbit
-ingredient:	 Radishes
-ingredient:	 Rhubarb
-ingredient:	 Rice
-ingredient:	 Ricotta
-ingredient:	 Rocket
-ingredient:	 Rosemary
-ingredient:	 Saffron
-ingredient:	 Sage
-category:	Salads, fruit
-category:	Salads, meat and fish
-category:	Salads, vegetable
-ingredient:	 Salami
-ingredient:	 Salmon
-category:	Sauces, salsas and dips 
-category:	Sauces, sweet
-category:	     Sausages 
-category:	     Seafood 
-ingredient:	 Semolina
-ingredient:	 Silverbeet
-category:	Small food
-category:	Soups
-ingredient:	 Spinach
-ingredient:	 Tamarillos
-ingredient:	 Tarragon
-category:	Tarts, savoury
-category:	Tarts, sweet
-ingredient:	 Tofu
-ingredient:	 Tomatoes
-ingredient:	 Tuna
-ingredient:	 Turnips
-category:	Vegetables 
-ingredient:	 Walnuts
-ingredient:	 Watercress
-ingredient:	 Watermelon
-ingredient:	 Witlof
-ingredient:	 Yoghurt
-ingredient:	 Zucchini
+ingredient:	 almonds
+ingredient:	 anchovies
+ingredient:	 apples
+ingredient:	 apricots
+ingredient:	 artichokes, globe
+ingredient:	 artichokes, jerusalem
+ingredient:	 asparagus
+ingredient:	 avocados
+ingredient:	 bacon
+ingredient:	 bananas
+ingredient:	 barley
+ingredient:	 basil
+ingredient:	 beans, dried and green
+ingredient:	 beansprouts
+ingredient:	 beef
+ingredient:	 beetroot
+ingredient:	 berries
+category:	biscuits, cookies and slices
+ingredient:	 blue cheese
+ingredient:	 bocconcini and mozzarella
+ingredient:	 bok choy
+category:	breads and yeast baking
+category:	brining
+ingredient:	 brussels sprouts
+category:	burgers, filled breads, sandwiches and wraps
+category:	butters, flavoured
+ingredient:	 cabbage
+category:	cakes and loaves
+ingredient:	 calamari and squid
+ingredient:	 capers
+ingredient:	 capsicums
+ingredient:	 caraway seeds
+ingredient:	 carrots
+ingredient:	 cashew nuts
+ingredient:	 caulifower
+ingredient:	 cavolo nero
+ingredient:	 celeriac
+ingredient:	 celery
+category:	       cheese 
+ingredient:	 cherries
+ingredient:	 chicken
+ingredient:	 chickpeas
+ingredient:	 chillies
+ingredient:	 chocolate
+ingredient:	 chorizo
+category:	chutneys, pickles and relishes
+ingredient:	 coconut
+ingredient:	 coffee
+ingredient:	 coriander
+ingredient:	 corn
+category:	cornichons and gherkins
+ingredient:	 couscous
+ingredient:	 cranberries
+ingredient:	 crème fraîche
+ingredient:	 cucumber
+ingredient:	 dates
+category:	desserts and puddings 
+category:	dressings and mayonnaise
+ingredient:	 drinks
+ingredient:	 duck
+ingredient:	 eggplants
+ingredient:	 eggs
+ingredient:	 edamame beans
+ingredient:	 fennel
+ingredient:	 feta
+ingredient:	 figs
+category:	fish 
+ingredient:	 garlic
+ingredient:	 ginger
+ingredient:	 grapefruit
+ingredient:	 grapes
+ingredient:	 ham
+ingredient:	 hazelnuts
+ingredient:	 honey
+category:	ice cream and frozen desserts
+ingredient:	 kumara
+ingredient:	 lamb
+ingredient:	 leeks
+ingredient:	 lemongrass
+ingredient:	 lemons
+ingredient:	 lentils
+ingredient:	 lettuce
+ingredient:	 limes
+ingredient:	 mangos
+category:	marinades
+ingredient:	 mascarpone
+ingredient:	 melons
+ingredient:	 meringue
+ingredient:	 mint
+ingredient:	 mushrooms
+ingredient:	 mussels
+ingredient:	 mustard
+ingredient:	 nectarines
+ingredient:	 noodles
+ingredient:	 olives
+ingredient:	 onions and shallots
+ingredient:	 oranges
+category:	pancakes and hotcakes
+ingredient:	 pancetta
+ingredient:	 papaya
+ingredient:	 parsley
+ingredient:	 parsnips
+ingredient:	 passionfruit
+category:	pasta and gnocchi 
+category:	pastries
+ingredient:	 peaches
+ingredient:	 peanuts
+ingredient:	 pears
+ingredient:	 peas, dried
+ingredient:	 peas, green
+category:	pies
+ingredient:	 pine nuts
+ingredient:	 pineapple
+ingredient:	 pistachios
+category:	pizzas and flatbreads
+ingredient:	 plums
+ingredient:	 polenta
+ingredient:	 pomegranate molasses
+ingredient:	 poppy seeds
+ingredient:	 pork
+ingredient:	 potatoes
+ingredient:	 prawns
+category:	preserves 
+ingredient:	 prosciutto
+ingredient:	 pumpkin
+ingredient:	 pumpkin seeds
+ingredient:	 quinces
+ingredient:	 quinoa
+ingredient:	 rabbit
+ingredient:	 radishes
+ingredient:	 rhubarb
+ingredient:	 rice
+ingredient:	 ricotta
+ingredient:	 rocket
+ingredient:	 rosemary
+ingredient:	 saffron
+ingredient:	 sage
+category:	salads, fruit
+category:	salads, meat and fish
+category:	salads, vegetable
+ingredient:	 salami
+ingredient:	 salmon
+category:	sauces, salsas and dips 
+category:	sauces, sweet
+category:	     sausages 
+category:	     seafood 
+ingredient:	 semolina
+ingredient:	 silverbeet
+category:	small food
+category:	soups
+category:	tarts, sweet
+ingredient:	 tofu
+ingredient:	 tomatoes
+ingredient:	 watermelon
+ingredient:	 witlof
+ingredient:	 yoghurt
+ingredient:	 zucchini
