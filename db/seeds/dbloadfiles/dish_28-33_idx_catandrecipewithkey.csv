@@ -1,0 +1,1077 @@
+type	action	issue	page	recipe	keyword
+H	28-33	recipe index.	byissueno
+C	c	ingredient:	 almonds
+r	l	29	89	Almond granita - Granita di mandorle	Almond
+r	l	30	74	Honey nut tart
+r	l	32	75	Roasted spring vegetables with fresh Parmesan, ricotta and almonds	almonds
+r	l	31	98	Saucy chocolate pudding with toasted almonds	almonds
+r	l	31	110	Sautéed Brussels sprouts with bacon and almonds	almonds
+C	c	ingredient:	 anchovies
+r	l	32	92	Anchovy dressing	Anchovy
+r	l	29	104	Caper, anchovy and parsley butter	anchovy
+r	l	33	91	Caramelized onion, anchovy and goat's cheese tartlets	anchovy
+C	c	ingredient:	 apples
+r	l	33	117	Apple and cabbage coleslaw	Apple
+r	l	30	66	Apple and rosemary tarte tatin	Apple
+r	l	30	107	Apples and shallot sauce	Apples
+r	l	30	102	Autumnal coleslaw
+r	l	31	110	Blackberry and apple cobbler	apple
+r	l	31	77	Braised chicken with shallots, peas and apples	apples
+r	l	32	87	Poached chicken, apple, rocket and hazelnut salad	apple
+r	l	31	90	Red lentil, kumara and coconut soup
+r	l	31	86	Roasted beetroot, parsnip and apple soup	apple
+r	l	29	81	Sage roasted pork belly and apples	apples
+C	c	ingredient:	 apricots
+r	l	31	98	Apricot glazed fruit brioche	Apricot
+r	l	30	72	Poached apricots with rosemary and peppercorn syrup	apricots
+r	l	28	86	Roast stonefruit with ricotta and pistachios
+C	c	ingredient:	 artichokes, globe
+r	l	28	83	Artichoke and ricotta salad with tomato and rosemary vinaigrette	Artichoke
+r	l	33	86	Chickpea, fennel and artichoke salad with lemon and date dressing	artichoke
+r	l	29	99	Linguine with fresh tomatoes and artichokes	artichokes
+r	l	32	76	Zesty rice salad with preserved lemon, artichokes and asparagus	artichokes
+C	c	ingredient:	 artichokes, jerusalem
+r	l	31	88	Jerusalem artichoke and potato soup with mustard croutons	Jerusalem
+r	l	31	106	Roasted basil and lemon chicken with Jerusalem artichokes	Jerusalem
+C	c	ingredient:	 asparagus
+r	l	33	80	Asparagus with mozzarella and roasted tomatoes	Asparagus
+r	l	32	71	Spring greens with roasted mustard haloumi
+r	l	32	111	Spring vegetable and prawn fritters with a lemon yoghurt sauce
+r	l	32	111	Stir-fried beef and asparagus	asparagus
+r	l	32	76	Zesty rice salad with preserved lemon, artichokes and asparagus	asparagus
+C	c	ingredient:	 avocados
+r	l	33	86	Green bean, edamame and avocado salad with preserved lemon dressing	avocado
+r	l	32	117	Grilled chorizo and avocado salad	avocado
+r	l	33	91	Lime and wasabi marinated tuna with avocado	avocado
+r	l	28	105	Pear, avocado and mixed greens with pistachio and tarragon dressing	avocado
+r	l	28	59	Tuna, avocado and white bean sandwiches	avocado
+C	c	ingredient:	 bacon
+r	l	32	83	Chicken supremes with beans and lemon
+r	l	30	101	Crispy eggs with bacon and lentils	bacon
+r	l	33	93	Filet mignon with duck liver pâté and red wine sauce
+r	l	28	79	Potato, broad bean and crispy bacon salad with mint dressing	bacon
+r	l	29	102	Roman-style lamb cutlets
+r	l	31	110	Sautéed Brussels sprouts with bacon and almonds	bacon
+r	l	32	104	Stuffed mushrooms baked in silverbeet leaves
+C	c	ingredient:	 bananas
+r	l	28	89	Frozen blueberry yoghurt
+r	l	30	106	Self-saucing banana butterscotch pudding	banana
+C	c	ingredient:	 barley
+r	l	31	88	Pearl barley and vegetable soup	barley
+C	c	ingredient:	 basil
+r	l	32	106	Baked fish in banana leaves with mango salad
+r	l	30	81	Chicken with zucchini, basil, pine nuts and tomato jam	basil
+r	l	33	116	Herb and mustard sauce
+r	l	28	68	Herb dressing
+r	l	28	76	Honey, lime and basil dressing	basil
+r	l	33	80	New potato and herb salad
+r	l	31	106	Roasted basil and lemon chicken with Jerusalem artichokes	basil
+r	l	29	61	Roasted tomato and basil soup with Parmesan croutons	basil
+C	c	ingredient:	 beans, dried and green
+r	l	32	83	Beans and lemon	Beans
+r	l	30	102	Black bean burgers	bean
+r	l	29	81	Borlotti bean and broad bean salad with buffalo mozzarella	bean
+r	l	29	104	Flat bean and raw zucchini salad with mint dressing	bean
+r	l	33	86	Green bean, edamame and avocado salad with preserved lemon dressing	Green
+r	l	32	117	Grilled chorizo and avocado salad
+r	l	28	79	Grilled zucchini, green bean and sun-dried tomato salad	green
+r	l	28	81	Mixed tomato and black bean salad with mustard seed dressing	bean
+r	l	28	79	Potato, broad bean and crispy bacon salad with mint dressing	bean
+r	l	30	92	Prawns and green beans in black bean and garlic sauce	green
+r	l	31	74	Roasted fish with potatoes and fennel
+r	l	29	66	Slow-cooked green beans and tomato	green
+r	l	32	71	Spring greens with roasted mustard haloumi	greens
+r	l	28	59	Tuna, avocado and white bean sandwiches	bean
+r	l	32	92	Warm salmon carpaccio
+r	l	32	114	White bean hummus	bean
+C	c	ingredient:	 beansprouts
+r	l	31	86	Hot and sour soup with mushrooms and tofu
+r	l	30	94	Mu shu pork in Chinese pancakes
+C	c	ingredient:	 beef
+r	l	30	102	Baked beef kofta with paneer	beef
+r	l	30	64	Beef and caramelized shallot pies with cauliflower tops	Beef
+r	l	28	101	Beef and yellow split pea salad with pumpkin seed dressing	Beef
+r	l	31	112	Beef olives with cherry tomatoes	Beef
+r	l	30	85	Braised scotch fillet with Marsala and red wine sauce
+r	l	31	74	Braised shin of beef with lemongrass and coconut	beef
+r	l	33	93	Filet mignon with duck liver pâté and red wine sauce
+r	l	28	66	Korean sesame grilled beef and mushrooms	beef
+r	l	33	116	Spice rubbed rump steak with herb and mustard sauce
+r	l	32	111	Stir-fried beef and asparagus	beef
+r	l	29	104	T-bone steaks with caper, anchovy and parsley butter
+C	c	ingredient:	 beetroot
+r	l	30	102	Autumnal coleslaw
+r	l	32	92	Beef and beetroot salad with anchovy dressing	beetroot
+r	l	33	119	Beetroot and tomato salad with capers and mint	Beetroot
+r	l	31	86	Beetroot chips	Beetroot
+r	l	30	70	Honey glazed roasted root vegetables
+r	l	28	79	Roast beetroot, fresh date and pistachio salad	beetroot
+r	l	31	86	Roasted beetroot, parsnip and apple soup	beetroot
+r	l	32	75	Roasted spring vegetables with fresh Parmesan, ricotta and almonds
+C	c	ingredient:	 berries
+r	l	31	110	Blackberry and apple cobbler	Blackberry
+r	l	28	89	Blackberry and lemon loaf	Blackberry
+r	l	32	100	Blueberry sauce	Blueberry
+r	l	33	107	with crème anglaise [blueberries]
+r	l	33	120	Fresh plum and berry clafouti	berry
+r	l	28	89	Frozen blueberry yoghurt	blueberry
+r	l	29	71	Limoncello and raspberry tiramisu	raspberry
+r	l	33	73	Roasted strawberry and rhubarb compote	strawberry
+r	l	33	69	Strawberry and hazelnut meringues with crushed strawberry cream	Strawberry
+r	l	33	73	Strawberry and lemon tart	Strawberry
+r	l	33	69	Strawberry and vanilla brioche	Strawberry
+C	c	category:	biscuits, cookies and slices
+r	l	30	68	Honey crisps
+r	l	33	94	Nougat sesame biscuits	biscuits
+r	l	33	109	Poppy and sesame seed oatcakes
+r	l	33	108	Salty caramel and chocolate Christmas crackers
+r	l	29	93	Sicilian date, fig and lemon biscuits	biscuits
+C	c	ingredient:	 blue cheese
+r	l	31	90	Cauliflower, watercress and blue cheese soup	blue
+r	l	30	59	Gorgonzola polenta croutons
+r	l	30	68	Grape and blue cheese schiacciata with honey	blue
+r	l	29	69	Mushroom arancini
+r	l	32	108	Pears, blue cheese and walnuts in baking paper	blue
+r	l	29	78	Sautéed pears, prosciutto and blue cheese salad	blue
+C	c	ingredient:	 bocconcini and mozzarella
+r	l	33	80	Asparagus with mozzarella and roasted tomatoes	mozzarella
+r	l	29	85	Baked spaghetti with eggplant and bocconcini - Involtini	bocconcini
+r	l	29	81	Borlotti bean and broad bean salad with buffalo mozzarella	mozzarella
+r	l	28	66	Grilled mozzarella and garlic breads	mozzarella
+r	l	29	63	Potato, rosemary and mozzarella pizza	mozzarella
+r	l	32	104	Stuffed mushrooms baked in silverbeet leaves
+C	c	ingredient:	 bok choy
+r	l	28	97	Braised market fish with mushrooms and bok choy	bok
+C	c	category:	breads and yeast baking
+r	l	31	98	Apricot glazed fruit brioche
+r	l	32	93	Caramelized red onion, black olive and herb bread	bread
+r	l	29	63	Classic dough for pizzas or bread sticks	bread
+r	l	29	62	Herb and Parmesan bread sticks	bread
+r	l	33	69	Strawberry and vanilla brioche
+C	c	category:	brining
+r	l	28	68	Brining method	Brining
+C	c	ingredient:	 brussels sprouts
+r	l	31	110	Sautéed Brussels sprouts with bacon and almonds	Brussels
+C	c	category:	burgers, filled breads, sandwiches and wraps
+r	l	28	60	Bagels with shaved pork, fennel and lime salad
+r	l	32	82	Chicken, walnut and watercress sandwiches	sandwiches
+r	l	28	66	Grilled mozzarella and garlic breads	breads
+r	l	33	119	Indian spiced salmon and spinach burgers	burgers
+r	l	28	59	Oyster po' boys
+r	l	28	63	Picnic loaf
+r	l	29	83	Roasted capsicum and vine tomato bruschetta with ricotta
+r	l	28	63	Roasted tomato and goat's cheese bruschetta
+r	l	28	60	Scandinavian fish and prawn sandwiches with mustard sauce	sandwiches
+r	l	28	97	Spiced lamb pide pockets with mango chutney
+r	l	28	59	Tuna, avocado and white bean sandwiches	sandwiches
+r	l	31	106	Warm chicken liver salad on garlic croutes
+C	c	category:	butters, flavoured
+r	l	29	104	Caper, anchovy and parsley butter	butter
+r	l	33	112	Garlic and herb butter	butter
+r	l	31	105	Paprika butter	butter
+C	c	ingredient:	 cabbage
+r	l	33	117	Apple and cabbage coleslaw	cabbage
+r	l	32	117	Grilled chorizo and avocado salad
+r	l	30	94	Mu shu pork in Chinese pancakes
+C	c	category:	cakes and loaves
+r	l	31	102	Cardamom madeleines
+r	l	33	74	Chocolate and cherry brownie
+r	l	29	96	Chocolate and roasted hazelnut cake	cake
+r	l	31	100	Hazelnut tiramisu layer cake	cake
+r	l	32	100	Lemon, yoghurt and poppy seed cake with blueberry sauce	cake
+r	l	33	89	Lime, Riesling and passionfruit curd cakes	cakes
+r	l	31	94	Little rhubarb crumble cakes with ginger custard	cakes
+r	l	30	79	Orange and semolina syrup cake with fresh orange and date salad	cake
+C	c	ingredient:	 calamari and squid
+r	l	28	103	Calamari, fennel and chickpea salad	Calamari
+r	l	29	61	Fritto misto
+r	l	28	68	Monkfish and squid souvlaki with herb dressing	squid
+C	c	ingredient:	 capers
+r	l	33	119	Beetroot and tomato salad with capers and mint	capers
+r	l	29	104	Caper, anchovy and parsley butter	Caper
+r	l	31	74	Caper sauce	Caper
+r	l	32	98	Cornichon and caper salsa	caper
+r	l	32	75	Grilled new season potatoes with crispy onions, capers and olives	capers
+r	l	32	92	Warm salmon carpaccio
+r	l	29	78	White fish carpaccio with fried sage, capers and preserved lemon	capers
+C	c	ingredient:	 capsicums
+r	l	28	97	Braised market fish with mushrooms and bok choy
+r	l	29	104	Crisp baked potatoes with red capsicum	capsicum
+r	l	29	63	Great mixed raw salad
+r	l	32	117	Grilled chorizo and avocado salad
+r	l	28	70	Roasted capsicum and hazelnut sauce	capsicum
+r	l	29	83	Roasted capsicum and vine tomato bruschetta with ricotta	capsicum
+C	c	ingredient:	 caraway seeds
+r	l	29	107	Fig and caraway seed biscotti	caraway
+C	c	ingredient:	 carrots
+r	l	32	71	Baby carrot and date salad with coriander dressing	carrot
+r	l	28	103	Fresh vegetable salad
+r	l	29	63	Great mixed raw salad
+r	l	32	117	Grilled chorizo and avocado salad
+r	l	30	96	Indian spiced potatoes and carrots	carrots
+r	l	30	70	Honey glazed roasted root vegetables
+r	l	31	80	Moroccan carrot purée	carrot
+r	l	32	95	Navarin of spring lamb
+r	l	33	116	Orange and cumin glazed carrots	carrots
+r	l	30	101	Roasted carrot and parsnip soup	carrot
+r	l	30	87	Roasted root vegetable mash
+r	l	32	75	Roasted spring vegetables with fresh Parmesan, ricotta and almonds
+r	l	31	110	Root vegetable gratin
+C	c	ingredient:	 cashew nuts
+r	l	30	74	Honey nut tart	nut
+r	l	30	92	Prawns and green beans in black bean and garlic sauce
+C	c	ingredient:	 caulifower
+r	l	30	64	Beef and caramelized shallot pies with cauliflower tops
+r	l	30	105	Sautéed cauliflower and rocket salad
+C	c	ingredient:	 cavolo nero
+r	l	29	104	Wilted greens with fried chick peas
+C	c	ingredient:	 celeriac
+r	l	30	102	Autumnal coleslaw
+r	l	30	70	Honey glazed roasted root vegetables
+r	l	30	87	Roasted root vegetable mash
+C	c	ingredient:	 celery
+r	l	30	102	Autumnal coleslaw
+r	l	28	103	Fresh vegetable salad
+r	l	29	63	Great mixed raw salad
+r	l	32	92	Warm salmon carpaccio
+C	c	category:	       cheese 
+r	l	30	102	Baked beef kofta with paneer
+r	l	32	93	Baked semolina gnocchi
+r	l	29	74	Chickpea panelle
+r	l	32	119	Fennel, pea and Parmesan risotto
+r	l	29	62	Herb and Parmesan bread sticks
+r	l	31	82	Lemon and Parmesan sauce
+r	l	33	114	Linguine with lemon, Parmesan and soft poached eggs
+r	l	29	61	Parmesan croutons
+r	l	32	71	Spring greens with roasted mustard haloumi
+C	c	ingredient:	 cherries
+r	l	33	71	Cherry confit	Cherry
+r	l	33	74	Cherry, pomegranate molasses and pistachio relish	Cherry
+r	l	33	74	Chocolate and cherry brownie	cherry
+r	l	33	107	Fig and sour cherry Christmas puddings with crème anglaise	cherry
+r	l	28	105	Fresh cherry and rhubarb turnovers	cherry
+C	c	ingredient:	 chicken
+r	l	33	112	Asian steamed chicken with cucumber and a lime dressing	chicken
+r	l	31	77	Braised chicken with shallots, peas and apples	chicken
+r	l	31	80	Chicken and Moroccan carrot puree with orange and green olive salsa	Chicken
+r	l	29	86	Chicken bollito with salsa verde	Chicken
+r	l	29	100	Chicken cacciatore	Chicken
+r	l	32	84	Chicken kebabs with coconut and lime sambal	Chicken
+r	l	30	85	Chicken liver pâté with red onion and pomegranate molasses relish	Chicken
+r	l	32	83	Chicken supremes with beans and lemon	Chicken
+r	l	32	82	Chicken, walnut and watercress sandwiches	Chicken
+r	l	30	81	Chicken with zucchini, basil, pine nuts and tomato jam	Chicken
+r	l	32	84	Crispy five spice chicken nibbles with hot sauce	chicken
+r	l	30	94	Greek chicken with oregano and feta	chicken
+r	l	28	68	Herb roasted chicken with grilled limes	chicken
+r	l	30	62	Leek, cider and porcini pot roast chicken	chicken
+r	l	28	97	One-pan chicken meatballs and roasted tomato sauce	chicken
+r	l	32	82	Roast chicken on saffron potatoes and leeks	chicken
+r	l	31	106	Roasted basil and lemon chicken with Jerusalem artichokes	chicken
+r	l	32	87	Steamed chicken and water chestnut dumplings	chicken
+r	l	30	99	Thai chicken pies	chicken
+r	l	31	106	Warm chicken liver salad on garlic croutes	chicken
+C	c	ingredient:	 chickpeas
+r	l	28	103	Calamari, fennel and chickpea salad	chickpea
+r	l	33	86	Chickpea, fennel and artichoke salad with lemon and date dressing	Chickpea
+r	l	29	74	Chickpea panelle	Chickpea
+r	l	30	94	Greek chicken with oregano and feta
+r	l	31	69	Spanish beans
+r	l	29	104	Wilted greens with fried chick peas
+C	c	ingredient:	 chillies
+r	l	32	71	Chilli croutons
+r	l	32	84	Hot sauce
+r	l	32	107	Nuoc mam
+r	l	28	92	Sweet red chilli syrup
+C	c	ingredient:	 chocolate
+r	l	33	74	Chocolate and cherry brownie	Chocolate
+r	l	33	107	Chocolate and coconut marshmallows	Chocolate
+r	l	29	96	Chocolate and roasted hazelnut cake	Chocolate
+r	l	30	87	Hazelnut, chocolate and date baklava	chocolate
+r	l	33	108	Salty caramel and chocolate Christmas crackers	chocolate
+r	l	31	98	Saucy chocolate pudding with toasted almonds	chocolate
+C	c	ingredient:	 chorizo
+r	l	30	77	Braised pork shoulder with fennel and chorizo	chorizo
+r	l	32	117	Grilled chorizo and avocado salad	chorizo
+r	l	32	98	Pork, chorizo and herb terrine	chorizo
+r	l	33	85	Prawn and chorizo kebabs with smoked paprika and hazelnut aioli	chorizo
+C	c	category:	chutneys, pickles and relishes
+r	l	33	74	Cherry, pomegranate molasses and pistachio relish	relish
+r	l	31	72	Date and pomegranate chutney	chutney
+r	l	28	97	Mango chutney	chutney
+r	l	30	85	Red onion and pomegranate molasses relish	relish
+r	l	33	110	Spiced peach chutney	chutney
+r	l	30	81	Tomato jam
+r	l	28	66	Tomato relish	relish
+C	c	ingredient:	 coconut
+r	l	32	106	Baked fish in banana leaves with mango salad
+r	l	31	74	Braised shin of beef with lemongrass and coconut	coconut
+r	l	33	107	Chocolate and coconut marshmallows	coconut
+r	l	32	84	Coconut and lime sambal	Coconut
+r	l	31	109	Prawn and pork cakes with noodles and broth
+r	l	30	92	Quick lamb and kumara curry
+r	l	31	90	Red lentil, kumara and coconut soup	coconut
+r	l	28	90	Sticky rice and coconut puddings with papaya	coconut
+C	c	ingredient:	 coffee
+r	l	32	100	Coffee and brown sugar brûlées	Coffee
+r	l	33	107	Confectionery and sweets Chocolate and coconut marshmallows
+r	l	33	108	Salty caramel and chocolate Christmas crackers
+C	c	ingredient:	 coriander
+r	l	31	72	Chermoula paste
+r	l	33	117	Coriander and yoghurt dressing	Coriander
+r	l	32	71	Coriander dressing	Coriander
+r	l	32	117	Grilled chorizo and avocado salad
+r	l	33	116	Herb and mustard sauce
+r	l	32	114	Spicy lamb sausages with white bean hummus
+C	c	ingredient:	 corn
+r	l	28	76	Quinoa, sweet corn and edamame bean salad with honey, lime and basil dressing	corn
+C	c	category:	cornichons and gherkins
+r	l	32	98	Cornichon and caper salsa	Cornichon
+r	l	33	80	New potato and herb salad
+C	c	ingredient:	 couscous
+r	l	31	72	Pumpkin couscous	couscous
+r	l	29	85	Sicilian fish couscous	couscous
+C	c	ingredient:	 cranberries
+r	l	33	79	Baked ham with cranberries and glacé peaches	cranberries
+r	l	33	107	Fig and sour cherry Christmas puddings with crème anglaise
+r	l	33	108	Salty caramel and chocolate Christmas crackers
+C	c	ingredient:	 crème fraîche
+r	l	33	85	Crab, lemon and crème fraîche tart	crème
+r	l	33	102	Smoked fish brandade
+C	c	ingredient:	 cucumber
+r	l	33	112	Asian steamed chicken with cucumber and a lime dressing	cucumber
+r	l	28	76	Cucumber salad with spicy and sweet poppy seed dressing	Cucumber
+C	c	ingredient:	 dates
+r	l	32	71	Baby carrot and date salad with coriander dressing	date
+r	l	33	86	Chickpea, fennel and artichoke salad with lemon and date dressing	date
+r	l	31	72	Date and pomegranate chutney	Date
+r	l	32	104	Date, rum and ricotta strudels	Date
+r	l	30	79	Fresh orange and date salad	date
+r	l	30	87	Hazelnut, chocolate and date baklava	date
+r	l	28	79	Roast beetroot, fresh date and pistachio salad	date
+r	l	29	93	Sicilian date, fig and lemon biscuits	date
+C	c	category:	desserts and puddings 
+r	l	31	110	Blackberry and apple cobbler
+r	l	28	89	Blackberry and lemon loaf
+r	l	31	102	Cardamom madeleines with roasted tamarillo fool
+r	l	32	100	Coffee and brown sugar brûlées
+r	l	29	107	Fig and caraway seed biscotti
+r	l	33	107	Fig and sour cherry Christmas puddings with crème anglaise	puddings
+r	l	33	120	Fresh plum and berry clafouti
+r	l	32	120	Grilled pineapple with butterscotch sauce
+r	l	28	86	Grilled pineapple with mint and lime sugar
+r	l	33	83	Honey roasted peanut, rum and caramel tiramisu
+r	l	29	71	Limoncello and raspberry tiramisu
+r	l	28	86	Melon with lemongrass syrup
+r	l	33	94	Nougat sesame biscuits with honey roasted peaches
+r	l	31	84	Orange and saffron confit
+r	l	30	72	Poached apricots with rosemary and peppercorn syrup
+r	l	28	86	Roast stonefruit with ricotta and pistachios
+r	l	29	106	Roasted plums and rhubarb
+r	l	33	73	Roasted strawberry and rhubarb compote
+r	l	31	98	Saucy chocolate pudding with toasted almonds	pudding
+r	l	30	106	Self-saucing banana butterscotch pudding	pudding
+r	l	29	88	Spiced sesame and honey torrone
+r	l	31	100	Steamed candied orange puddings	puddings
+r	l	31	96	Sticky pear and ginger pudding with toffee sauce	pudding
+r	l	28	90	Sticky rice and coconut puddings with papaya	puddings
+r	l	31	94	Vanilla rice pudding with Shiraz poached quinces	pudding
+r	l	30	68	Yoghurt, lime and honey panna cotta
+r	l	29	96	Zabaglione with Marsala raisins
+C	c	category:	dressings and mayonnaise
+r	l	32	92	Anchovy dressing	dressing
+r	l	33	117	Coriander and yoghurt dressing	dressing
+r	l	32	71	Coriander dressing	dressing
+r	l	28	68	Herb dressing	dressing
+r	l	28	76	Honey, lime and basil dressing	dressing
+r	l	33	86	Lemon and date dressing	dressing
+r	l	33	112	Lime dressing	dressing
+r	l	28	79	Mint dressing	dressing
+r	l	29	104	Mint dressing	dressing
+r	l	28	81	Mustard seed dressing	dressing
+r	l	28	105	Pistachio and tarragon dressing	dressing
+r	l	33	79	Preserved lemon aioli
+r	l	33	86	Preserved lemon dressing	dressing
+r	l	28	101	Pumpkin seed dressing	dressing
+r	l	33	85	Smoked paprika and hazelnut aioli
+r	l	28	76	Spicy and sweet poppy seed dressing	dressing
+r	l	28	83	Tomato and rosemary vinaigrette
+C	c	ingredient:	 drinks
+r	l	31	80	Lime and lemonade
+r	l	29	97	Sgroppino
+C	c	ingredient:	 duck
+r	l	32	107	Crispy duck spring rolls	duck
+r	l	30	57	Duck and cinnamon pear salad with crispy wontons	Duck
+r	l	31	72	Duck tagine with pumpkin couscous and date chutney	Duck
+r	l	30	70	Honey spiced duck	duck
+C	c	ingredient:	 eggplants
+r	l	29	85	Baked spaghetti with eggplant and bocconcini - Involtini	eggplant
+r	l	33	117	Eggplant and zucchini salad with coriander and yoghurt dressing	Eggplant
+r	l	29	74	Eggplant stemperata	Eggplant
+r	l	28	63	Picnic loaf
+r	l	29	96	Zabaglione with Marsala raisins
+C	c	ingredient:	 eggs
+r	l	32	92	Beef and beetroot salad with anchovy dressing
+r	l	32	100	Coffee and brown sugar brûlées
+r	l	33	107	Crème anglaise
+r	l	30	101	Crispy eggs with bacon and lentils	eggs
+r	l	28	101	Family-style baked omelette with zucchini and smoked salmon
+r	l	31	94	Ginger custard
+r	l	32	98	Leek and goat's cheese tart with walnut pastry
+r	l	33	114	Linguine with lemon, Parmesan and soft poached eggs	eggs
+r	l	28	63	Picnic loaf
+r	l	31	108	Potato crusted silverbeet and feta tart
+r	l	31	82	Ricotta and rocket gnocchi with lemon and Parmesan sauce
+r	l	33	99	Sweet potato and spinach tortilla with feta yoghurt
+C	c	ingredient:	 edamame beans
+r	l	33	86	Green bean, edamame and avocado salad with preserved lemon dressing	bean
+r	l	31	86	Hot and sour soup with mushrooms and tofu
+r	l	28	76	Quinoa, sweet corn and edamame bean salad with honey, lime and basil dressing	edamame
+C	c	ingredient:	 fennel
+r	l	30	102	Autumnal coleslaw
+r	l	28	60	Bagels with shaved pork, fennel and lime salad	fennel
+r	l	32	83	Beans and lemon
+r	l	29	66	Braised fennel	fennel
+r	l	30	77	Braised pork shoulder with fennel and chorizo	fennel
+r	l	28	103	Calamari, fennel and chickpea salad	fennel
+r	l	33	86	Chickpea, fennel and artichoke salad with lemon and date dressing	fennel
+r	l	32	119	Fennel, pea and Parmesan risotto	Fennel
+r	l	31	81	Prawn, grapefruit and fregola salad
+r	l	32	71	Roasted fennel and prawns with chilli croutons	fennel
+r	l	31	74	Roasted fish with potatoes and fennel	fennel
+r	l	28	76	Watermelon, fennel and feta salad with prawns	fennel
+C	c	ingredient:	 feta
+r	l	33	99	Feta yoghurt	Feta
+r	l	30	94	Greek chicken with oregano and feta	feta
+r	l	32	117	Grilled chorizo and avocado salad
+r	l	31	108	Potato crusted silverbeet and feta tart	feta
+r	l	33	116	Roasted loin of lamb with orange and cumin glazed carrots
+r	l	28	76	Watermelon, fennel and feta salad with prawns	feta
+C	c	ingredient:	 figs
+r	l	29	93	Brandy and honey baked figs	figs
+r	l	29	107	Fig and caraway seed biscotti	Fig
+r	l	33	107	Fig and sour cherry Christmas puddings with crème anglaise	Fig
+r	l	29	93	Sicilian date, fig and lemon biscuits	fig
+C	c	category:	fish 
+r	l	32	106	Baked fish in banana leaves with mango salad	fish
+r	l	33	112	Barbecued whole fish with garlic and herb butter	fish
+r	l	28	97	Braised market fish with mushrooms and bok choy	fish
+r	l	29	99	Crispy skinned fish with orange, parsley and pine nut salad	fish
+r	l	32	117	Fettuccine with fish, clams and tomatoes	fish
+r	l	29	61	Fritto misto
+r	l	30	81	Lemongrass and seafood soup
+r	l	33	91	Lime and wasabi marinated tuna with avocado
+r	l	31	105	Market fish with white wine, grapes and tarragon	fish
+r	l	28	68	Monkfish and squid souvlaki with herb dressing
+r	l	31	74	Roasted fish with potatoes and fennel	fish
+r	l	28	60	Scandinavian fish and prawn sandwiches with mustard sauce	fish
+r	l	29	85	Sicilian fish couscous	fish
+r	l	33	102	Smoked fish and parsnip cakes with Smoked fish brandade	fish
+r	l	29	78	White fish carpaccio with fried sage, capers and preserved lemon	fish
+C	c	ingredient:	 garlic
+r	l	33	112	Garlic and herb butter	Garlic
+r	l	28	66	Grilled mozzarella and garlic breads	garlic
+r	l	30	70	Honey glazed roasted root vegetables
+r	l	32	107	Nuoc mam
+C	c	ingredient:	 ginger
+r	l	31	94	Ginger custard	Ginger
+r	l	31	96	Sticky pear and ginger pudding with toffee sauce	ginger
+r	l	30	77	Goat's cheese Baked goat's cheese with dry roasted olives
+r	l	33	91	Caramelized onion, anchovy and goat's cheese tartlets
+r	l	32	98	Leek and goat's cheese tart with walnut pastry
+r	l	33	100	Quince and goat's cheese balls with walnut crumb
+r	l	28	63	Roasted tomato and goat's cheese bruschetta
+r	l	32	69	Zucchini, mint and goat's cheese pizzas
+C	c	ingredient:	 grapefruit
+r	l	31	81	Prawn, grapefruit and fregola salad	grapefruit
+C	c	ingredient:	 grapes
+r	l	30	68	Grape and blue cheese schiacciata with honey	Grape
+r	l	31	105	Market fish with white wine, grapes and tarragon	grapes
+C	c	ingredient:	 ham
+r	l	33	79	Baked ham with cranberries and glacé peaches	ham
+C	c	ingredient:	 hazelnuts
+r	l	30	102	Autumnal coleslaw
+r	l	31	82	Baked witlof with orange and hazelnuts	hazelnuts
+r	l	29	96	Chocolate and roasted hazelnut cake	hazelnut
+r	l	30	87	Hazelnut, chocolate and date baklava	Hazelnut
+r	l	31	100	Hazelnut tiramisu layer cake	Hazelnut
+r	l	32	87	Poached chicken, apple, rocket and hazelnut salad	hazelnut
+r	l	28	70	Roasted capsicum and hazelnut sauce	hazelnut
+r	l	33	85	Smoked paprika and hazelnut aioli	hazelnut
+r	l	28	95	Spinach, orange and hazelnut salad	hazelnut
+r	l	33	69	Strawberry and hazelnut meringues with crushed strawberry cream	hazelnut
+r	l	28	73	Stuffed salmon in vine leaves
+C	c	ingredient:	 honey
+r	l	29	93	Brandy and honey baked figs	honey
+r	l	30	70	Cinnamon buttermilk hotcakes
+r	l	30	68	Grape and blue cheese schiacciata with honey	honey
+r	l	30	68	Honey crisps	Honey
+r	l	30	70	Honey glazed roasted root vegetables	Honey
+r	l	28	76	Honey, lime and basil dressing	Honey
+r	l	33	94	Honey roasted peaches	Honey
+r	l	30	70	Honey spiced duck	Honey
+r	l	32	108	Pears, blue cheese and walnuts in baking paper
+r	l	29	97	Sgroppino
+r	l	29	88	Spiced sesame and honey torrone	honey
+r	l	30	68	Yoghurt, lime and honey panna cotta	honey
+C	c	category:	ice cream and frozen desserts
+r	l	29	89	Almond granita - Granita di mandorle
+r	l	33	75	Cherry granita
+r	l	28	89	Frozen blueberry yoghurt	Frozen
+r	l	29	93	Mascarpone and vanilla bean semifreddo
+C	c	ingredient:	 kumara
+r	l	30	70	Honey glazed roasted root vegetables
+r	l	30	92	Quick lamb and kumara curry	kumara
+r	l	31	90	Red lentil, kumara and coconut soup	kumara
+r	l	30	87	Roasted root vegetable mash
+r	l	31	110	Root vegetable gratin
+r	l	33	99	Sweet potato and spinach tortilla with feta yoghurt
+C	c	ingredient:	 lamb
+r	l	31	105	Baked Turkish lamb manti with minted yoghurt sauce	lamb
+r	l	29	65	Braised lamb with olives	lamb
+r	l	32	95	Lamb sausage and red wine ragu	Lamb
+r	l	28	66	Lamb shoulder chops with charred tomato relish	Lamb
+r	l	32	95	Navarin of spring lamb	lamb
+r	l	30	92	Quick lamb and kumara curry	lamb
+r	l	31	69	Roast breast of lamb on Spanish beans	lamb
+r	l	33	116	Roasted loin of lamb with orange and cumin glazed carrots	lamb
+r	l	29	102	Roman-style lamb cutlets	lamb
+r	l	28	97	Spiced lamb pide pockets with mango chutney	lamb
+r	l	32	114	Spicy lamb sausages with white bean hummus	lamb
+r	l	33	86	Zucchini-wrapped lamb cutlets	lamb
+C	c	ingredient:	 leeks
+r	l	32	98	Leek and goat's cheese tart with walnut pastry	Leek
+r	l	30	62	Leek, cider and porcini pot roast chicken	Leek
+r	l	31	77	Puy lentils with leeks	leeks
+r	l	32	82	Saffron potatoes and leeks	leeks
+C	c	ingredient:	 lemongrass
+r	l	31	74	Braised shin of beef with lemongrass and coconut	lemongrass
+r	l	30	81	Lemongrass and seafood soup	Lemongrass
+r	l	28	86	Lemongrass syrup	Lemongrass
+C	c	ingredient:	 lemons
+r	l	32	83	Beans and lemon	lemon
+r	l	28	89	Blackberry and lemon loaf	lemon
+r	l	33	85	Crab, lemon and crème fraîche tart	lemon
+r	l	31	82	Lemon and Parmesan sauce	Lemon
+r	l	32	100	Lemon, yoghurt and poppy seed cake with blueberry sauce	Lemon
+r	l	32	111	Lemon yoghurt sauce	Lemon
+r	l	31	80	Lime and lemonade
+r	l	33	114	Linguine with lemon, Parmesan and soft poached eggs	lemon
+r	l	33	79	Preserved lemon aioli	lemon
+r	l	33	86	Preserved lemon dressing	lemon
+r	l	31	106	Roasted basil and lemon chicken with Jerusalem artichokes	lemon
+r	l	29	93	Sicilian date, fig and lemon biscuits	lemon
+r	l	33	73	Strawberry and lemon tart	lemon
+r	l	29	78	White fish carpaccio with fried sage, capers and preserved lemon	lemon
+r	l	32	76	Zesty rice salad with preserved lemon, artichokes and asparagus	lemon
+C	c	ingredient:	 lentils
+r	l	30	101	Crispy eggs with bacon and lentils	lentils
+r	l	30	59	Mushroom and lentil soup with Gorgonzola polenta croutons	lentil
+r	l	31	77	Puy lentils with leeks	lentils
+r	l	31	90	Red lentil, kumara and coconut soup	lentil
+C	c	ingredient:	 lettuce
+r	l	32	92	Beef and beetroot salad with anchovy dressing
+r	l	29	63	Great mixed raw salad
+r	l	32	119	Green salad
+r	l	28	105	Pear, avocado and mixed greens with pistachio and tarragon dressing
+C	c	ingredient:	 limes
+r	l	28	60	Bagels with shaved pork, fennel and lime salad	lime
+r	l	32	84	Coconut and lime sambal	lime
+r	l	28	68	Herb roasted chicken with grilled limes	limes
+r	l	28	76	Honey, lime and basil dressing	lime
+r	l	31	80	Lime and lemonade	Lime
+r	l	33	91	Lime and wasabi marinade	Lime
+r	l	33	112	Lime dressing	Lime
+r	l	28	86	Mint and lime sugar	lime
+r	l	30	68	Yoghurt, lime and honey panna cotta	lime
+C	c	ingredient:	 mangos
+r	l	28	70	Mango and pineapple salsa	Mango
+r	l	28	97	Mango chutney	Mango
+r	l	32	106	Mango salad	Mango
+r	l	28	92	Mango tart with sweet red chilli syrup	Mango
+C	c	category:	marinades
+r	l	33	91	Lime and wasabi marinade	marinade
+C	c	ingredient:	 mascarpone
+r	l	29	71	Limoncello and raspberry tiramisu
+r	l	29	93	Mascarpone and vanilla bean semifreddo	Mascarpone
+C	c	ingredient:	 melons
+r	l	28	86	Melon with lemongrass syrup	Melon
+C	c	ingredient:	 meringue
+r	l	33	69	Strawberry and hazelnut meringues with crushed strawberry cream	meringues
+C	c	ingredient:	 mint
+r	l	33	119	Beetroot and tomato salad with capers and mint	mint
+r	l	33	112	Garlic and herb butter
+r	l	33	116	Herb and mustard sauce
+r	l	32	111	Lemon yoghurt sauce
+r	l	28	86	Mint and lime sugar	Mint
+r	l	29	104	Mint dressing	Mint
+r	l	28	79	Mint dressing	Mint
+r	l	33	86	Preserved lemon dressing
+r	l	32	75	Ricotta, pea and herb gnocchi with fresh tomato salsa and crispy pancetta
+r	l	32	114	Spicy lamb sausages with white bean hummus
+r	l	32	76	Zesty rice salad with preserved lemon, artichokes and asparagus
+r	l	32	69	Zucchini, mint and goat's cheese pizzas	mint
+C	c	ingredient:	 mushrooms
+r	l	31	112	Beef olives with cherry tomatoes
+r	l	28	97	Braised market fish with mushrooms and bok choy	mushrooms
+r	l	31	86	Hot and sour soup with mushrooms and tofu	mushrooms
+r	l	28	66	Korean sesame grilled beef and mushrooms	mushrooms
+r	l	30	62	Leek, cider and porcini pot roast chicken
+r	l	30	94	Mu shu pork in Chinese pancakes
+r	l	30	59	Mushroom and lentil soup with Gorgonzola polenta croutons	Mushroom
+r	l	29	69	Mushroom arancini	Mushroom
+r	l	29	69	Mushroom arancini	Mushroom
+r	l	29	102	Pork scaloppini with mushrooms and Marsala	mushrooms
+r	l	32	104	Stuffed mushrooms baked in silverbeet leaves	mushrooms
+C	c	ingredient:	 mussels
+r	l	32	92	Mussels and clams in a white wine and tarragon broth	Mussels
+C	c	ingredient:	 mustard
+r	l	33	116	Herb and mustard sauce	mustard
+r	l	31	88	Mustard croutons	Mustard
+r	l	28	60	Mustard sauce	Mustard
+r	l	32	92	Mustard sauce	Mustard
+r	l	28	81	Mustard seed dressing	Mustard
+r	l	32	71	Roasted mustard haloumi	mustard
+C	c	ingredient:	 nectarines
+r	l	33	94	Honey roasted peaches [or nectarines]
+r	l	28	86	Roast stonefruit with ricotta and pistachios
+C	c	ingredient:	 noodles
+r	l	30	99	Miso salmon with soba noodles	noodles
+r	l	31	109	Prawn and pork cakes with noodles and broth	noodles
+r	l	32	111	Stir-fried beef and asparagus
+C	c	ingredient:	 olives
+r	l	30	77	Baked goat's cheese with dry roasted olives	olives
+r	l	29	65	Braised lamb with olives	olives
+r	l	32	93	Caramelized red onion, black olive and herb bread
+r	l	32	98	Cornichon and caper salsa
+r	l	29	104	Flat bean and raw zucchini salad with mint dressing
+r	l	30	94	Greek chicken with oregano and feta
+r	l	32	75	Grilled new season potatoes with crispy onions, capers and olives	olives
+r	l	31	80	Orange and green olive salsa
+r	l	32	114	Spicy lamb sausages with white bean hummus
+C	c	ingredient:	 onions and shallots
+r	l	30	107	Apples and shallot sauce	shallot
+r	l	30	64	Beef and caramelized shallot pies with cauliflower tops	shallot
+r	l	31	77	Braised chicken with shallots, peas and apples	shallots
+r	l	33	91	Caramelized onion, anchovy and goat's cheese tartlets	onion
+r	l	31	69	Caramelized onion gravy	onion
+r	l	32	93	Caramelized red onion, black olive and herb bread	onion
+r	l	32	75	Grilled new season potatoes with crispy onions, capers and olives	onions
+r	l	30	85	Red onion and pomegranate molasses relish	onion
+r	l	31	74	Roasted fish with potatoes and fennel
+C	c	ingredient:	 oranges
+r	l	31	82	Baked witlof with orange and hazelnuts	orange
+r	l	33	86	Chickpea, fennel and artichoke salad with lemon and date dressing
+r	l	33	86	Lemon and date dressing
+r	l	33	116	Orange and cumin glazed carrots	Orange
+r	l	33	86	Lemon and date dressing
+r	l	31	80	Orange and green olive salsa	Orange
+r	l	31	84	Orange and saffron confit	Orange
+r	l	30	79	Orange and semolina syrup cake with fresh orange and date salad	Orange
+r	l	29	99	Orange, parsley and pine nut salad	Orange
+r	l	28	95	Spinach, orange and hazelnut salad	orange
+r	l	31	100	Steamed candied orange puddings	orange
+C	c	category:	pancakes and hotcakes
+r	l	30	94	Chinese pancakes	pancakes
+r	l	30	70	Cinnamon buttermilk hotcakes	hotcakes
+C	c	ingredient:	 pancetta
+r	l	32	75	Fresh tomato salsa and crispy pancetta	pancetta
+C	c	ingredient:	 papaya
+r	l	28	90	Sticky rice and coconut puddings with papaya	papaya
+C	c	ingredient:	 parsley
+r	l	33	117	Apple and cabbage coleslaw
+r	l	29	104	Caper, anchovy and parsley butter	parsley
+r	l	31	72	Chermoula paste
+r	l	33	112	Garlic and herb butter
+r	l	32	119	Green salad
+r	l	33	116	Herb and mustard sauce
+r	l	28	68	Herb dressing
+r	l	33	80	New potato and herb salad
+r	l	29	99	Orange, parsley and pine nut salad	parsley
+r	l	32	98	Pork, chorizo and herb terrine
+r	l	32	75	Ricotta, pea and herb gnocchi with fresh tomato salsa and crispy pancetta
+r	l	32	114	Spicy lamb sausages with white bean hummus
+r	l	32	76	Zesty rice salad with preserved lemon, artichokes and asparagus
+C	c	ingredient:	 parsnips
+r	l	30	70	Honey glazed roasted root vegetables
+r	l	31	69	Parsnip and pear mash	Parsnip
+r	l	31	86	Roasted beetroot, parsnip and apple soup	parsnip
+r	l	30	101	Roasted carrot and parsnip soup	parsnip
+r	l	30	87	Roasted root vegetable mash
+r	l	31	110	Root vegetable gratin
+C	c	ingredient:	 passionfruit
+r	l	33	89	Smoked fish and parsnip cakes with Lime, Riesling and passionfruit curd cakes	passionfruit
+C	c	category:	pasta and gnocchi 
+r	l	29	66	Baked pasta with pumpkin and amaretti	pasta
+r	l	29	100	Baked penne with sausages and spinach
+r	l	32	93	Baked semolina gnocchi	gnocchi
+r	l	29	85	Baked spaghetti with eggplant and bocconcini - Involtini
+r	l	32	117	Fettuccine with fish, clams and tomatoes
+r	l	29	99	Linguine with fresh tomatoes and artichokes
+r	l	33	114	Linguine with lemon, Parmesan and soft poached eggs
+r	l	30	59	Papardelle with walnut pesto and roasted pumpkin
+r	l	31	81	Prawn, grapefruit and fregola salad
+r	l	31	82	Ricotta and rocket gnocchi with lemon and Parmesan sauce	gnocchi
+r	l	32	75	Ricotta, pea and herb gnocchi with fresh tomato salsa and crispy pancetta	gnocchi
+C	c	category:	pastries
+r	l	32	104	Date, rum and ricotta strudels
+r	l	28	105	Fresh cherry and rhubarb turnovers
+r	l	30	87	Hazelnut, chocolate and date baklava
+r	l	33	100	Spicy pork empanadas
+C	c	ingredient:	 peaches
+r	l	33	79	Baked ham with cranberries and glacé peaches	peaches
+r	l	33	94	Honey roasted peaches	peaches
+r	l	28	86	Roast stonefruit with ricotta and pistachios
+r	l	33	110	Spiced peach chutney	peach
+C	c	ingredient:	 peanuts
+r	l	33	83	Honey roasted peanut, rum and caramel tiramisu	peanut
+r	l	32	111	Stir-fried beef and asparagus
+C	c	ingredient:	 pears
+r	l	30	57	Duck and cinnamon pear salad with crispy wontons	pear
+r	l	30	83	Ginger beer poached pears	pears
+r	l	31	69	Parsnip and pear mash	pear
+r	l	28	105	Pear, avocado and mixed greens with pistachio and tarragon dressing	Pear
+r	l	32	108	Pears, blue cheese and walnuts in baking paper	Pears
+r	l	29	78	Sautéed pears, prosciutto and blue cheese salad	pears
+r	l	31	96	Sticky pear and ginger pudding with toffee sauce	pear
+C	c	ingredient:	 peas, dried
+r	l	28	101	Beef and yellow split pea salad with pumpkin seed dressing	pea
+C	c	ingredient:	 peas, green
+r	l	31	77	Braised chicken with shallots, peas and apples	peas
+r	l	32	119	Fennel, pea and Parmesan risotto	pea
+r	l	32	71	Spring greens with roasted mustard haloumi	greens
+r	l	32	111	Spring vegetable and prawn fritters with a lemon yoghurt sauce
+C	c	category:	pies
+r	l	30	64	Beef and caramelized shallot pies with cauliflower tops	pies
+r	l	30	99	Thai chicken pies	pies
+C	c	ingredient:	 pine nuts
+r	l	29	86	Braised rabbit with spinach and pine nuts	pine
+r	l	30	81	Chicken with zucchini, basil, pine nuts and tomato jam	pine
+r	l	29	99	Orange, parsley and pine nut salad	pine
+r	l	29	66	Roasted pumpkin with brown butter, sage and pine nuts	pine
+C	c	ingredient:	 pineapple
+r	l	32	120	Grilled pineapple with butterscotch sauce	pineapple
+r	l	28	86	Grilled pineapple with mint and lime sugar	pineapple
+r	l	28	70	Mango and pineapple salsa	pineapple
+C	c	ingredient:	 pistachios
+r	l	33	74	Cherry, pomegranate molasses and pistachio relish	pistachio
+r	l	28	105	Pistachio and tarragon dressing	Pistachio
+r	l	28	79	Roast beetroot, fresh date and pistachio salad	pistachio
+r	l	28	86	Roast stonefruit with ricotta and pistachios	pistachios
+r	l	33	108	Salty caramel and chocolate Christmas crackers
+C	c	category:	pizzas and flatbreads
+r	l	29	63	Classic dough for pizzas or bread sticks	pizzas
+r	l	30	68	Grape and blue cheese schiacciata with honey
+r	l	32	69	Pizza dough	Pizza
+r	l	29	63	Potato, rosemary and mozzarella pizza	pizza
+r	l	32	69	Zucchini, mint and goat's cheese pizzas	pizzas
+C	c	ingredient:	 plums
+r	l	33	120	Fresh plum and berry clafouti	plum
+r	l	29	106	Roasted plums and rhubarb	plums
+r	l	28	86	Roast stonefruit with ricotta and pistachios
+C	c	ingredient:	 polenta
+r	l	30	59	Gorgonzola polenta croutons	polenta
+C	c	ingredient:	 pomegranate molasses
+r	l	33	74	Cherry, pomegranate molasses and pistachio relish	pomegranate
+r	l	31	72	Date and pomegranate chutney	pomegranate
+r	l	30	85	Red onion and pomegranate molasses relish	pomegranate
+r	l	32	114	Spicy lamb sausages with white bean hummus
+C	c	ingredient:	 poppy seeds
+r	l	32	100	Lemon, yoghurt and poppy seed cake with blueberry sauce	poppy
+r	l	33	109	Poppy and sesame seed oatcakes	Poppy
+r	l	28	76	Spicy and sweet poppy seed dressing	poppy
+C	c	ingredient:	 pork
+r	l	28	60	Bagels with shaved pork, fennel and lime salad	pork
+r	l	30	77	Braised pork shoulder with fennel and chorizo	pork
+r	l	32	114	Clay pot pork	pork
+r	l	31	69	Crisp roasted pork hocks with caramelized onion gravy	pork
+r	l	28	95	Crumbed pork schnitzel with spinach, orange and hazelnut salad	pork
+r	l	30	94	Mu shu pork in Chinese pancakes	pork
+r	l	33	117	Polenta crumbed pork schnitzel with apple and cabbage coleslaw	pork
+r	l	32	98	Pork, chorizo and herb terrine	Pork
+r	l	30	107	Pork fillet with apples and shallot sauce	Pork
+r	l	29	102	Pork scaloppini with mushrooms and Marsala	Pork
+r	l	31	109	Prawn and pork cakes with noodles and broth	pork
+r	l	29	81	Sage roasted pork belly and apples	pork
+r	l	33	100	Spicy pork empanadas	pork
+r	l	32	106	Steamed pork spare ribs in lotus leaves	pork
+r	l	28	70	Twice-cooked pork belly with roasted capsicum and hazelnut sauce	pork
+C	c	ingredient:	 potatoes
+r	l	29	104	Crisp baked potatoes with red capsicum	potatoes
+r	l	32	75	Grilled new season potatoes with crispy onions, capers and olives	potatoes
+r	l	30	96	Indian spiced potatoes and carrots	potatoes
+r	l	31	88	Jerusalem artichoke and potato soup with mustard croutons	potato
+r	l	32	95	Navarin of spring lamb
+r	l	33	80	New potato and herb salad	potato
+r	l	28	79	Potato, broad bean and crispy bacon salad with mint dressing	Potato
+r	l	31	108	Potato crusted silverbeet and feta tart	Potato
+r	l	29	63	Potato, rosemary and mozzarella pizza	Potato
+r	l	33	93	Potato rosti	Potato
+r	l	31	74	Roasted fish with potatoes and fennel	potatoes
+r	l	31	110	Root vegetable gratin
+r	l	32	82	Saffron potatoes and leeks	potatoes
+r	l	33	102	Smoked fish brandade
+C	c	ingredient:	 prawns
+r	l	29	61	Fritto misto
+r	l	33	85	Prawn and chorizo kebabs with smoked paprika and hazelnut aioli	Prawn
+r	l	31	109	Prawn and pork cakes with noodles and broth	Prawn
+r	l	31	81	Prawn, grapefruit and fregola salad	Prawn
+r	l	33	99	Prawn rice paper parcels	Prawn
+r	l	30	92	Prawns and green beans in black bean and garlic sauce	Prawns
+r	l	32	71	Roasted fennel and prawns with chilli croutons	prawns
+r	l	28	60	Scandinavian fish and prawn sandwiches with mustard sauce	prawn
+r	l	32	111	Spring vegetable and prawn fritters with a lemon yoghurt sauce	prawn
+r	l	28	70	Tikka prawns with mango and pineapple salsa	prawns
+C	c	category:	preserves 
+r	l	33	71	Cherry confit
+r	l	31	84	Orange and saffron confit
+C	c	ingredient:	 prosciutto
+r	l	31	82	Baked witlof with orange and hazelnuts
+r	l	29	78	Sautéed pears, prosciutto and blue cheese salad	prosciutto
+C	c	ingredient:	 pumpkin
+r	l	29	66	Baked pasta with pumpkin and amaretti	pumpkin
+r	l	30	59	Papardelle with walnut pesto and roasted pumpkin	pumpkin
+r	l	31	72	Pumpkin couscous	Pumpkin
+r	l	31	86	Roasted buttercup pumpkins	pumpkins
+r	l	29	66	Roasted pumpkin with brown butter, sage and pine nuts	pumpkin
+r	l	30	87	Roasted root vegetable mash
+C	c	ingredient:	 pumpkin seeds
+r	l	28	101	Pumpkin seed dressing	Pumpkin
+r	l	32	75	Roasted spring vegetables with fresh Parmesan, ricotta and almonds
+C	c	ingredient:	 quinces
+r	l	33	100	Quince and goat's cheese balls with walnut crumb	Quince
+r	l	31	94	Vanilla rice pudding with Shiraz poached quinces	quinces
+C	c	ingredient:	 quinoa
+r	l	28	76	Quinoa, sweet corn and edamame bean salad with honey, lime and basil dressing	Quinoa
+C	c	ingredient:	 rabbit
+r	l	29	86	Braised rabbit with spinach and pine nuts	rabbit
+C	c	ingredient:	 radishes
+r	l	30	102	Autumnal coleslaw
+r	l	31	81	Prawn, grapefruit and fregola salad
+C	c	ingredient:	 rhubarb
+r	l	28	105	Fresh cherry and rhubarb turnovers	rhubarb
+r	l	31	94	Little rhubarb crumble cakes with ginger custard	rhubarb
+r	l	29	106	Roasted plums and rhubarb	rhubarb
+r	l	33	73	Roasted strawberry and rhubarb compote	rhubarb
+C	c	ingredient:	 rice
+r	l	32	119	Fennel, pea and Parmesan risotto
+r	l	29	69	Mushroom arancini
+r	l	29	69	Mushroom arancini
+r	l	30	105	Rice pilaf	Rice
+r	l	28	90	Sticky rice and coconut puddings with papaya	rice
+r	l	31	94	Vanilla rice pudding with Shiraz poached quinces	rice
+r	l	32	76	Zesty rice salad with preserved lemon, artichokes and asparagus	rice
+C	c	ingredient:	 ricotta
+r	l	28	83	Artichoke and ricotta salad with tomato and rosemary vinaigrette	ricotta
+r	l	32	104	Date, rum and ricotta strudels	ricotta
+r	l	31	82	Ricotta and rocket gnocchi with lemon and Parmesan sauce	Ricotta
+r	l	32	75	Ricotta, pea and herb gnocchi with fresh tomato salsa and crispy pancetta	Ricotta
+r	l	28	86	Roast stonefruit with ricotta and pistachios	ricotta
+r	l	29	83	Roasted capsicum and vine tomato bruschetta with ricotta	ricotta
+r	l	32	75	Roasted spring vegetables with fresh Parmesan, ricotta and almonds	ricotta
+C	c	ingredient:	 rocket
+r	l	32	92	Beef and beetroot salad with anchovy dressing
+r	l	32	119	Green salad
+r	l	33	114	Linguine with lemon, Parmesan and soft poached eggs
+r	l	32	87	Poached chicken, apple, rocket and hazelnut salad	rocket
+r	l	31	81	Prawn, grapefruit and fregola salad
+r	l	31	82	Ricotta and rocket gnocchi with lemon and Parmesan sauce	rocket
+r	l	30	105	Sautéed cauliflower and rocket salad	rocket
+C	c	ingredient:	 rosemary
+r	l	30	66	Apple and rosemary tarte tatin	rosemary
+r	l	32	93	Baked semolina gnocchi
+r	l	32	93	Caramelized red onion, black olive and herb bread
+r	l	30	72	Poached apricots with rosemary and peppercorn syrup	rosemary
+r	l	32	98	Pork, chorizo and herb terrine
+r	l	29	63	Potato, rosemary and mozzarella pizza	rosemary
+r	l	33	93	Potato rosti
+r	l	28	83	Tomato and rosemary vinaigrette	rosemary
+C	c	ingredient:	 saffron
+r	l	31	84	Orange and saffron confit	saffron
+r	l	32	82	Saffron potatoes and leeks	Saffron
+C	c	ingredient:	 sage
+r	l	32	93	Baked semolina gnocchi
+r	l	29	66	Roasted pumpkin with brown butter, sage and pine nuts	sage
+r	l	29	102	Roman-style lamb cutlets
+r	l	29	81	Sage roasted pork belly and apples	Sage
+r	l	29	78	White fish carpaccio with fried sage, capers and preserved lemon	sage
+C	c	category:	salads, fruit
+r	l	30	79	Fresh orange and date salad	salad
+r	l	32	106	Mango salad	salad
+C	c	category:	salads, meat and fish
+r	l	32	92	Beef and beetroot salad with anchovy dressing	salad
+r	l	28	101	Beef and yellow split pea salad with pumpkin seed dressing	salad
+r	l	28	103	Calamari, fennel and chickpea salad	salad
+r	l	30	57	Duck and cinnamon pear salad with crispy wontons	salad
+r	l	32	117	Grilled chorizo and avocado salad	salad
+r	l	32	87	Poached chicken, apple, rocket and hazelnut salad	salad
+r	l	31	81	Prawn, grapefruit and fregola salad	salad
+r	l	31	106	Warm chicken liver salad on garlic croutes	salad
+r	l	28	76	Watermelon, fennel and feta salad with prawns	salad
+C	c	category:	salads, vegetable
+r	l	33	117	Apple and cabbage coleslaw
+r	l	28	83	Artichoke and ricotta salad with tomato and rosemary vinaigrette	salad
+r	l	30	102	Autumnal coleslaw
+r	l	32	71	Baby carrot and date salad with coriander dressing	salad
+r	l	33	119	Beetroot and tomato salad with capers and mint	salad
+r	l	29	81	Borlotti bean and broad bean salad with buffalo mozzarella	salad
+r	l	33	86	Chickpea, fennel and artichoke salad with lemon and date dressing	salad
+r	l	28	76	Cucumber salad with spicy and sweet poppy seed dressing	salad
+r	l	33	117	Eggplant and zucchini salad with coriander and yoghurt dressing	salad
+r	l	28	60	Fennel and lime salad	salad
+r	l	29	104	Flat bean and raw zucchini salad with mint dressing	salad
+r	l	28	103	Fresh vegetable salad	vegetable
+r	l	29	63	Great mixed raw salad	salad
+r	l	33	86	Green bean, edamame and avocado salad with preserved lemon dressing	salad
+r	l	32	119	Green salad	salad
+r	l	28	79	Grilled zucchini, green bean and sun-dried tomato salad	salad
+r	l	33	80	New potato and herb salad	salad
+r	l	29	99	Orange, parsley and pine nut salad	salad
+r	l	28	105	Pear, avocado and mixed greens with pistachio and tarragon dressing
+r	l	28	79	Potato, broad bean and crispy bacon salad with mint dressing	salad
+r	l	28	76	Quinoa, sweet corn and edamame bean salad with honey, lime and basil dressing	salad
+r	l	28	79	Roast beetroot, fresh date and pistachio salad	salad
+r	l	30	105	Sautéed cauliflower and rocket salad	salad
+r	l	29	78	Sautéed pears, prosciutto and blue cheese salad	salad
+r	l	28	95	Spinach, orange and hazelnut salad	salad
+r	l	32	76	Zesty rice salad with preserved lemon, artichokes and asparagus	salad
+C	c	ingredient:	 salami
+r	l	28	63	Picnic loaf
+C	c	ingredient:	 salmon
+r	l	33	79	Baked salmon with a smoked paprika and rosemary glaze	salmon
+r	l	28	101	Family-style baked omelette with zucchini and smoked salmon	salmon
+r	l	33	119	Indian spiced salmon and spinach burgers	salmon
+r	l	30	99	Miso salmon with soba noodles	salmon
+r	l	28	73	Stuffed salmon in vine leaves	salmon
+r	l	32	92	Warm salmon carpaccio	salmon
+C	c	category:	sauces, salsas and dips 
+r	l	29	66	Béchamel sauce	sauce
+r	l	31	74	Caper sauce	sauce
+r	l	31	69	Caramelized onion gravy
+r	l	32	84	Coconut and lime sambal
+r	l	32	98	Cornichon and caper salsa	salsa
+r	l	32	75	Fresh tomato salsa and crispy pancetta	salsa
+r	l	33	116	Herb and mustard sauce	sauce
+r	l	32	84	Hot sauce	sauce
+r	l	31	82	Lemon and Parmesan sauce	sauce
+r	l	32	111	Lemon yoghurt sauce	sauce
+r	l	28	70	Mango and pineapple salsa	salsa
+r	l	31	105	Minted yoghurt sauce	sauce
+r	l	28	60	Mustard sauce	sauce
+r	l	32	92	Mustard sauce	sauce
+r	l	32	107	Nuoc mam
+r	l	31	80	Orange and green olive salsa	salsa
+r	l	30	85	Red wine sauce	sauce
+r	l	33	93	Red wine sauce	sauce
+r	l	28	70	Roasted capsicum and hazelnut sauce	sauce
+r	l	28	97	Roasted tomato sauce	sauce
+r	l	29	83	Salsa rustica	Salsa
+r	l	29	86	Salsa verde	Salsa
+r	l	30	102	Spinach and yoghurt raita
+r	l	29	85	Tomato sauce	sauce
+r	l	30	102	Tomato sauce	sauce
+r	l	31	112	Tomato sauce	sauce
+r	l	30	59	Walnut pesto
+C	c	category:	sauces, sweet
+r	l	32	100	Blueberry sauce	sauce
+r	l	32	120	Butterscotch sauce	sauce
+r	l	33	83	Caramel sauce	sauce
+r	l	33	107	Crème anglaise
+r	l	31	94	Ginger custard
+r	l	28	86	Lemongrass syrup
+r	l	28	92	Sweet red chilli syrup	Sweet
+r	l	31	96	Toffee sauce	sauce
+C	c	category:	     sausages 
+r	l	29	100	Baked penne with sausages and spinach	sausages
+r	l	30	90	Clams with Chinese sausage and spring onions	sausage
+r	l	32	95	Lamb sausage and red wine ragu	sausage
+r	l	32	114	Spicy lamb sausages with white bean hummus	sausages
+C	c	category:	     seafood 
+r	l	30	90	Clams with Chinese sausage and spring onions
+r	l	33	85	Crab, lemon and crème fraîche tart
+r	l	32	117	Fettuccine with fish, clams and tomatoes
+r	l	30	81	Lemongrass and seafood soup	seafood
+r	l	32	92	Mussels and clams in a white wine and tarragon broth
+r	l	28	59	Oyster po' boys
+r	l	29	78	Stuffed clams
+C	c	ingredient:	 semolina
+r	l	32	93	Baked semolina gnocchi	semolina
+r	l	30	79	Orange and semolina syrup cake with fresh orange and date salad	semolina
+r	l	33	94	Sesame seeds Nougat sesame biscuits
+r	l	33	109	Poppy and sesame seed oatcakes
+r	l	29	88	Spiced sesame and honey torrone
+C	c	ingredient:	 silverbeet
+r	l	33	86	Chickpea, fennel and artichoke salad with lemon and date dressing
+r	l	31	108	Potato crusted silverbeet and feta tart	silverbeet
+r	l	32	104	Stuffed mushrooms baked in silverbeet leaves	silverbeet
+r	l	29	104	Wilted greens with fried chick peas
+C	c	category:	small food
+r	l	30	77	Baked goat's cheese with dry roasted olives
+r	l	33	91	Caramelized onion, anchovy and goat's cheese tartlets
+r	l	29	74	Chickpea panelle
+r	l	30	85	Chicken liver pâté with red onion and pomegranate molasses relish
+r	l	32	84	Crispy five spice chicken nibbles with hot sauce
+r	l	29	74	Eggplant stemperata
+r	l	30	68	Grape and blue cheese schiacciata with honey
+r	l	29	69	Mushroom arancini
+r	l	32	108	Pears, blue cheese and walnuts in baking paper
+r	l	32	98	Pork, chorizo and herb terrine
+r	l	33	85	Prawn and chorizo kebabs with smoked paprika and hazelnut aioli
+r	l	33	99	Prawn rice paper parcels
+r	l	33	100	Quince and goat's cheese balls with walnut crumb
+r	l	33	102	Smoked fish brandade
+r	l	33	100	Spicy pork empanadas
+r	l	33	99	Sweet potato and spinach tortilla with feta yoghurt
+C	c	category:	soups
+r	l	31	90	Cauliflower, watercress and blue cheese soup	soup
+r	l	31	86	Hot and sour soup with mushrooms and tofu	soup
+r	l	31	88	Jerusalem artichoke and potato soup with mustard croutons	soup
+r	l	30	81	Lemongrass and seafood soup	soup
+r	l	30	59	Mushroom and lentil soup with Gorgonzola polenta croutons	soup
+r	l	32	98	Leek and goat's cheese tart with walnut pastry
+C	c	category:	tarts, sweet
+r	l	30	66	Apple and rosemary tarte tatin
+r	l	30	74	Honey nut tart	tart
+r	l	28	92	Mango tart with sweet red chilli syrup	tart
+r	l	33	73	Strawberry and lemon tart	tart
+C	c	ingredient:	 tofu
+r	l	31	86	Hot and sour soup with mushrooms and tofu	tofu
+C	c	ingredient:	 tomatoes
+r	l	33	80	Asparagus with mozzarella and roasted tomatoes	tomatoes
+r	l	32	83	Beans and lemon
+r	l	31	112	Beef olives with cherry tomatoes	tomatoes
+r	l	33	119	Beetroot and tomato salad with capers and mint	tomato
+r	l	29	100	Chicken cacciatore
+r	l	32	117	Fettuccine with fish, clams and tomatoes	tomatoes
+r	l	32	75	Fresh tomato salsa and crispy pancetta	tomato
+r	l	30	94	Greek chicken with oregano and feta
+r	l	28	79	Grilled zucchini, green bean and sun-dried tomato salad	tomato
+r	l	32	95	Lamb sausage and red wine ragu
+r	l	29	99	Linguine with fresh tomatoes and artichokes	tomatoes
+r	l	28	81	Mixed tomato and black bean salad with mustard seed dressing	tomato
+r	l	31	108	Potato crusted silverbeet and feta tart
+r	l	29	83	Roasted capsicum and vine tomato bruschetta with ricotta	tomato
+r	l	29	61	Roasted tomato and basil soup with Parmesan croutons	tomato
+C	c	ingredient:	 watermelon
+r	l	28	76	Watermelon, fennel and feta salad with prawns	Watermelon
+C	c	ingredient:	 witlof
+r	l	31	82	Baked witlof with orange and hazelnuts	witlof
+C	c	ingredient:	 yoghurt
+r	l	33	117	Coriander and yoghurt dressing	yoghurt
+r	l	28	89	Frozen blueberry yoghurt	yoghurt
+r	l	32	111	Lemon yoghurt sauce	yoghurt
+r	l	33	89	Lime, Riesling and passionfruit curd cakes
+r	l	31	105	Minted yoghurt sauce	yoghurt
+r	l	31	102	Roasted tamarillo fool
+r	l	28	97	Spiced lamb pide pockets with mango chutney
+r	l	30	102	Spinach and yoghurt raita	yoghurt
+r	l	30	68	Yoghurt, lime and honey panna cotta	Yoghurt
+C	c	ingredient:	 zucchini
+r	l	30	81	Chicken with zucchini, basil, pine nuts and tomato jam	zucchini
+r	l	33	117	Eggplant and zucchini salad with coriander and yoghurt dressing	zucchini
+r	l	28	101	Family-style baked omelette with zucchini and smoked salmon	zucchini
+r	l	33	99	Feta yoghurt
+r	l	29	104	Flat bean and raw zucchini salad with mint dressing	zucchini
+r	l	28	103	Fresh vegetable salad
+r	l	29	61	Fritto misto
+r	l	28	79	Grilled zucchini, green bean and sun-dried tomato salad	zucchini
