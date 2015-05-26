@@ -59,7 +59,7 @@ unless pubDish.issuedescriptions.exists?(title: 'Feb-Mar') then
 end
 
 catTypeI = Categorytype.find_or_create_by(code: 'I', name: 'Ingredient')
-catTypeT = Categorytype.find_or_create_by(code: 'T', name: 'Type')
+catTypeT = Categorytype.find_or_create_by(code: 'T', name: 'Style')
 if Rails.env == "development"
 	catTypeM = Categorytype.find_or_create_by(code: 'M', name: 'Meal')
 end
