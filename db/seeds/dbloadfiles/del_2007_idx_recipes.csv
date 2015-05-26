@@ -1,7 +1,7 @@
 type	action	issue	page	recipe
 H	2007	recipe index.	byyear
 R	c	Apr	101	lemonade
-R	c	Apr	101	slow-cooked veal with olives & preserved lemon
+R	c	Apr	101	slow-cooked veal with olives, & preserved lemon
 R	c	Apr	102	lemon mayonnaise
 R	c	Apr	102	preserved lemons
 R	c	Apr	107	gorgonzola tortellini with apple & sage butter
@@ -16,7 +16,6 @@ R	c	Apr	12	mascarpone & prosciutto pizza
 R	c	Apr	12	mascarpone, prosciutto & rocket pizza
 R	c	Apr	120	hot baked fruits with butterscotch cream
 R	c	Apr	128	shortcrust pastry
-R	c	Apr	130	tomato & red onion tart
 R	c	Apr	131	cheese & polenta shortcrust pastry base
 R	c	Apr	131	gruyere & pancetta & herb quiche
 R	c	Apr	131	mini banoffee tarts
@@ -32,7 +31,6 @@ R	c	Apr	140	smoked-trout pasta bake
 R	c	Apr	141	smoked trout, potato & cherry tomato salad
 R	c	Apr	145	fig pudding with carob sauce
 R	c	Apr	32	Greek honey-dipped pastries
-R	c	Apr	32	Xerotigana (honey-dipped Greek pastries)
 R	c	Apr	39	coddled eggs
 R	c	Apr	39	creme caramel
 R	c	Apr	40	rhubarb and custard
@@ -72,12 +70,10 @@ R	c	Aug	104	lemon meringue puddings
 R	c	Aug	105	lemon curd
 R	c	Aug	105	lemon-curd frozen yoghurt
 R	c	Aug	108	ruby chard, cheese & almond tart
-R	c	Aug	108	warm herb-scented olives
 R	c	Aug	110	crunchy rosemary potatoes
 R	c	Aug	110	fennel, pear & pecan salad
 R	c	Aug	110	simple shortcrust tart shell
 R	c	Aug	110	slow-cooked capsicum & tomato
-R	c	Aug	110	slow-cooked red capsicums & tomatoes
 R	c	Aug	112	muscat-poached pear & almond cake
 R	c	Aug	12	winter pavlova with quince and cinnamon cream
 R	c	Aug	120	green leaf & pea soup
@@ -88,7 +84,6 @@ R	c	Aug	128	polenta & herb-crusted barramundi
 R	c	Aug	129	stir-fried vegetables on Asian-style coconut & pumpkin polenta
 R	c	Aug	130	bucatini & garlic prawns
 R	c	Aug	131	eye fillet with celeriac remoulade
-R	c	Aug	132	crunchy stir-fry
 R	c	Aug	133	yellow split pea soup
 R	c	Aug	134	chicken & pistachio pilaf
 R	c	Aug	136	spiced pork with chilli pasta
@@ -101,7 +96,6 @@ R	c	Aug	143	coconut-braised beef ribs
 R	c	Aug	154	wild mushroom risotto
 R	c	Aug	32	John Dory with pea risotto
 R	c	Aug	38	smoked salmon with beetroot, watercress & horseradish
-R	c	Aug	40	apple & frangipane tart
 R	c	Aug	40	apple tart with nutty frangipane
 R	c	Aug	40	roast organic chicken with potatoes, mushrooms and herb salad
 R	c	Aug	42	curried parsnip soup
@@ -168,7 +162,6 @@ R	c	Dec	122	chilled soup of roasted summer vegetables
 R	c	Dec	122	parmesan crisps with avocado, chilli and lime
 R	c	Dec	124	cheese roulade with herbed goat's feta and grilled capsicum
 R	c	Dec	125	green beans with basil dressing
-R	c	Dec	125	platter of tomatoes
 R	c	Dec	126	honey crunch semifreddo
 R	c	Dec	126	muscat-poached fruits
 R	c	Dec	128	rum balls
@@ -186,7 +179,6 @@ R	c	Dec	148	dauphinoise potatoes
 R	c	Dec	148	glazed carrots
 R	c	Dec	148	warm baked ham
 R	c	Dec	150	baked treacle, stem ginger & blackberry pudding
-R	c	Dec	150	sweet & sour red cabbage
 R	c	Dec	154	asparagus, ham & mascarpone tarts
 R	c	Dec	154	ham reuben sandwiches
 R	c	Dec	154	ham, prosciutto and bacon asparagus, ham & mascarpone tarts
@@ -221,7 +213,6 @@ R	c	Dec	209	pancetta, sage & onion stuffing
 R	c	Dec	212	roast turkey with pancetta, sage & onion stuffing
 R	c	Dec	214	quick roast chicken with oregano, zucchini & pine nut stuffing
 R	c	Dec	214	rolled pork loin with rice, spinach & basil stuffing
-R	c	Dec	214	tray-baked stuffing
 R	c	Dec	219	red curry beef & bok choy stir-fry
 R	c	Dec	220	chargrilled masala chicken
 R	c	Dec	222	cuttlefish & white-bean tabbouleh
@@ -243,7 +234,6 @@ R	c	Dec	78	chilli-dressed salmon with Thai cucumber salad
 R	c	Dec	81	reef fish in coconut batter with green mango salad
 R	c	Dec	81	tropical seafood cocktail
 R	c	Dec	82	grilled prawns with tropical fruit salsa
-R	c	Dec	82	wasabi-coated salmon
 R	c	Dec	82	wasabi-coated salmon with cucumber salad
 R	c	Dec	85	beef fillet with star anise broth
 R	c	Dec	85	mango & tomato curry
@@ -255,7 +245,6 @@ R	c	Dec	94	corn cakes with homemade sweet chilli sauce
 R	c	Dec	96	chilli roast potatoes
 R	c	Dec	96	roast chicken with coconut, chilli & lime stuffing and coconut gravy
 R	c	Dec	98	lime tart with fresh passionfruit
-R	c	Dec	98	sugar snap peas with fried eschalots
 R	c	Feb	102	apple raita
 R	c	Feb	102	grape, rocket & spiced nut salad
 R	c	Feb	102	ras el hanout ocean trout poached in rose-petal tea
@@ -271,9 +260,8 @@ R	c	Feb	110	chilli flatbreads
 R	c	Feb	112	potato & fennel salad with chilli yoghurt dressing
 R	c	Feb	112	roasted onion, capsicum & sundried olive salad
 R	c	Feb	112	zucchini & pistachio spice cake
-R	c	Feb	112	zucchini & pistachio spice cake with lime frosting
 R	c	Feb	116	blackberry parfait
-R	c	Feb	116	venison loin with blackberry sauce
+R	c	Feb	116	venison with blackberry sauce
 R	c	Feb	117	blackberry tart with lemon mascarpone
 R	c	Feb	117	blackberry tart with lemon mascarpone and crystallised basil
 R	c	Feb	120	ricotta dumplings with orecchiette, peas and prosciutto
@@ -283,7 +271,6 @@ R	c	Feb	122	Spanish eggs, spinach & prawns
 R	c	Feb	124	fig & blackberry friands
 R	c	Feb	124	figs in blackberry syrup
 R	c	Feb	124	open steak sandwich
-R	c	Feb	124	zucchini flowers with ratatouille
 R	c	Feb	130	summer beef salad
 R	c	Feb	131	smoked ocean trout and mesclun with creme fraiche & dill sauce
 R	c	Feb	131	smoked ocean trout with creme fraiche & dill sauce
@@ -301,7 +288,7 @@ R	c	Feb	143	Szechuan prawns
 R	c	Feb	29	baked curried chicken & mango
 R	c	Feb	35	Indian tomato chutney
 R	c	Feb	36	rack-roasted quail with tomatoes and ciabatta
-R	c	Feb	36	stracci with quick cherry tomato sauce
+R	c	Feb	36	stracci with quick tomato sauce
 R	c	Feb	38	Fijian marinated fish (kokoda)
 R	c	Feb	38	Kokoda (Fijian marinated fish)
 R	c	Feb	41	duck breast with peach salsa
@@ -334,7 +321,6 @@ R	c	Feb	88	cherry cordial
 R	c	Feb	88	fontina cheese & herb toasted sandwiches
 R	c	Feb	91	peppers Piedmontese
 R	c	Feb	91	pizza with ricotta & green tomato
-R	c	Feb	91	pizza with rocket & speck
 R	c	Feb	94	chargrilled eggplant dip
 R	c	Feb	94	coriander & chilli chicken skewers
 R	c	Feb	97	oregano, garlic & lemon lamb cutlets
@@ -363,7 +349,6 @@ R	c	Jul	142	baked maple-glazed salmon
 R	c	Jul	143	chicken, celery & almond stir-fry
 R	c	Jul	144	roasted capsicum, tomato & coriander soup
 R	c	Jul	145	pan-fried tofu with ponzu dressing and shredded vegetables
-R	c	Jul	146	sundried tomato pesto & artichoke pizza
 R	c	Jul	148	chargrilled steak with green-olive tapenade & butter-bean mash
 R	c	Jul	152	burnt butter, macadamia & marmalade biscuits
 R	c	Jul	162	roasted sweet capsicums stuffed with goat's cheese
@@ -378,7 +363,7 @@ R	c	Jul	44	lamb & red wine casserole
 R	c	Jul	46	chicken liver paté
 R	c	Jul	52	bubble & squeak with tomato relish
 R	c	Jul	52	cranberry & rum warmer
-R	c	Jul	52	warm veal, sage & mozzarella panini
+R	c	Jul	52	veal, sage & mozzarella panini
 R	c	Jul	54	fish & chat potato chowder
 R	c	Jul	55	braised lamb with black bean sauce
 R	c	Jul	55	braised lamb with ginger & black bean sauce
@@ -453,7 +438,6 @@ R	c	Jun	34	roast pork shoulder with crackling
 R	c	Jun	36	sticky roasted pears
 R	c	Jun	39	coq au vin
 R	c	Jun	42	seafood stew
-R	c	Jun	44	vegetable san choy bau
 R	c	Jun	63	blood plum & rosewater martini
 R	c	Jun	63	orange-dust tiger prawns with artichoke salad
 R	c	Jun	63	salmon pearl purses
@@ -465,7 +449,6 @@ R	c	Jun	66	orange-blossom water mille-feuille
 R	c	Jun	70	pea & ham soup
 R	c	Jun	71	cauliflower cheese
 R	c	Jun	71	roast rib of beef & Yorkshire puddings
-R	c	Jun	74	treacle tart
 R	c	Jun	74	treacle tart with ice cream
 R	c	Jun	78	baked lamb & apricot couscous
 R	c	Jun	78	fettuccine with ratatouille
@@ -476,7 +459,6 @@ R	c	Jun	82	rice noodles with chilli meatballs
 R	c	Jun	82	sausages with potato rosti bake
 R	c	Jun	86	tuna steaks & Cafe de Paris butter
 R	c	Jun	87	herb butter
-R	c	Jun	87	herb butter with roasted vegetables
 R	c	Jun	88	steak with anchovy & red wine butter
 R	c	Jun	93	bruschetta with mozzarella and anchovies
 R	c	Jun	93	spaghetti with prosciutto, peas & spring onion
@@ -487,12 +469,10 @@ R	c	Jun	95	baked rhubarb with orange
 R	c	Jun	98	couscous with toasted almonds
 R	c	Jun	98	Moroccan lamb harira
 R	c	Jun	98	Thai chicken & coconut soup
-R	c	Jun	98	Thai chicken soup
 R	c	Mar	100	chargrilled baby octopus with sherry vinegar dressing
 R	c	Mar	100	patatas bravas
 R	c	Mar	100	semolina-fried school prawns with cheat's allioli
 R	c	Mar	100	tomato-rubbed bread with jamon, manchego and olives
-R	c	Mar	100	tomato-rubbed bread, jamon, manchego & olives
 R	c	Mar	100	white anchovy, cos & celery salad
 R	c	Mar	102	raisins in sherry with ice cream
 R	c	Mar	102	spiced orange biscuits
@@ -514,12 +494,10 @@ R	c	Mar	129	blueberry flapjacks
 R	c	Mar	129	blueberry or choc-chip flapjacks
 R	c	Mar	129	pikelets with smoked trout
 R	c	Mar	129	spinach & ricotta pancake cannelloni
-R	c	Mar	129	Venetian pancakes
 R	c	Mar	129	Venetian pancakes with raisins
 R	c	Mar	132	soy beef with tatsoi salad
 R	c	Mar	133	sushi rice & prawn salad
 R	c	Mar	134	oyster mushroom & noodle stir-fry
-R	c	Mar	135	vegetarian pastry pizzas
 R	c	Mar	136	barbecued peri-peri pork with quick guacamole
 R	c	Mar	136	barbecued piri piri pork with quick guacamole
 R	c	Mar	138	Greek bean & silverbeet stew
@@ -534,7 +512,7 @@ R	c	Mar	38	semolina cake with ricotta cream
 R	c	Mar	38	semolina cake with ricotta cream and lemon syrup
 R	c	Mar	41	crisp filo tart with chorizo & feta
 R	c	Mar	41	crisp filo tart with chorizo, tomato and feta
-R	c	Mar	42	fried mozzarella with heirloom tomatoes and basil
+R	c	Mar	42	fried mozzarella with heirloom tomatoes & basil
 R	c	Mar	44	lamb burgers with gruyere & onion confit
 R	c	Mar	60	hasselback potatoes with L'Edel de Cleron and a hazelnut dressing
 R	c	Mar	60	roasted quails with agresto sauce
@@ -563,7 +541,6 @@ R	c	Mar	86	pumpkin & chickpea salad with tahini
 R	c	Mar	87	turron & coffee ice cream
 R	c	Mar	89	egg, leek & bacon pie
 R	c	Mar	89	upside-down tomato & basil pie
-R	c	Mar	89	upside-down tomato pie
 R	c	Mar	90	good, simple shortcrust pastry
 R	c	Mar	91	luscious lemon slice
 R	c	Mar	92	macadamia & choc-chip brownies
@@ -579,7 +556,6 @@ R	c	May	106	garlic & rosemary focaccia
 R	c	May	107	white bean soup with bay leaves and pancetta
 R	c	May	107	white-bean soup with pancetta
 R	c	May	109	rocket & pumpkin salad
-R	c	May	109	veal with balsamic, pine nuts and currants
 R	c	May	110	hazelnut & fig cake
 R	c	May	115	squid, tomato & peas
 R	c	May	116	(pollo in padella)
@@ -592,7 +568,6 @@ R	c	May	122	salad of raw asparagus and celery with anchovy & mint dressing
 R	c	May	123	pan-fried salmon and salsa verde
 R	c	May	124	pan-fried lamb with white beans and anchovy
 R	c	May	132	pesto lasagne
-R	c	May	132	torta Pasqualina
 R	c	May	146	risotto alla Milanese
 R	c	May	148	baked chicken & mushroom risotto
 R	c	May	148	risotto cakes
@@ -643,7 +618,6 @@ R	c	May	84	chicken sausages with white-wine beans
 R	c	May	84	panzanella salad with tuna
 R	c	May	84	roast organic chicken with potatoes, sausages with white-wine beans
 R	c	May	86	rigatoni Milano
-R	c	May	86	veal scallopine with fennel & parmesan salad
 R	c	May	92	braised duck with dried orange
 R	c	May	92	braised duck with dried orange and almonds
 R	c	May	92	warm sausage & polenta terrine
@@ -653,7 +627,6 @@ R	c	May	96	green maltagliati with semi-dried tomato, basil and pepper mascarpone
 R	c	May	96	green pasta dough
 R	c	May	96	winter Caprese salad
 R	c	Nov	100	chilli beef on avocado
-R	c	Nov	102	vegetable tagine
 R	c	Nov	107	zucchini flowers with ricotta & pecorino
 R	c	Nov	108	crab cakes
 R	c	Nov	108	grilled oysters with chorizo & wasabi mayonnaise
@@ -665,7 +638,6 @@ R	c	Nov	122	frozen Mars bar mousse
 R	c	Nov	122	lime & coconut ice cream
 R	c	Nov	122	Middle Eastern rice pudding
 R	c	Nov	122	quick brioche & apple tarts
-R	c	Nov	122	quick brioche apple tart
 R	c	Nov	124	chocolate caramel tarts
 R	c	Nov	124	passionfruit soufflé
 R	c	Nov	124	peach Melbas
@@ -675,7 +647,6 @@ R	c	Nov	130	eggplant timballo
 R	c	Nov	130	roasted asparagus
 R	c	Nov	131	prawns with roasted capsicum and butter beans
 R	c	Nov	132	little zucchini & basil frittatas
-R	c	Nov	132	zucchini & basil frittata
 R	c	Nov	134	mascarpone `zabaglione'
 R	c	Nov	134	strawberries in red wine syrup with mascarpone `zabaglione'
 R	c	Nov	138	pink lamington mountains
@@ -721,7 +692,6 @@ R	c	Nov	202	smoked salmon rice balls
 R	c	Nov	204	prawn & cucumber squares
 R	c	Nov	204	salmon & cucumber rolls
 R	c	Nov	204	tuna & avocado inside-out maki
-R	c	Nov	204	vegetarian hand rolls
 R	c	Nov	206	asparagus, artichoke & grape tomato salad with cottage cheese
 R	c	Nov	207	lamb cutlets with white & green bean salad
 R	c	Nov	208	salmon skewers with radish, watercress & avocado salad
@@ -772,7 +742,6 @@ R	c	Oct	103	meringues and pavlovas baby palm-sugar meringues
 R	c	Oct	104	lemon & saffron teacake
 R	c	Oct	105	classic lemon tart
 R	c	Oct	105	lychee sorbet with ginger fingers
-R	c	Oct	106	tarts, flans and pizzas apple & pear tarte Tatin
 R	c	Oct	106	velvety orange creams
 R	c	Oct	109	salad of parsley, capers, olives and tomatoes on bruschetta
 R	c	Oct	110	Fritto misto of parsley, sage and dill
@@ -791,7 +760,6 @@ R	c	Oct	139	citrus fish salad with rye
 R	c	Oct	140	grilled chicken and caesar greens
 R	c	Oct	142	grilled pork with avocado, black bean & lime salad
 R	c	Oct	144	yellow split pea & bean salad
-R	c	Oct	144	yellow split pea & bean salad with chive dressing
 R	c	Oct	150	sugar cane prawns
 R	c	Oct	162	scallop ceviche
 R	c	Oct	28	dairy-free date & walnut brownies
@@ -805,10 +773,9 @@ R	c	Oct	49	oven-baked ricotta & tomato tarts
 R	c	Oct	51	gai yang with Thai cucumber salad
 R	c	Oct	52	barbecued lamb steaks with cucumber & yoghurt relish
 R	c	Oct	52	cucumber & yoghurt relish
-R	c	Oct	54	champagne jelly
+R	c	Oct	54	Champagne jelly
 R	c	Oct	70	lemon herb squid
 R	c	Oct	71	rib-eye steaks with mushroom sauce and pea mash
-R	c	Oct	71	Thai chicken skewers
 R	c	Oct	72	self-saucing chocolate pudding
 R	c	Oct	72	tuna, tomato & olive pasta
 R	c	Oct	73	classic pavlova with berry coulis
@@ -824,7 +791,6 @@ R	c	Oct	84	spaghetti with butternut pumpkin & eggplant pesto
 R	c	Oct	86	crispy gnocchi with olive and tomato
 R	c	Oct	86	spiced chickpeas & cumin potatoes
 R	c	Oct	88	New Orleans-style `dirty rice'
-R	c	Oct	88	zucchini kedgeree
 R	c	Oct	88	zucchini kedgeree & tomato salad
 R	c	Oct	90	feta & spinach free-form pie
 R	c	Oct	94	aioli
@@ -840,14 +806,13 @@ R	c	Sep	10	feta, tomato & broad bean tarts
 R	c	Sep	100	pecorino with honey and truffle
 R	c	Sep	100	ricotta with honey & pickled figs
 R	c	Sep	100	young pecorino, honey & truffle
-R	c	Sep	101	and waffles Waldorf salad
 R	c	Sep	101	Waldorf salad
 R	c	Sep	102	hazelnut ice cream with honey
 R	c	Sep	106	banana buttermilk pancakes
 R	c	Sep	106	palm-sugar butter
 R	c	Sep	107	best fruits with mint tea syrup and biscotti
 R	c	Sep	107	macadamia biscotti
-R	c	Sep	108	bloodiest mary
+R	c	Sep	108	bloodiest Mary
 R	c	Sep	108	open omelette with ciabatta, mozzarella and basil oil
 R	c	Sep	109	bircher muesli
 R	c	Sep	110	salsa verde
@@ -893,7 +858,6 @@ R	c	Sep	78	tuna carpaccio with mustard dressing, capers, tomato and mint
 R	c	Sep	79	grilled prawns with ouzo, tomato, chilli & feta
 R	c	Sep	79	grilled prawns with ouzo, tomatoes, chilli and feta
 R	c	Sep	80	eggplants stuffed with fried onions, tomato and chilli (imam bayildi)
-R	c	Sep	80	eggplants stuffed with onions, tomato and chilli
 R	c	Sep	80	Moroccan chicken with preserved lemon and olives
 R	c	Sep	81	red wine zabaglione
 R	c	Sep	84	baked salmon with pesto potatoes

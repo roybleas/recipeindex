@@ -92,14 +92,6 @@ xref:squid xref:seafood
 xref:steak xref:beef
 xref:stews xref:soups and stews
 xref:stilton xref:cheese
-xref:swordfish xref:fish
-xref:tarts and flans xref:pies and pastries
 xref:terrines xref:pates and terrines
 xref:tiramisu xref:chilled desserts
 xref:toast xref:sandwiches, rolls and toast
-xref:trout xref:fish
-xref:tuna xref:fish
-xref:turkey xref:poultry
-xref:vinaigrette xref:dressings and sauces
-xref:walnuts xref:nuts
-xref:whiting xref:fish

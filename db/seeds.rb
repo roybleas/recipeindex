@@ -21,8 +21,8 @@ User.create(name:  "Roy User",
 
 if Rails.env == "development"
 	#create some extra users to play with during development
-	if User.count < 99
-		99.times do |n|
+	if User.count < 30
+		30.times do |n|
 		  
 		  screen_name = Faker::Name.first_name
 		  name  = Faker::Name.name
@@ -39,7 +39,7 @@ pubDel = Publication.find_or_create_by(title: "Delicious")
 	pubDel.published = "Monthly"
 	pubDel.description = "ABC food magazine"
 	pubDel.save
-pubDish = Publication.find_or_create_by!(title: "Dish")
+pubDish = Publication.find_or_create_by(title: "Dish")
 	pubDish.published = "Bimonthly"
 	pubDish.description = "New Zealand magazine published by Tangible Media"
 	pubDish.save
@@ -58,11 +58,19 @@ unless pubDish.issuedescriptions.exists?(title: 'Feb-Mar') then
 	id.gen_bimonthly(excludeJan = true)
 end
 
+catTypeI = Categorytype.find_or_create_by(code: 'I', name: 'Ingredient')
+catTypeT = Categorytype.find_or_create_by(code: 'T', name: 'Type')
+if Rails.env == "development"
+	catTypeM = Categorytype.find_or_create_by(code: 'M', name: 'Meal')
+end
+
 descDel = pubDel.issuedescriptions.find_by_title('Feb')
 [{:yr => 2007, :no => 57},{:yr => 2008, :no => 68},{:yr => 2006, :no => 46}].each do |issue|
  	IssueyearGenerator.new(pubDel, issue[:yr]).gen_issues_by_number(issue[:no]) unless descDel.issues.exists?(year: issue[:yr]) 
 	mag_title = "del"
 	RecipeImporter.new(pubDel,issue[:yr],mag_title).load_recipes_by_year unless pubDel.recipes.where('year = ?',issue[:yr]).count > 0
+	CategoryImporter.new(issue[:yr],mag_title).load_categories
+	RecipeImporter.new(pubDel,issue[:yr],mag_title).loadRecipesByCategory
 end	
 
 descDish = pubDish.issuedescriptions.find_by_title('Feb-Mar')
@@ -70,9 +78,11 @@ descDish = pubDish.issuedescriptions.find_by_title('Feb-Mar')
  	IssueyearGenerator.new(pubDish, issue[:yr]).gen_issues_by_number(issue[:no]) unless descDish.issues.exists?(year: issue[:yr]) 
 	mag_title = "dish"
 	RecipeImporter.new(pubDish,issue[:noRange],mag_title).load_recipes_by_issue
+	CategoryImporter.new(issue[:noRange],mag_title).load_categories
+	RecipeImporter.new(pubDish,issue[:noRange],mag_title).loadRecipesByCategory
 end	
 
-	
+
 
 
 

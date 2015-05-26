@@ -132,7 +132,7 @@ class IssueyearGenerator
 end
 
 class RecipeImporter
-	#class to load recipes from extracr file
+	#class to load recipes from extract file
 	def initialize(pub,yr,mag_title)
 		# store publication  
 		@pub = pub
@@ -142,6 +142,8 @@ class RecipeImporter
 		@issueNumRange = yr
 		# store the short name used in the extract file
 		@mag_title = mag_title
+		#type recipe records to be imported 
+		@fileType = nil
 	end
 	
 	def load_recipes_by_year
@@ -247,6 +249,84 @@ class RecipeImporter
 		end
 	end
 
+	def loadRecipesByCategory()
+		
+		
+		filename = "#{@mag_title}_#{@yr}_idx_catandrecipewithkey.csv"
+		fileInput = Rails.root.join('db','seeds','dbloadfiles',filename)
+		
+		catTypeI = Categorytype.find_by(code: 'I')
+		catTypeT = Categorytype.find_by(code: 'T')
+		
+		puts "loading #{@mag_title}_#{@yr}_categories.csv"
+		
+		current_category = nil
+		count = 0
+		
+		if validFileHeader?(fileInput,filename)
+								
+				# Header : 
+				#	type		- content of the row
+				# action	- type of action to the database	
+				# issue		- the issue for the year where the recipe is found
+				# page		- the page in the issue where the recipe is found
+				# recipe	- the recipe title
+				# keyword - word or phrase from the recipe that matches the category 
+				
+			# fetch the style of recipes to find based on the file type read from the header
+			this_recipe = recipeFinder
+			
+			CSV.foreach(fileInput, {col_sep: "\t", headers: :true}) do |row|
+				
+				case row["type"]
+				when "H"
+					# header row checked above so ignore
+				when "C"
+					# category stored in the issue column
+					case row["issue"]
+					when "ingredient:"
+						catType = catTypeI 
+					when "category:"
+						catType = catTypeT
+					else
+						catType = nil
+						puts "Unknown category type  #{row["issue"]}"
+					end
+					if !catType.nil?
+						current_category = catType.categories.find_by(name: row["page"])
+					else
+						current_category = nil
+						puts "Unknown category  #{row["page"]}"
+					end
+				when "r"
+					case row["action"]
+					when "l"
+						# lookup up recipe to add
+						
+						# confirm we have a category to add to
+						if !current_category.nil?
+							#set the issue for finding the recipe Id
+							this_recipe.issue = row["issue"]
+							# look up the receipe record
+							recipe = this_recipe.recipe(row["recipe"],row["page"])
+							if recipe.nil?
+								puts "Missing recipe: #{row["issue"]} #{row["recipe"]}"
+							else
+								catRecipe = current_category.category_recipes.find_by(recipe_id: recipe.id)
+								if catRecipe.nil?
+									catRecipe = current_category.category_recipes.create(recipe_id: recipe.id, keyword: row["keyword"])
+									count += 1
+								end
+							end
+						end
+					end
+				end
+						
+			end			
+			puts "#{count} recipes added to category"			
+		end
+	end
+  
 	
 	private
 	
@@ -268,8 +348,8 @@ class RecipeImporter
 			this_header = line.chomp.split("\t")
 			
 			# lookup style of data, by year or by issue number
-			filestyle = this_header[3]   
-			case filestyle
+			@filestyle = this_header[3]   
+			case @filestyle
 				when 'byyear' 
 						
 					yr = header_line_byyear(line)
@@ -346,4 +426,83 @@ class RecipeImporter
 		return 0
 	end
 	
+	def recipeFinder
+		case @filestyle
+			when 'byyear' 
+				return FindRecipeByYear.new(@yr)
+			when 'byissueno'
+				return FindRecipeByIssue.new
+		end
+	end
+end
+
+class CategoryImporter
+
+	def initialize(yr,mag_title)
+		
+		# store the year of publication
+		@yr = yr
+		# store the short name used in the extract file
+		@mag_title = mag_title
+		
+	end
+	
+	def load_categories
+		
+		filename = "#{@mag_title}_#{@yr}_categories.csv"
+		fileInput = Rails.root.join('db','seeds','dbloadfiles',filename)
+		
+		puts "loading #{@mag_title}_#{@yr}_categories.csv"
+		
+		#track how many updates
+		count = 0
+		
+		catTypeI = Categorytype.find_by(code: 'I')
+		catTypeT = Categorytype.find_by(code: 'T')
+
+		CSV.foreach(fileInput, {col_sep: "\t", headers: :true}) do |row|
+			
+			recipe = row["recipe"].strip
+			case row["category"]
+			when "ingredient:"
+				catTypeI.categories.find_or_create_by(name: recipe)
+				count += 1
+			when "category:"		
+				catTypeT.categories.find_or_create_by(name: recipe)
+				count += 1
+			else
+				puts "Unknown Category: #{row["category"]}"
+			end
+				
+		end
+		puts "Categories processed: #{count}"
+	end
+	
+	
+	
+end
+
+
+
+class FindRecipeByYear 
+	attr_accessor   :year, :issue
+	def initialize(year)
+		@year = year
+	end
+	
+	def recipe(recipeTitle,page)
+		this_issue = @issue.gsub("Dec","Dec-Jan")
+		return Recipe.joins(issue: :issuedescription).
+			where('issuedescriptions.title = ? and issues.year = ? and recipes.title = ? and page = ?',
+				this_issue, @year, recipeTitle, page).first
+		
+	end
+end
+
+class FindRecipeByIssue 
+	attr_accessor :issue
+	def recipe(recipeTitle,page)
+		return Recipe.joins(:issue).where('issues.no = ? and recipes.title = ? and page = ?',
+			@issue.to_i,recipeTitle,page).first
+	end
 end

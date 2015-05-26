@@ -1,6 +1,6 @@
 type	action	issue	page	recipe	keyword
 H	2008	recipe index.	byyear
-C	c	ingredient:	 apple
+C	c	ingredient:	apple
 r	l	Jul	95	apple & celery salad with walnuts and gorgonzola dressing	apple
 r	l	Jun	110	apple & cinnamon galette	apple
 r	l	Jul	73	apple & ginger strudel with ginger custard	apple
@@ -13,11 +13,11 @@ r	l	Jun	65	berry & apple tray bake	apple
 r	l	Jul	98	green apple sherbet	apple
 r	l	Dec	52	roasted apples	apples
 r	l	Jul	96	simple apple paste	apple
-C	c	ingredient:	 artichokes
+C	c	ingredient:	artichokes
 r	l	May	160	creamy artichoke & spinach dip	artichoke
 r	l	May	159	pasta with artichokes, porcini and zucchini	artichokes
 r	l	Aug	94	pea & artichoke lasagne	artichoke
-C	c	ingredient:	 asparagus
+C	c	ingredient:	asparagus
 r	l	Mar	140	asparagus & leek frittata	asparagus
 r	l	Nov	210	asparagus, pumpkin & goat's cheese frittata	asparagus
 r	l	Mar	110	asparagus with citrus dressing and shaved pecorino	asparagus
@@ -25,16 +25,16 @@ r	l	Sep	74	asparagus with crunchy gremolata crumbs	asparagus
 r	l	Oct	128	asparagus with tomato dressing and creme fraiche	asparagus
 r	l	Feb	88	chargrilled asparagus and ricotta on bruschetta	asparagus
 r	l	Feb	76	creamy asparagus soup	asparagus
-C	c	ingredient:	 avocado
+C	c	ingredient:	avocado
 r	l	Oct	159	avocado soup with crisp pancetta	avocado
 r	l	Oct	160	ceviche-filled avocados	avocados
 r	l	Dec	235	crab & avocado rice paper rolls	avocado
 r	l	Dec	176	grilled fish with lime, fresh coconut & avocado relish	avocado
-C	c	ingredient:	 banana
+C	c	ingredient:	banana
 r	l	Feb	49	banana-stuffed French toast with blackberry sauce	banana
 r	l	Jul	117	caramel custards with grilled banana	banana
 r	l	Oct	124	chocolate & banana tart	banana
-C	c	ingredient:	 beans
+C	c	ingredient:	beans
 r	l	Oct	86	barbecued baked beans	beans
 r	l	Oct	129	borlotti beans, clams & fino sherry	beans
 r	l	Aug	104	carrot, celery, farro & borlotti bean soup	bean
@@ -48,7 +48,7 @@ r	l	Mar	76	kidney bean, onion & tomato salad	bean
 r	l	Feb	90	long-braised beans	beans
 r	l	Sep	78	salmon with broad beans and parsley oil	beans
 r	l	Oct	146	veal cutlets with lemon beans	beans
-C	c	ingredient:	 beef
+C	c	ingredient:	beef
 r	l	Dec	225	beef baguettes with mustard & cranberry dressing	beef
 r	l	Sep	58	beef baked in a salt crust	beef
 r	l	Dec	111	beef fillet with salsa verde and horseradish cream	beef
@@ -89,7 +89,7 @@ r	l	Mar	89	`sushi'di Chianti
 r	l	Nov	206	teriyaki beef skewers with snow pea salad	beef
 r	l	Oct	92	Thai beef salad	beef
 r	l	Jun	92	wagyu beef burgers with cos, beetroot and aioli	beef
-C	c	ingredient:	 beetroot
+C	c	ingredient:	beetroot
 r	l	Nov	92	beetroot & goat's cheese stacks	beetroot
 r	l	Apr	139	beetroot, baby spinach & goat's cheese salad	beetroot
 r	l	Jun	62	beetroot couscous	beetroot
@@ -101,7 +101,7 @@ r	l	Dec	186	chilled beetroot soup	beetroot
 r	l	Nov	156	cumin-spiced beetroot salad with honey & almond dressing	beetroot
 r	l	Feb	75	roast beetroot salad	beetroot
 r	l	Mar	110	roasted beetroot & leek salad with goat's cheese and raspberry dressing	beetroot
-C	c	ingredient:	 berries
+C	c	ingredient:	berries
 r	l	Dec	90	baklava tarts with berries	berries
 r	l	Jun	65	berry & apple tray bake	berry
 r	l	Feb	139	berry & yoghurt Eton mess	berry
@@ -159,7 +159,7 @@ r	l	Sep	121	plain pizza dough
 r	l	Apr	28	potato & rosemary bread
 r	l	Oct	34	sour cherry scones
 r	l	Dec	186	spottted dog (soda bread with sultanas)
-C	c	ingredient:	 breakfast
+C	c	ingredient:	breakfast
 r	l	Apr	85	American corn fritters with bacon
 r	l	Feb	49	banana-stuffed French toast with blackberry sauce
 r	l	Sep	33	breakfast Bombay potatoes	breakfast
@@ -203,19 +203,19 @@ r	l	Oct	32	Victoria sponge cake with raspberries and rosewater	cake
 r	l	Mar	94	vin santo & olive oil cake	cake
 r	l	Dec	138	white chocolate cake with buttercream icing	cake
 r	l	Jun	74	white wine, olive oil & polenta cake	cake
-C	c	ingredient:	 capsicum
+C	c	ingredient:	capsicum
 r	l	Mar	147	capsicum & mozzarella bruschetta	capsicum
 r	l	Nov	104	lamb wrapped in capsicum with smoky eggplant puree	capsicum
 r	l	May	152	pan-fried chicken breast on balsamic capsicum	capsicum
 r	l	Apr	119	roast capsicum & tomato soup	capsicum
 r	l	Mar	148	stuffed capsicum with white beans	capsicum
-C	c	ingredient:	 caramel
+C	c	ingredient:	caramel
 r	l	Jun	106	caramel & nut diamonds	caramel
 r	l	Jul	117	caramel custards with grilled banana	caramel
 r	l	Apr	68	caramel soy roast vegetables	caramel
 r	l	Apr	76	caramel tartlets with macadamia pastry	caramel
 r	l	Mar	102	chocolate caramel tart	caramel
-C	c	ingredient:	 cheese
+C	c	ingredient:	cheese
 r	l	Mar	110	asparagus with citrus dressing and shaved pecorino
 r	l	Jul	36	baby onion tarte Tatin with endive and Roquefort
 r	l	May	90	baked`blonde'figs with gorgonzola sauce (fichi biondi)
@@ -254,18 +254,18 @@ r	l	Jun	70	Swiss cheese fondue	cheese
 r	l	Mar	150	twice-baked goat's cheese soufflé	cheese
 r	l	Sep	74	twice-baked goat's cheese soufflés with spinach and walnut salad	cheese
 r	l	Nov	102	warm goat's cheese custard with figs and ham	cheese
-C	c	ingredient:	 chermoula
+C	c	ingredient:	chermoula
 r	l	Feb	36	baked chermoula chicken	chermoula
 r	l	Mar	68	baked chermoula salmon with roast capsicum, lemon & mint couscous	chermoula
 r	l	Oct	102	butterflied lamb with chermoula	chermoula
 r	l	Nov	147	grilled red snapper marinated with chermoula	chermoula
-C	c	ingredient:	 cherries
+C	c	ingredient:	cherries
 r	l	Oct	132	cherry clafoutis	cherry
 r	l	Nov	198	cherry-ripe sundae	cherry
 r	l	May	118	crepes with sweet ricotta and amarena cherries	cherries
 r	l	Dec	220	frozen cherry & almond roulade	cherry
 r	l	Oct	34	sour cherry scones	cherry
-C	c	ingredient:	 chicken
+C	c	ingredient:	chicken
 r	l	Apr	134	Asian chicken parcels	chicken
 r	l	Sep	90	Asian roast chicken with coconut gravy	chicken
 r	l	Apr	93	bacon-wrapped chicken with succotash	chicken
@@ -321,7 +321,7 @@ r	l	Nov	148	Thai-marinated chargrilled chicken	chicken
 r	l	Nov	201	Vietnamese noodle & smoked chicken salad	chicken
 r	l	Sep	130	warm roast chicken salad with potato, pumpkin and tarragon	chicken
 r	l	Mar	139	yakitori chicken & pickled carrot salad	chicken
-C	c	ingredient:	 chickpea
+C	c	ingredient:	chickpea
 r	l	Jun	134	chickpea, rice & spinach pilaf	chickpea
 r	l	Mar	124	chickpea, tomato & bread soup	chickpea
 r	l	Mar	126	chickpeas with fried eggs, labne and sage & chilli burnt butter	chickpeas
@@ -375,14 +375,14 @@ r	l	Mar	104	white & dark chocolate mousse
 r	l	Mar	99	white & dark chocolate tiramisu
 r	l	Dec	134	white chocolate & Irish cream parfait
 r	l	Dec	92	yoghurt pannacottas with marsala peaches
-C	c	ingredient:	 chilli
+C	c	ingredient:	chilli
 r	l	Oct	84	fire-roasted peppers
 r	l	Nov	142	lamb cutlets with chilli jam	chilli
 r	l	Jun	134	quick chilli con carne with avocado	chilli
 r	l	Jul	113	red chilli nahm jim	chilli
 r	l	Oct	83	Singapore chilli crab	chilli
 r	l	Jul	80	steamed chilli & black bean ribs	chilli
-C	c	ingredient:	 chocolate
+C	c	ingredient:	chocolate
 r	l	Mar	98	Baileys & rocky road fudge
 r	l	Jul	136	Black Forest trifle
 r	l	Dec	138	`bubble wrap'mousse
@@ -425,17 +425,17 @@ r	l	Mar	104	white & dark chocolate mousse	chocolate
 r	l	Mar	99	white & dark chocolate tiramisu	chocolate
 r	l	Dec	138	white chocolate cake with buttercream icing	chocolate
 r	l	Dec	134	white chocolate & Irish cream parfait	chocolate
-C	c	ingredient:	 coconut
+C	c	ingredient:	coconut
 r	l	Sep	90	Asian roast chicken with coconut gravy	coconut
 r	l	Dec	180	baked vanilla fruits with coconut custard	coconut
 r	l	Nov	164	coconut & citrus syrup cake	coconut
 r	l	Jun	44	coconut quinoa porridge with banana and palm sugar	coconut
 r	l	Mar	66	chunky fish goujons in coconut batter	coconut
-C	c	ingredient:	 corn
+C	c	ingredient:	corn
 r	l	Apr	85	American corn fritters with bacon	corn
 r	l	Mar	40	Mexican-style barbecued corn	corn
 r	l	Dec	170	corn & ham fritters with roasted cherry tomatoes	corn
-C	c	ingredient:	 couscous
+C	c	ingredient:	couscous
 r	l	Jun	62	beetroot couscous	couscous
 r	l	Oct	94	chargrilled chicken & lemon couscous	couscous
 r	l	Sep	148	couscous-crumbed chicken with chickpea & parsley salad	couscous
@@ -519,7 +519,7 @@ r	l	Oct	88	Southern Cross Pimm's
 r	l	Dec	124	strawberry bellini
 r	l	Sep	129	strawberry margarita mocktails
 r	l	Jun	61	The Vicar's tipple
-C	c	ingredient:	 eggplant
+C	c	ingredient:	eggplant
 r	l	May	100	baked ricotta with caponata
 r	l	Feb	120	eggplant & white bean curry	eggplant
 r	l	Feb	81	eggplant with minced pork in Szechuan sauce	eggplant
@@ -552,12 +552,12 @@ r	l	Sep	114	spring frittata of zucchini & ricotta
 r	l	Oct	154	sweet souffléd omelette
 r	l	Mar	150	twice-baked goat's cheese soufflé
 r	l	Sep	74	twice-baked goat's cheese soufflés with spinach and walnut salad
-C	c	ingredient:	 fennel
+C	c	ingredient:	fennel
 r	l	Dec	146	chilled fennel soup with leeks and smoked paprika	fennel
 r	l	Nov	30	crispy fennel & carrot salad	fennel
 r	l	Jul	132	pork with fennel, thyme & orange stew	fennel
 r	l	Oct	83	squid with fennel & black pudding	fennel
-C	c	ingredient:	 figs
+C	c	ingredient:	figs
 r	l	May	90	baked`blonde'figs with gorgonzola sauce (fichi biondi)	figs
 r	l	Apr	100	braised chicken with fresh figs	figs
 r	l	Nov	92	cheat's blinis with jamon and figs	figs
@@ -615,14 +615,14 @@ r	l	May	105	tuna polpette with salmoriglio
 r	l	Sep	104	Tuna sashimi with coconut rice
 r	l	Oct	144	tuna tabouleh salad
 r	l	Dec	116	whiting fillets steamed with prawn & celery mousse
-C	c	ingredient:	 fruit
+C	c	ingredient:	fruit
 r	l	Dec	180	baked vanilla fruits with coconut custard	fruits
 r	l	Sep	78	fruit soup with frozen yoghurt	fruit
 r	l	Feb	93	poached fruit & roasted apricots with mascarpone sabayon	fruit
 r	l	Nov	174	sorbet of seasonal fruits with pistachios and lemon myrtle syrup	fruits
 r	l	Dec	93	summer fruits in jasmine tea syrup with coconut cakes and ginger ice cream	fruits
 r	l	Sep	147	sweet couscous with seasonal fruit	fruit
-C	c	ingredient:	 ginger
+C	c	ingredient:	ginger
 r	l	Dec	162	gingerbread men
 r	l	Jun	106	really good gingerbread
 r	l	Sep	152	Thai ginger & basil chicken with coconut rice	ginger
@@ -648,15 +648,15 @@ r	l	Dec	148	prosciutto crostini with dried cherries and goat's cheese
 r	l	Aug	61	prosciutto-wrapped king prawns with celeriac remoulade
 r	l	Jul	128	prosciutto-wrapped ocean trout with roast kumara
 r	l	Nov	126	the new caesar salad
-C	c	ingredient:	 jellies
+C	c	ingredient:	jellies
 r	l	Mar	101	chocolate jellies	jellies
 r	l	Jun	72	spiced red wine jellies with stem ginger & cinnamon cream	jellies
 r	l	Nov	106	warm strawberry jelly in a berry soup	jelly
-C	c	ingredient:	 kumara
+C	c	ingredient:	kumara
 r	l	Dec	128	baked kumara with yoghurt dressing	kumara
 r	l	Apr	44	kumara & pancetta tart	kumara
 r	l	Oct	104	kumara & thyme soda bread with marinated feta	kumara
-C	c	ingredient:	 lamb
+C	c	ingredient:	lamb
 r	l	Jun	140	Asian-style lamb on sesame fried rice	lamb
 r	l	Oct	102	butterflied lamb with chermoula	lamb
 r	l	Feb	90	chargrilled lamb with white beans	lamb
@@ -696,7 +696,7 @@ r	l	Apr	93	spiced lamb cutlets with chickpea puree	lamb
 r	l	Nov	158	spiced lamb with mint yoghurt	lamb
 r	l	Aug	94	sumac lamb with carrot rosti	lamb
 r	l	Dec	190	warm salad of lamb, roast garlic, straw potatoes & redcurrants	lamb
-C	c	ingredient:	 lemon
+C	c	ingredient:	lemon
 r	l	May	122	homemade limoncello
 r	l	Jun	78	lemon & herb polenta-crumbed fish with chips	lemon
 r	l	Mar	138	lemon & oregano lamb	lemon
@@ -706,7 +706,7 @@ r	l	May	128	marzipan & lemon cake with lemon syrup	lemon
 r	l	May	125	roast lemon chicken with Sicilian olives	lemon
 r	l	Sep	34	sour & spicy homemade lemon lime pickle	lemon
 r	l	May	126	tangy lemon gelato	lemon
-C	c	ingredient:	 lentils
+C	c	ingredient:	lentils
 r	l	Sep	124	braised lentil & cotechino calzone	lentil
 r	l	Apr	68	lamb koftas with red lentil & tomato dahl	lentil
 r	l	Jul	129	lentil & cauliflower dahl	lentil
@@ -716,12 +716,12 @@ r	l	Dec	110	pan-fried snapper with lentil, zucchini, tomato & tarragon salad	len
 r	l	May	156	pork with lentils and spinach	lentils
 r	l	Aug	96	spiced fish with easy dahl
 r	l	Aug	26	store-cupboard soup
-C	c	ingredient:	 lime
+C	c	ingredient:	lime
 r	l	Mar	76	chocolate lime pie	lime
 r	l	Oct	88	lime & honey posset	lime
 r	l	Dec	94	limoncello & lime popsicles with fruits and sugared lime zest	lime
 r	l	Feb	108	spicy lime-marinated pork with peach & tomato salsa	lime
-C	c	ingredient:	 mushroom
+C	c	ingredient:	mushroom
 r	l	May	107	beef with mushrooms & spinach	mushrooms
 r	l	Jun	115	chestnut, porcini mushroom & potato soup	mushroom
 r	l	Jun	82	creamy mushroom & snow pea pasta	mushroom
@@ -735,7 +735,7 @@ r	l	Feb	69	steak with mushroom miso sauce	mushroom
 r	l	Aug	92	steak with stroganoff sauce
 r	l	Feb	81	steamed chicken with shiitakes and Chinese sausage
 r	l	Jul	52	stir-fried mushrooms with Japanese noodles	mushrooms
-C	c	ingredient:	 noodles
+C	c	ingredient:	noodles
 r	l	Apr	68	miso ramen with five-spice roast pork
 r	l	Nov	141	poached chicken & soba salad
 r	l	Jun	78	sesame chicken with buckwheat noodles and bok choy	noodles
@@ -747,7 +747,7 @@ r	l	Sep	106	stir-fried beef and noodles	noodles
 r	l	Jul	52	stir-fried mushrooms with Japanese noodles	noodles
 r	l	Nov	201	Vietnamese noodle & smoked chicken salad	noodle
 r	l	Aug	155	Vietnamese noodle soup	noodle
-C	c	ingredient:	 nuts
+C	c	ingredient:	nuts
 r	l	Apr	76	caramel tartlets with macadamia pastry
 r	l	Jul	138	choc-macadamia ice cream cake
 r	l	May	109	chocolate & hazelnut crostata	nut
@@ -760,15 +760,15 @@ r	l	Jun	104	peanut butter biscuits	nut
 r	l	Sep	125	pear & almond pizza
 r	l	Jun	109	pecan & jam linzertorte
 r	l	Sep	162	pecan pie
-C	c	ingredient:	 olives
+C	c	ingredient:	olives
 r	l	Nov	148	olive & preserved lemon salad with flat-leaf parsley
 r	l	Nov	55	quick black olive tapenade
-C	c	ingredient:	 oranges
+C	c	ingredient:	oranges
 r	l	May	112	amaretto oranges with vanilla mascarpone	oranges
 r	l	May	144	orange crostoli	orange
 r	l	Aug	107	raspberry & orange pudding	orange
 r	l	Jun	116	rich chocolate cream with candied chestnut and orange	orange
-C	c	ingredient:	 pasta
+C	c	ingredient:	pasta
 r	l	May	142	basic pasta dough	pasta
 r	l	Jul	84	broccolini, chilli & pecorino pasta	pasta
 r	l	Sep	139	buckwheat pasta with caramelised onion and peas	pasta
@@ -816,14 +816,14 @@ r	l	Dec	118	raspberry & meringue ice cream sandwich
 r	l	Oct	106	rolled pavlova with rose cream and strawberries
 r	l	Oct	113	slow-baked meringue with tamarillo and rhubarb
 r	l	Dec	138	white Christmas tree
-C	c	ingredient:	 peas
+C	c	ingredient:	peas
 r	l	Dec	156	mixed pea, bacon & pine nut salad	pea
 r	l	Aug	94	pea & artichoke lasagne	pea
 r	l	Nov	122	pea & goat's cheese tarts	pea
 r	l	Sep	106	pea & smoked trout tart	pea
 r	l	Jul	70	pea, ham & sausage soup	pea
 r	l	Jul	103	sausages, peas and mash with port jus	peas
-C	c	ingredient:	 pears
+C	c	ingredient:	pears
 r	l	Jun	110	little upside-down pear cakes	pear
 r	l	Sep	125	pear & almond pizza	pear
 r	l	Mar	134	pear, date & cinnamon chutney	pear
@@ -851,7 +851,7 @@ C	c	category:	plums and prunes
 r	l	Mar	119	almond-sugar tarts with lemon mascarpone and roast plums	plums
 r	l	Mar	42	plum upside-down cake	plum
 r	l	Mar	136	spiced plum chutney	plum
-C	c	ingredient:	 pork
+C	c	ingredient:	pork
 r	l	Jul	115	caramelised pork hock with chilli vinegar	pork
 r	l	Jul	141	char siu pork	pork
 r	l	Nov	122	chargrilled pork sausages with Thai-style salad	pork
@@ -884,7 +884,7 @@ r	l	Feb	96	stir-fried pork and pickled cucumber on rice noodles	pork
 r	l	Dec	54	suckling pig
 r	l	Mar	84	Swedish meatballs
 r	l	Jun	126	Thai pork skewers	pork
-C	c	ingredient:	 potato
+C	c	ingredient:	potato
 r	l	Dec	87	barbecued seafood with truffled mash
 r	l	Sep	33	breakfast Bombay potatoes
 r	l	Oct	122	crushed potatoes with watercress
@@ -923,27 +923,27 @@ r	l	Dec	230	turkey & cranberry pilaf
 r	l	Dec	170	turkey & ham free-form pie
 r	l	Dec	168	turkey tostadas with avocado
 r	l	Dec	124	turkey with soy, star anise and ginger
-C	c	ingredient:	 pumpkin
+C	c	ingredient:	pumpkin
 r	l	Jul	41	chunky butternut pumpkin & chickpea soup	pumpkin
 r	l	Aug	104	pumpkin, cauliflower & coconut curry	pumpkin
 r	l	Jul	95	pumpkin mash	pumpkin
 r	l	Jun	30	pumpkin, rosemary & mascarpone risotto	pumpkin
 r	l	Jun	114	roast pumpkin, chestnut and speck salad	pumpkin
 r	l	Aug	158	spelt pasta with roasted pumpkin, pine nuts and sage	pumpkin
-C	c	ingredient:	 quince
+C	c	ingredient:	quince
 r	l	Apr	142	cheddar, quince & walnut millefeuille	quince
 r	l	Apr	78	poached quinces	quinces
 r	l	Apr	76	spiced quince trifle	quince
-C	c	ingredient:	 quinoa
+C	c	ingredient:	quinoa
 r	l	Nov	170	chicken & quinoa san choy bau	quinoa
 r	l	Jun	44	coconut quinoa porridge with banana and palm sugar	quinoa
 r	l	Mar	110	quinoa salad with roast vegetables & feta	quinoa
-C	c	ingredient:	 rhubarb
+C	c	ingredient:	rhubarb
 r	l	Apr	78	apple, rhubarb & ginger pie with Calvados cream	rhubarb
 r	l	Sep	54	rhubarb & orange sponge pudding	rhubarb
 r	l	Sep	84	rosy rhubarb compote	rhubarb
 r	l	Aug	103	salad of raw rhubarb, blood orange, beetroot and fior di latte	rhubarb
-C	c	ingredient:	 rice
+C	c	ingredient:	rice
 r	l	Jun	140	Asian-style lamb on sesame fried rice	rice
 r	l	Jul	54	bouillabaisse risotto
 r	l	May	52	braised cuttlefish & fennel risotto
@@ -1048,7 +1048,7 @@ r	l	Jun	70	Swiss cheese fondue
 r	l	Mar	132	tomato chutney
 r	l	Oct	75	tomato kasundi
 r	l	Mar	136	zucchini & ginger chutney
-C	c	ingredient:	 sausage
+C	c	ingredient:	sausage
 r	l	Dec	146	baked chorizo with dates and capsicum sauce
 r	l	Nov	114	barbecued squid and chipolatas with spicy tomato relish
 r	l	Nov	122	chargrilled pork sausages with Thai-style salad	sausages
@@ -1136,7 +1136,7 @@ r	l	Mar	90	tomato & bread soup	soup
 r	l	Aug	92	tomato soup with spaghetti and chicken meatballs	soup
 r	l	May	96	tomato soup with tortellini	soup
 r	l	Aug	155	Vietnamese noodle soup	soup
-C	c	ingredient:	 spinach
+C	c	ingredient:	spinach
 r	l	Oct	154	baked spinach & tomato omelette	spinach
 r	l	Apr	139	beetroot, baby spinach & goat's cheese salad	spinach
 r	l	Sep	114	frittata of zucchini, mint & ricotta
@@ -1184,14 +1184,14 @@ r	l	Sep	123	sauteed cauliflower calzone
 r	l	Feb	96	smoked salmon & basil tart
 r	l	Mar	118	smoked salmon & leek torta
 r	l	Mar	84	spinach, feta & onion tarts	spinach
-C	c	ingredient:	 terrines
+C	c	ingredient:	terrines
 r	l	Jun	62	ham hock terrine	terrine
 r	l	May	112	pannacotta terrine with strawberries in red wine syrup	terrine
 r	l	Dec	156	simple terrine with cranberries and pistachios	terrine
-C	c	ingredient:	 tofu
+C	c	ingredient:	tofu
 r	l	Feb	85	steamed silken tofu with soy	tofu
 r	l	Apr	129	vegetable & tofu stir-fry with chilli and basil	tofu
-C	c	ingredient:	 tomato
+C	c	ingredient:	tomato
 r	l	Jul	96	apple & tomato relish	tomato
 r	l	Oct	128	asparagus with tomato dressing and creme fraiche	tomato
 r	l	May	154	baked tomatoes stuffed with tuna & rice	tomatoes
@@ -1219,7 +1219,7 @@ r	l	Mar	132	tomato chutney	tomato
 r	l	Oct	75	tomato kasundi	tomato
 r	l	Aug	92	tomato soup with spaghetti and chicken meatballs	tomato
 r	l	May	96	tomato soup with tortellini	tomato
-C	c	ingredient:	 veal
+C	c	ingredient:	veal
 r	l	Aug	110	braised veal shanks with Sicilian olives and gremolata	veal
 r	l	Jul	114	braised veal with hot & sour salad	veal
 r	l	Oct	60	crumbed veal and tomato & ricotta salad and salsa verde	veal
@@ -1230,7 +1230,7 @@ r	l	Oct	146	veal cutlets with lemon beans	veal
 r	l	Aug	86	veal osso bucco	veal
 r	l	May	88	veal rolls filled with pine nuts and raisins (braciolette napoletana)	veal
 r	l	Feb	67	vitello tonnato with pesto potatoes
-C	c	ingredient:	 vegetables
+C	c	ingredient:	vegetables
 r	l	Aug	78	baby vegetables	vegetables
 r	l	Apr	68	caramel soy roast vegetables	vegetables
 r	l	Jul	126	mixed vegetable frittata	vegetable
@@ -1242,7 +1242,7 @@ r	l	Jun	82	sweet spiced potato & vegie patties
 r	l	Apr	129	vegetable & tofu stir-fry with chilli and basil	vegetable
 r	l	Oct	75	vegetable bhaji	vegetable
 r	l	Nov	120	vegetable crudité plate	vegetable
-C	c	ingredient:	 zucchini
+C	c	ingredient:	zucchini
 r	l	Feb	44	pasta with zucchini, prosciutto and lemon	zucchini
 r	l	Mar	109	prawn & zucchini fritters	zucchini
 r	l	Sep	114	spring frittata of zucchini, mint and ricotta	zucchini
