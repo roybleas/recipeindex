@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429022423) do
+ActiveRecord::Schema.define(version: 20150526085153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: true do |t|
-    t.string   "name"
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",            limit: 255
     t.integer  "seq"
     t.integer  "categorytype_id"
     t.datetime "created_at"
@@ -26,27 +26,27 @@ ActiveRecord::Schema.define(version: 20150429022423) do
 
   add_index "categories", ["categorytype_id"], name: "index_categories_on_categorytype_id", using: :btree
 
-  create_table "category_recipes", force: true do |t|
+  create_table "category_recipes", force: :cascade do |t|
     t.string   "keyword"
     t.integer  "category_id"
     t.integer  "recipe_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "category_recipes", ["category_id"], name: "index_category_recipes_on_category_id", using: :btree
   add_index "category_recipes", ["recipe_id"], name: "index_category_recipes_on_recipe_id", using: :btree
 
-  create_table "categorytypes", force: true do |t|
-    t.string   "code"
-    t.string   "name"
+  create_table "categorytypes", force: :cascade do |t|
+    t.string   "code",       limit: 255
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "issuedescriptions", force: true do |t|
-    t.string   "title"
-    t.string   "full_title"
+  create_table "issuedescriptions", force: :cascade do |t|
+    t.string   "title",          limit: 255
+    t.string   "full_title",     limit: 255
     t.integer  "seq"
     t.integer  "publication_id"
     t.datetime "created_at"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20150429022423) do
 
   add_index "issuedescriptions", ["publication_id"], name: "index_issuedescriptions_on_publication_id", using: :btree
 
-  create_table "issuemonths", force: true do |t|
+  create_table "issuemonths", force: :cascade do |t|
     t.integer  "monthindex"
     t.integer  "issuedescription_id"
     t.datetime "created_at"
@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 20150429022423) do
 
   add_index "issuemonths", ["issuedescription_id"], name: "index_issuemonths_on_issuedescription_id", using: :btree
 
-  create_table "issues", force: true do |t|
-    t.string   "title"
+  create_table "issues", force: :cascade do |t|
+    t.string   "title",               limit: 255
     t.integer  "issuedescription_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -75,18 +75,18 @@ ActiveRecord::Schema.define(version: 20150429022423) do
 
   add_index "issues", ["issuedescription_id"], name: "index_issues_on_issuedescription_id", using: :btree
 
-  create_table "publications", force: true do |t|
-    t.string   "title"
+  create_table "publications", force: :cascade do |t|
+    t.string   "title",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "published"
-    t.string   "description"
+    t.string   "published",   limit: 255
+    t.string   "description", limit: 255
   end
 
-  create_table "recipes", force: true do |t|
-    t.string   "title"
+  create_table "recipes", force: :cascade do |t|
+    t.string   "title",      limit: 255
     t.integer  "page"
-    t.string   "url"
+    t.string   "url",        limit: 255
     t.integer  "issue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -94,14 +94,16 @@ ActiveRecord::Schema.define(version: 20150429022423) do
 
   add_index "recipes", ["issue_id"], name: "index_recipes_on_issue_id", using: :btree
 
-  create_table "users", force: true do |t|
-    t.string   "name"
+  create_table "users", force: :cascade do |t|
+    t.string   "name",            limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "screen_name"
-    t.string   "password_digest"
-    t.string   "remember_digest"
+    t.string   "screen_name",     limit: 255
+    t.string   "password_digest", limit: 255
+    t.string   "remember_digest", limit: 255
     t.boolean  "admin"
   end
 
+  add_foreign_key "category_recipes", "categories"
+  add_foreign_key "category_recipes", "recipes"
 end

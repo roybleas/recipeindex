@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
 
+  
   get 'admin_pages/home'
 
 	resources :users
@@ -18,12 +19,17 @@ Rails.application.routes.draw do
 	end
 	
 	resources :issues, only: [:index, :show] do
-  member do
-    get 'years'
-    get 'descriptions'
-  end
-end
+  	member do
+    	get 'years'
+    	get 'descriptions'
+  	end
+	end
 	
+	resources :categories, only:[:index, :show] 
+	
+	get 'categories/byletter/:letter', to: 'categories#byletter',  as: 'byletter_categories'
+	
+	resources :recipes, only:[:show] 
 	
   
     

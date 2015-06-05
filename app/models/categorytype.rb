@@ -14,4 +14,16 @@ class Categorytype < ActiveRecord::Base
 	
 	validates :name, presence: true, uniqueness: true
 	validates :code, presence: true, uniqueness: true
+	
+	def self.by_ingredient()
+  	where(code: 'I')
+  end
+  
+  def self.by_style()
+  	where(code: 'S')
+  end
+
+	def self.by_list
+		where(code: %w[I S])
+	end
 end

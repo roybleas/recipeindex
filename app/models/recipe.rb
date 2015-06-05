@@ -15,6 +15,7 @@ class Recipe < ActiveRecord::Base
   belongs_to :issue
  	has_many :category_recipes
  	has_many :categories, through: :category_recipes
+ 	has_one :issuedescription, through: :issue
  	has_one :publication, through: :issue
   
   validates :issue, presence: true

@@ -1,0 +1,25 @@
+<h3>Recipes</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Recipe</th>
+        <th>Publication</th>
+        <th>Issue</th>
+        <th>Year</th>
+        <th>Page</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @recipes.each do |recipe| %>
+	      <tr>
+	        <td>
+	        	<%= raw format_recipe_title(recipe, @catrec, @category.id) %>
+	        </td>
+	        <td><%= recipe.pub %></td>
+	        <td><%= link_to recipe.desc, issue_path(recipe.issue_id) %></td>
+	        <td><%= recipe.year %></td>
+	        <td><%= recipe.page %></td>
+	      </tr>
+	     <% end %>
+    </tbody>
+  </table>

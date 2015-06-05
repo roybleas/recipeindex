@@ -24,7 +24,6 @@ RSpec.describe "issues/descriptions.html.erb", :type => :view do
 	  it "displays a button for multiple issue descriptions " do
 	  	descs =  [create(:issuedescription_with_single_issue, full_title: "April", issue_id: 124),
 	  		create(:issuedescription_with_single_issue, full_title: "May", issue_id: 125)]
-	  	puts descs.last.inspect
 	  	assign(:descriptions, descs)
 	  	assign(:issue_id , descs.last.issues.first.id)
 	  	

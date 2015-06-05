@@ -16,7 +16,7 @@
 					  <%= publication.published %>
 			  	<% end %>
 				</p>
-				<% pub_issues = publication.issues.joins(issuedescription: :issuemonths).where("monthindex = ?",5).order(year: :asc).all%>
+				<% pub_issues = publication.issues.joins(issuedescription: :issuemonths).where("monthindex = ?",@mnth).order(year: :asc).all%>
 			  <% if pub_issues.length == 0 %>
 			  	<p> No indexes available for this publication </p>
 			  <% else %>

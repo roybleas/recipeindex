@@ -13,7 +13,11 @@ Rails.application.configure do
   config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_assets  = true
+  #DEPRECATION WARNING: The configuration option `config.serve_static_assets` has
+	# been renamed to `config.serve_static_files` to clarify its role (it merely enables
+	# serving everything in the `public` folder and is unrelated to the asset pipeline
+  #config.serve_static_assets  = true
+  config.serve_static_files = true
   config.static_cache_control = 'public, max-age=3600'
 
   # Show full error reports and disable caching.
@@ -36,4 +40,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  # Getting error undefined method `keyword=' for #<CategoryRecipe
+  # RuntimeError Exception: Circular dependency detected while autoloading constant
+  # found https://robots.thoughtbot.com/how-to-fix-circular-dependency-errors-in-rails-integration-tests
+  config.allow_concurrency = false
 end

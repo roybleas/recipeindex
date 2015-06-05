@@ -526,7 +526,7 @@ r	l	Feb	81	eggplant with minced pork in Szechuan sauce	eggplant
 r	l	Sep	96	imam bayildi
 r	l	Oct	92	Italian baked eggplant	eggplant
 r	l	Jun	81	roasted eggplant with chickpea, black olive & capsicum salsa	eggplant
-C	c	category:	eggs
+C	c	ingredient:	eggs
 r	l	Oct	152	Asian crab omelette
 r	l	Mar	140	asparagus & leek frittata
 r	l	Nov	210	asparagus, pumpkin & goat's cheese frittata
@@ -612,7 +612,7 @@ r	l	Jun	126	Thai fishcakes
 r	l	Feb	99	Thai jungle fish curry	fish
 r	l	Nov	226	tuna & mackerel sashimi with ponzu dipping sauce
 r	l	May	105	tuna polpette with salmoriglio
-r	l	Sep	104	Tuna sashimi with coconut rice
+r	l	Sep	104	tuna sashimi with coconut rice
 r	l	Oct	144	tuna tabouleh salad
 r	l	Dec	116	whiting fillets steamed with prawn & celery mousse
 C	c	ingredient:	fruit
@@ -964,7 +964,7 @@ r	l	May	80	seafood risotto
 r	l	Mar	68	seared scallops on pea risotto
 r	l	Sep	140	spring vegetable & herb pilaf
 r	l	Sep	152	Thai ginger & basil chicken with coconut rice	rice
-r	l	Sep	104	Tuna sashimi with coconut rice	rice
+r	l	Sep	104	tuna sashimi with coconut rice	rice
 r	l	Dec	230	turkey & cranberry pilaf
 C	c	category:	salads
 r	l	Jul	70	alpine salad	salad
@@ -1219,16 +1219,7 @@ r	l	Mar	132	tomato chutney	tomato
 r	l	Oct	75	tomato kasundi	tomato
 r	l	Aug	92	tomato soup with spaghetti and chicken meatballs	tomato
 r	l	May	96	tomato soup with tortellini	tomato
-C	c	ingredient:	veal
-r	l	Aug	110	braised veal shanks with Sicilian olives and gremolata	veal
-r	l	Jul	114	braised veal with hot & sour salad	veal
-r	l	Oct	60	crumbed veal and tomato & ricotta salad and salsa verde	veal
-r	l	Aug	34	poached fillet of veal with chestnut mushrooms and parsnip puree	veal
-r	l	Jun	96	roast fillet of veal in a parmesan crust	veal
-r	l	Jul	78	san choy bau
-r	l	Oct	146	veal cutlets with lemon beans	veal
-r	l	Aug	86	veal osso bucco	veal
-r	l	May	88	veal rolls filled with pine nuts and raisins (braciolette napoletana)	veal
+r	l	May	88	veal rolls filled with pine nuts and raisins (braciolette napoletana)
 r	l	Feb	67	vitello tonnato with pesto potatoes
 C	c	ingredient:	vegetables
 r	l	Aug	78	baby vegetables	vegetables
@@ -1242,8 +1233,3 @@ r	l	Jun	82	sweet spiced potato & vegie patties
 r	l	Apr	129	vegetable & tofu stir-fry with chilli and basil	vegetable
 r	l	Oct	75	vegetable bhaji	vegetable
 r	l	Nov	120	vegetable crudité plate	vegetable
-C	c	ingredient:	zucchini
-r	l	Feb	44	pasta with zucchini, prosciutto and lemon	zucchini
-r	l	Mar	109	prawn & zucchini fritters	zucchini
-r	l	Sep	114	spring frittata of zucchini, mint and ricotta	zucchini
-r	l	Mar	136	zucchini & ginger chutney	zucchini

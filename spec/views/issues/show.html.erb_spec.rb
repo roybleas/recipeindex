@@ -5,12 +5,13 @@ RSpec.describe "issues/show.html.erb", :type => :view do
 	context "with Publication,Issue " do
     before(:each) do
       assign(:pub, Publication.new(title: "Delicious"))
-   		assign(:issue,Issue.create(no: 123, year: 2001))
+      @this_issue = Issue.create(no: 123, year: 2001)
+   		assign(:issue,@this_issue)
    		assign(:issuedesc,Issuedescription.new(title: "April"))
    		assign(:previous_issuedescription, FactoryGirl.create(:issue_without_description, year: 2000))
    		assign(:next_issuedescription, FactoryGirl.create(:issue_without_description, year: 2002))
-   		assign(:recipes, [ Recipe.new(page: 102, title: "Baked kumara with yoghurt dressing")])
-   		
+   		this_recipe = FactoryGirl.create(:recipe , page: 102, title: "Baked kumara with yoghurt dressing", issue_id: @this_issue.id)
+   		assign(:recipes, [this_recipe])
    	end
 	
 	
@@ -41,7 +42,7 @@ RSpec.describe "issues/show.html.erb", :type => :view do
 	  	expect(rendered).to match /Baked kumara/
 	  end
 	  it "displays a recipe with a link " do
-	  	assign(:recipes, [ Recipe.new(page: 103, title: "Baked Alaska", url: "www.awebsite.com.au/recipe1.html")])
+	  	assign(:recipes, [  FactoryGirl.create(:recipe , page: 103, title: "Baked Alaska", url: "www.awebsite.com.au/recipe1.html", issue_id: @this_issue.id)])
 	  	render 
 	  	expect(rendered).to match /103/
 	  	expect(rendered).to match /Baked Alaska/

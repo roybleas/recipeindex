@@ -17,4 +17,8 @@ class Category < ActiveRecord::Base
   
   validates :name, presence: true, uniqueness: true
   validates :categorytype, presence: true
+  
+  def self.by_letter_range(letters)
+  	where('lower(left(categories.name,1)) >= ? AND lower(left(categories.name,1)) <= ?', letters[0], letters[1]).order(:name)
+  end
 end

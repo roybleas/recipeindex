@@ -233,7 +233,7 @@ class RecipeImporter
 						end
 									
 						if !current_issue.nil?
-							current_issue.recipes.create(title: row["recipe"], page: row["page"])
+							current_issue.recipes.find_or_create_by(title: row["recipe"], page: row["page"])
 						end
 									
 					else
@@ -256,7 +256,7 @@ class RecipeImporter
 		fileInput = Rails.root.join('db','seeds','dbloadfiles',filename)
 		
 		catTypeI = Categorytype.find_by(code: 'I')
-		catTypeT = Categorytype.find_by(code: 'T')
+		catTypeT = Categorytype.find_by(code: 'S')
 		
 		puts "loading #{@mag_title}_#{@yr}_categories.csv"
 		
@@ -458,7 +458,7 @@ class CategoryImporter
 		count = 0
 		
 		catTypeI = Categorytype.find_by(code: 'I')
-		catTypeT = Categorytype.find_by(code: 'T')
+		catTypeT = Categorytype.find_by(code: 'S')
 
 		CSV.foreach(fileInput, {col_sep: "\t", headers: :true}) do |row|
 			
@@ -505,4 +505,44 @@ class FindRecipeByIssue
 		return Recipe.joins(:issue).where('issues.no = ? and recipes.title = ? and page = ?',
 			@issue.to_i,recipeTitle,page).first
 	end
+end
+
+class UrlImporter
+	def initialize(mag_title)
+	
+		# store the short name used in the extract file
+		@mag_title = mag_title
+			
+	end
+		
+	def load_delicious_urls
+		
+		filename = "#{@mag_title}_urls.csv"
+		fileInput = Rails.root.join('db','seeds','dbloadfiles',filename)
+		
+		puts "loading #{filename}"
+		
+		#track how many updates
+		count = 0
+			
+		CSV.foreach(fileInput, {col_sep: "\t", headers: :true}) do |row|
+			
+			recipe = Recipe.joins(issue: :issuedescription).
+				where(" issuedescriptions.title = ? AND issues.year = ? AND page = ? AND recipes.title = ? ",
+				row["issue"], row["year"],row["page"],row["recipe"]).take
+			if recipe.nil?
+				puts "#{row['recipe']} not found"
+			else
+				recipe.url = row["url"]
+				recipe.save
+				count += 1
+			end
+		end
+		
+		puts "Recipes updated: #{count}"
+	end			
+		
+					
+					
+					
 end

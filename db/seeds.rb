@@ -59,7 +59,7 @@ unless pubDish.issuedescriptions.exists?(title: 'Feb-Mar') then
 end
 
 catTypeI = Categorytype.find_or_create_by(code: 'I', name: 'Ingredient')
-catTypeT = Categorytype.find_or_create_by(code: 'T', name: 'Style')
+catTypeT = Categorytype.find_or_create_by(code: 'S', name: 'Style')
 if Rails.env == "development"
 	catTypeM = Categorytype.find_or_create_by(code: 'M', name: 'Meal')
 end
@@ -81,6 +81,9 @@ descDish = pubDish.issuedescriptions.find_by_title('Feb-Mar')
 	CategoryImporter.new(issue[:noRange],mag_title).load_categories
 	RecipeImporter.new(pubDish,issue[:noRange],mag_title).loadRecipesByCategory
 end	
+
+mag_title = "del"
+UrlImporter.new(mag_title).load_delicious_urls
 
 
 

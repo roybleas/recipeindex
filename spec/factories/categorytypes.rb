@@ -13,7 +13,7 @@
 
 FactoryGirl.define do
   factory :categorytype do
-    code "MyString"
-    name "MyString"
+  	sequence(:code) { |n| "#{n}" }
+  	sequence(:name) { |n| "Type #{n}" }
   end
 end

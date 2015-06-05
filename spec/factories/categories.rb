@@ -14,8 +14,7 @@
 
 FactoryGirl.define do
   factory :category do
-    name "MyString"
-    seq 1
-    categorytype nil
+    sequence(:name) { |n| "Example-#{n}" }
+    seq nil  
   end
 end

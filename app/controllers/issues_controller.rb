@@ -47,8 +47,8 @@ class IssuesController < ApplicationController
   	@next_issuedescription = Issue.joins(:issuedescription).where("issuedescriptions.seq = ? and year = ?",next_sequence,@issue.year).take
   	
   	@recipes = Recipe.where("issue_id = ?", issue_id).order('lower(title) asc').all
+  	@catrec = CategoryRecipe.keywords_list_by_issue(issue_id).all.to_a
   	
-  	render 'show'
   end
   
   def years
