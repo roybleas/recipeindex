@@ -28,4 +28,5 @@ class Issue < ActiveRecord::Base
   def self.for_issuemonth_and_publication(mnth,pub_id)
     joins([issuedescription: :issuemonths]).where("issuemonths.monthindex = ? and issuedescriptions.publication_id = ?", mnth,pub_id)
   end
+	
 end

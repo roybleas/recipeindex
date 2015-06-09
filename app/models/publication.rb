@@ -15,4 +15,5 @@ class Publication < ActiveRecord::Base
 	has_many :issues, through: :issuedescriptions
 	has_many :recipes, through: :issues
 	validates :title, presence: true, uniqueness: true
+	
 end

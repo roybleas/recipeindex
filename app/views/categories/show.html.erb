@@ -3,4 +3,7 @@
   
   <%= render 'layouts/recipesfull' %>
   
+  <% if @recipes.size == 0 %>
+  	<p> No recipes available. </p>
+  <% end %>
 </div>

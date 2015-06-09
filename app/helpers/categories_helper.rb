@@ -35,7 +35,7 @@ module CategoriesHelper
 				formated_recipe.concat(raw(recipe_words.join(" ")))
 			end
 		end
-		# add link to recipe url if exists
+		
 		unless recipe.url.nil?
 			url = " <a href=\"#{recipe.url}\"> <span class=\"glyphicon glyphicon-globe\"></span> </a> "
 			formated_recipe.concat(raw(url))
