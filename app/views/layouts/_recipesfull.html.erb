@@ -18,7 +18,7 @@
 	        <td><%= recipe.pub %></td>
 	        <td><%= link_to recipe.desc, issue_path(recipe.issue_id) %></td>
 	        <td><%= recipe.year %></td>
-	        <td><%= recipe.page %></td>
+	        <td class="recipepage"><%= recipe.page %></td>
 	      </tr>
 	     <% end %>
     </tbody>

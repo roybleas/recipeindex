@@ -13,25 +13,17 @@ class IssuesController < ApplicationController
   end
 
   def show
-  	#save the parameter as an integer 
+  	
   	issue_id = params[:id].to_i
   	@issue = Issue.find(issue_id)
   	@issuedesc = Issuedescription.joins(:issues).where("issues.id = ?", issue_id).take
   	@pub = Publication.joins(:issues).where("issues.id = ?", issue_id).take
   	years = Issue.where(issuedescription_id: @issuedesc.id).order(year: :asc).all
   	
-  	#find the next and previous year records for the passed issue
-  	@year_before = nil
-  	@year_after = nil
-  	(0...years.size).each do |idx|
-  		if years[idx].id == issue_id 
-  			@year_before = years[idx - 1] unless idx == 0
-  			@year_after = years[idx + 1] unless idx == years.size
-  			break
-  		end
-  	end
+  	idx = years.index(@issue)
+  	@year_before = years[idx - 1] unless idx == 0
+  	@year_after = years[idx + 1] unless idx == years.size
   	
-  	#find the next and previous issuedescriptions
   	min_sequence = @pub.issuedescriptions.minimum("seq")
   	max_sequence = @pub.issuedescriptions.maximum("seq")
   	

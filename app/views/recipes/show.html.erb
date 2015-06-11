@@ -1,4 +1,16 @@
 <div class="container">
-<h1>
-	<%= @recipe.title %>
-</h1>
+	<h1>
+		<%= capitalise_first_letter(@recipe.title) %>
+	</h1>
+	<h2><%= @issue_with_desc.publication_title %></h2>
+	<h3>Issue: 
+			<%= link_to(issue_path(@issue_with_desc)) do %>
+  		<%= concat_issue_description_with_year(@issue_with_desc.issuedescription_title, @issue_with_desc.year) %>
+			<% end %>
+  		<small>Page: <%= @recipe.page %> </small>
+	</h3>
+	<% if @categories.size > 0 %><h4>Categories</h4> <% end %>
+	<div class="row" >
+		<%= render 'layouts/categories_list' %>
+	</div>
+</div>

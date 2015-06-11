@@ -21,4 +21,5 @@ class Category < ActiveRecord::Base
   def self.by_letter_range(letters)
   	where('lower(left(categories.name,1)) >= ? AND lower(left(categories.name,1)) <= ?', letters[0], letters[1]).order(:name)
   end
+  
 end

@@ -22,7 +22,7 @@ RSpec.describe "categories/show.html.erb", :type => :view do
   end
   
   context "view category without recipes" do
-  	it "displays no recipes availbale" do
+  	it "displays no recipes available" do
   		render 
   		expect(rendered).to match /No recipes available/
   	end

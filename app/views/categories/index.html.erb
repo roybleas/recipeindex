@@ -15,26 +15,7 @@
 	  	<p> No categories found </p>
 		<% else %>
 			<div class="row recipe" >
-				
-			<% count = 0 %>
-			
-    	<% @categories.each do |category| %>
-    	
-    		<% if count == 0 %>
-    			<div class="col-sm-3 col-md-6 col-lg-3" >
-    	 		<ul class="list-unstyled">
-    		<% end %>
-    	
-    		<li> <%= link_to category.name, category_path(category) %>	 </li>
-     	     	
-     		<% count += 1%>
-     		<% if count >= @columnheight %>
-     			</ul>
-    			</div>
-    			<% count = 0 %>
-    		<% end %>      
-    	<% end %>
-    	</ul>
-    	</div>
+				<%= render 'layouts/categories_list' %>
+			</div>
   	<% end %>
 </div>

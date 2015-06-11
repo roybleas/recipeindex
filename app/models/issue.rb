@@ -28,5 +28,9 @@ class Issue < ActiveRecord::Base
   def self.for_issuemonth_and_publication(mnth,pub_id)
     joins([issuedescription: :issuemonths]).where("issuemonths.monthindex = ? and issuedescriptions.publication_id = ?", mnth,pub_id)
   end
-	
+  
+  def self.and_description_title_for_recipe(recipe_id)
+		select("issues.*,issuedescriptions.title as issuedescription_title, publications.title as publication_title").joins(:recipes, {issuedescription: :publication}).where("recipes.id = ?",recipe_id)
+	end
 end
+

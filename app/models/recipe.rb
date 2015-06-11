@@ -21,5 +21,7 @@ class Recipe < ActiveRecord::Base
   validates :issue, presence: true
   validates :title, :page, presence: true
   
-  
+  def self.by_category(category)
+  	select('recipes.* , publications.title as pub, issuedescriptions.title as desc , issues.year as year').joins(:categories).joins(issue: { issuedescription: :publication}).where('categories.id = ?',category.id).order(title: :asc).all 	
+  end
 end

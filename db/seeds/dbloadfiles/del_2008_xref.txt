@@ -69,7 +69,7 @@ xref:sweet potato xref:kumara
 xref:swordfish xref:fish
 xref:tagliatelle xref:pasta
 xref:Taleggio xref:cheese
-xref:tarts, flans and pizzas xref:also
+xref:tarts, flans and pizzas xref: pies and pastries
 xref:tiramisu xref:chilled desserts
 xref:toast xref:sandwiches, rolls and toast
 xref:trout xref:fish

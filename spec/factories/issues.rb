@@ -12,6 +12,11 @@
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
+class Issue_and_description < Issue 
+	attr_accessor :issuedescription_title
+	attr_accessor :publication_title
+	
+end
 
 FactoryGirl.define do
   factory :issue do
@@ -24,4 +29,12 @@ FactoryGirl.define do
 		sequence(:year, 1998)
   	sequence(:no, 100)
 	end
+	
+	factory :issue_with_descriptiontitle, class: Issue_and_description, parent: :issue_without_description do
+  	issuedescription_title "Aug"
+  	publication_title "Delicious"
+	end
+	
 end
+
+

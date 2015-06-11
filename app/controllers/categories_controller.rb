@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+include Layoutcalculations
 	def byletter
 	
 		@letter_ranges = letter_ranges
@@ -30,12 +31,11 @@ class CategoriesController < ApplicationController
 	end
 
   def show
-  	#save the parameter as an integer and fetch category 
+  	
   	category_id = params[:id].to_i
   	@category = Category.find(category_id)
   	
-  	#look up all the recipes associated with this category and their keyword links
-  	@recipes = Recipe.select('recipes.* , publications.title as pub, issuedescriptions.title as desc , issues.year as year').joins(:categories).joins(issue: { issuedescription: :publication}).where('categories.id = ?',@category.id).order(title: :asc).all 	
+  	@recipes = Recipe.by_category(@category)
   	@catrec = CategoryRecipe.keywords_list_by_category(category_id).all.to_a
   	
   rescue ActiveRecord::RecordNotFound
@@ -57,12 +57,5 @@ class CategoriesController < ApplicationController
   
   end
   
-  def column_height(size)
-  	# divides the number of categories by 3 and works out a rounding margin
-  	if size == 0
-  		return 0
-  	else
-    	return ( size / 3) + (size % 3 == 0 ? 0 : 1)
-    end
-   end
+  
 end

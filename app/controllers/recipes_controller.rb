@@ -1,10 +1,12 @@
 class RecipesController < ApplicationController
-
+include Layoutcalculations
 	def show
 		#save the parameter as an integer and fetch category 
   	recipe_id = params[:id].to_i
   	@recipe = Recipe.find(recipe_id)
-  	
+  	@issue_with_desc = Issue.and_description_title_for_recipe(recipe_id).first
+  	@categories = Category.joins(:category_recipes).where("category_recipes.recipe_id = ?",recipe_id)
+  	@columnheight = column_height(@categories.count,1)
   	rescue ActiveRecord::RecordNotFound
 	  	begin
 	  		# When an unknown recipe requested go back 
