@@ -8,4 +8,9 @@ module ApplicationHelper
   		current_user.admin?
   	end
   end
+
+	def publications
+	
+		return []
+	end
 end

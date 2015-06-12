@@ -1,19 +1,35 @@
 require 'rails_helper'
 
 RSpec.describe "layouts/application.html.erb", :type => :view do
+	
+	
 	context "navigation menu" do
+		before(:each) do
+			@publications = [create(:publication)]
+			allow(view).to receive(:publications).and_return(@publications)
+		end
+			
 		it "has a Home tab" do
 			render
 			assert_select 'li', "Home"
 			assert_select "a[href=?]", "/"
-
 		end
 		it "has a Categories tab" do
 			render
 			assert_select 'li', "Categories"
 			assert_select "a[href=?]", "/categories"
-			
 		end
+		it "has an Issues tab" do			
+			render
+			assert_select 'a.dropdown-toggle', "Issues"
+		end
+		
+		it "has a menu of publications for issues" do
+			render
+			assert_select 'li', @publications[0].title
+			assert_select "a[href=?]", "/publications/" + @publications[0].id.to_s + "/issues"
+		end
+		
 	end
 	context "navigate when not logged in" do
 		before(:each) do

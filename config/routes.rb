@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   delete 'logout'	=> 'sessions#destroy'
   
   root 'issues#index'
-  resources :publications, only: [:show, :edit, :update ]
+  resources :publications, only: [:show, :edit, :update ] do
+  	member do
+  		get 'issues'
+  	end
+  end
   
   namespace :admin do
   	resources :publications, only: [:index]
