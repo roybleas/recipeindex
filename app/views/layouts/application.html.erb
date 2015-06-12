@@ -16,12 +16,11 @@
   <% if logged_in? %>
 	  <li role="presentation" class="dropdown">
 	    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-	      User: 
-	      <%= @current_user.screen_name %> <span class="caret"></span>
+	      User:           
+	        <%= current_user.screen_name %> <span class="caret"></span>
 	    </a>
 	    <ul class="dropdown-menu" role="menu">
 	    	<li role="presentation"> <%= link_to "Profile", current_user %> </li>
-	    	<li role="presentation"> <%= link_to "All Users", users_path %> </li>
 	    	<li class="divider"></li>
 	    	<li role="presentation"><%= link_to "Log out", logout_path, method: :delete %></li>
 	  </li>
@@ -34,6 +33,7 @@
 		    <ul class="dropdown-menu" role="menu">
 		    	<li role="presentation"> <%= link_to "Publications", admin_pages_home_path %> </li>
 		    	<li class="divider"></li>	
+		    	<li role="presentation"> <%= link_to "All Users", users_path %> </li>
 		  	</li>
 				</ul>
 			<% end %>
