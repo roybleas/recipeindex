@@ -14,9 +14,9 @@
 
 FactoryGirl.define do
   factory :publication do
-    title  "DeliciousTest"
+    sequence(:title) {|n| "Publication #{n}" }
     published "Monthly"
-   	description "ABC food magazine."
+   	description "A food magazine."
   end
 end
 

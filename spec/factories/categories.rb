@@ -16,5 +16,6 @@ FactoryGirl.define do
   factory :category do
     sequence(:name) { |n| "Example-#{n}" }
     seq nil  
+    categorytype_id 1
   end
 end

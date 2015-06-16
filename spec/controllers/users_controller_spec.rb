@@ -31,12 +31,12 @@ RSpec.describe UsersController, :type => :controller do
  		context "with invalid attributes" do
  			it "does not save the new user in the database" do
  				expect{
- 					post :create, user: attributes_for(:invalid_user)
+ 					post :create, user: attributes_for(:user, name: nil )
 				}.not_to change(User, :count)
 			end		
  			it "re-renders the :new template" do
  				post :create,
- 					user: attributes_for(:invalid_user)
+ 					user: attributes_for(:user, name: nil)
  				expect(response).to render_template :new
  			end
  		end

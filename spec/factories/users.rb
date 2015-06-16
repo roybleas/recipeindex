@@ -20,13 +20,6 @@ FactoryGirl.define do
 		password_confirmation "foobar"
 	end
 	
-	factory :invalid_user, class: User do
-		name nil
-		screen_name nil
-		password nil
-		password_confirmation nil
-	end
-	
 	factory :admin_user, class: User do
 		name "Barney Rubble"
 		screen_name "Barney"

@@ -35,6 +35,10 @@ FactoryGirl.define do
   	publication_title "Delicious"
 	end
 	
+	factory :issue_with_set_year, class: Issue do
+		year  2002
+  	sequence(:no, 200)
+	end
 end
 
 
