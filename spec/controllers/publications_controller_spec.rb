@@ -77,5 +77,29 @@ RSpec.describe PublicationsController, :type => :controller do
  		end
 	end
 
+	describe 'issues by publication' do
+		
+		before(:each) do
+			@pub = create(:publication)
+			@isdesc = create_list(:issuedescription_list, 5)
+			@issues = create_list(:issue_without_description, 5, year: 2008)
+		end
+		
+		it "returns http success" do
+			
+ 			get :issues, id: @pub
+      expect(response).to have_http_status(:success)
+    end
+ 			
+ 		it "renders the :issues template" do
+			get :issues, id: @pub
+ 			expect(response).to render_template :issues
+ 		end
+ 		
+ 		it "assigns the requested publication to publication" do
+ 			get :issues, id: @pub
+ 			expect(assigns(:publication)).to eq @pub
+ 		end
+	end
  	
 end

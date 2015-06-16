@@ -41,6 +41,12 @@ RSpec.describe IssuesController, :type => :controller do
     	expect(assigns(:pub)).to eq pub
     end
     
+    it "redirects to root when id not found" do
+    	issue = create(:issue)
+    	get :show, id: (issue.id) + 1
+    	expect(response).to redirect_to :root
+    end
+    
     it "assigns the previous year and next year to null when only one issue year" do
     
     	issue = FactoryGirl.create(:issue, year: 2005)	   	

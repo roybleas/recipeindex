@@ -10,7 +10,6 @@ module ApplicationHelper
   end
 
 	def publications
-	
-		return []
+		return  Publication.distinct.joins(:issuedescriptions).order(title: :asc).all
 	end
 end

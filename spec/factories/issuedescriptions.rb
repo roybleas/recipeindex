@@ -49,4 +49,13 @@ FactoryGirl.define do
 	  	create(:issue, id: evaluator.issue_id, issuedescription: issuedescription, year: 2010)
 	  end
 	end
+	
+	 
+	 	
+	factory :issuedescription_list, class: Issuedescription do
+  	sequence(:title) {|n| "Title #{n}" }
+  	sequence(:full_title) { |n| "Full title #{n}" }
+  	sequence(:seq) 
+  	
+  end
 end

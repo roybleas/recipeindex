@@ -20,12 +20,7 @@ feature 'show users' do
 		click_button 'Log in'
 		expect(current_path).to eq user_path(user.id)
 		
-		click_link 'All Users'
-		expect(current_path).to eq users_path
-		
-		expect(page).to have_content(user.screen_name)
-		expect(page).to have_content(user.name)
-		expect(page).to_not have_link("Delete")
+	
 		
 		click_link 'Log out'
 		
@@ -46,6 +41,13 @@ feature 'show users' do
 		expect(page).to have_content(admin.screen_name)
 		expect(page).to have_link("Delete", :href=>"/users/#{user.id}" )
 		expect(page).to_not have_link("Delete", :href=>"/users/#{admin.id}" )
+		
+		click_link 'All Users'
+		expect(current_path).to eq users_path
+		
+		expect(page).to have_content(user.screen_name)
+		expect(page).to have_content(user.name)
+		
 		
 		click_link 'Log out'
 	end 

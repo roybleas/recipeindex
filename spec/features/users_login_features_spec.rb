@@ -41,7 +41,6 @@
 		
 		expect(current_path).to eq user_path(user.id)
 		expect(page).to have_link("Profile")
-		expect(page).to have_link("All Users")
 		expect(page).to have_link("Log out")
 		expect(page).to_not have_link("Log in")
 		expect(page).to have_content(user.screen_name)

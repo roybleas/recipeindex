@@ -1,4 +1,7 @@
 class IssuesController < ApplicationController
+
+rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+	
   def index
   	# Note not a true index of all issue records.
   	# instead it shows the distinct year fields by publication and selects the Issue Id for each publication for the current month
@@ -71,5 +74,10 @@ class IssuesController < ApplicationController
   
   	def issue_params
   		params.require(:issue).permit(:id)
+  	end
+  	
+  	def record_not_found
+			flash[:danger] = "Record not found."
+  		redirect_to root_url
   	end
 end

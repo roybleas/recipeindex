@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
 include Layoutcalculations
+
+
+	
 	def byletter
 	
 		@letter_ranges = letter_ranges
@@ -37,11 +40,7 @@ include Layoutcalculations
   	
   	@recipes = Recipe.by_category(@category)
   	@catrec = CategoryRecipe.keywords_list_by_category(category_id).all.to_a
-  	
-  rescue ActiveRecord::RecordNotFound
-  	# When an unknown category requested go back to index
-  	flash[:danger] = "Category not found"
-  	redirect_to action: :index
+  
   end
   
   private 
@@ -57,5 +56,8 @@ include Layoutcalculations
   
   end
   
-  
+  def record_not_found(item)
+		flash[:danger] = "#{item} not found."
+	  redirect_to action: :index
+	end
 end
