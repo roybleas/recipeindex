@@ -7,7 +7,7 @@ include Layoutcalculations
   	recipe_id = params[:id].to_i
   	@recipe = Recipe.find(recipe_id)
   	@issue_with_desc = Issue.and_description_title_for_recipe(recipe_id).first
-  	@categories = Category.joins(:category_recipes).where("category_recipes.recipe_id = ?",recipe_id)
+  	@categories = Category.joins(:category_recipes).where("category_recipes.recipe_id = ?",recipe_id).order("categories.name asc")
   	@columnheight = column_height(@categories.count,1)
 	end
 	
