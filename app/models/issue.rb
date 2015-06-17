@@ -26,7 +26,7 @@ class Issue < ActiveRecord::Base
   validates :no, presence: {if: Proc.new { |issue| issue.title.blank? }}
   
   def self.for_issuemonth_and_publication(mnth,pub_id)
-    joins([issuedescription: :issuemonths]).where("issuemonths.monthindex = ? and issuedescriptions.publication_id = ?", mnth,pub_id)
+    joins([issuedescription: :issuemonths]).where("issuemonths.monthindex = ? and issuedescriptions.publication_id = ?", mnth,pub_id).order(year: :asc)
   end
   
   def self.and_description_title_for_recipe(recipe_id)
