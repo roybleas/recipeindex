@@ -81,8 +81,10 @@ RSpec.describe PublicationsController, :type => :controller do
 		
 		before(:each) do
 			@pub = create(:publication)
-			@isdesc = create_list(:issuedescription_list, 5)
-			@issues = create_list(:issue_without_description, 5, year: 2008)
+			@isdesc = []
+			3.times do
+				@isdesc << FactoryGirl.create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 2, yr: 2001)
+			end
 		end
 		
 		it "returns http success" do
@@ -100,6 +102,49 @@ RSpec.describe PublicationsController, :type => :controller do
  			get :issues, id: @pub
  			expect(assigns(:publication)).to eq @pub
  		end
+ 		
+ 		it "assigns the requested issuedescriptions to issuedescription" do
+ 			get :issues, id: @pub
+ 			expect(assigns(:issuedescriptions)).to eq @isdesc
+ 		end
+ 		
+ 		it "assigns the requested issues to issues" do
+ 			get :issues, id: @pub
+ 			issues_list = @isdesc.inject([]) { |issues_group, issuedesc| issues_group  +  issuedesc.issues }
+ 			expect(assigns(:issues).to_a).to match_array issues_list
+ 		end
+ 		
+ 		it "assigns the requested issue descriptions in the correct sequence" do
+ 			pub2 = create(:publication)
+			isdesc2 = []
+			isdesc2 << FactoryGirl.create(:issuedescription_list, publication_id: pub2.id, seq: 3)
+			isdesc2 << FactoryGirl.create(:issuedescription_list, publication_id: pub2.id, seq: 1)
+			isdesc2 << FactoryGirl.create(:issuedescription_list, publication_id: pub2.id, seq: 2)
+ 			issuedesc_list = [isdesc2[1], isdesc2[2] , isdesc2[0]]
+ 			get :issues, id: pub2
+ 			expect(assigns(:issuedescriptions)).to eq issuedesc_list
+ 		end
+ 		
+ 		it "assigns the requested issues in the correct issuedescription and year sequence" do
+ 			pub2 = create(:publication)
+			isdesc2 = []
+			isdesc2 << create(:issuedescription_list_with_an_issue, publication_id: pub2.id, seq: 3, issue_count: 2, yr: 2001)
+			isdesc2 << create(:issuedescription_list_with_an_issue, publication_id: pub2.id, seq: 1, issue_count: 2, yr: 2001)
+			isdesc2 << create(:issuedescription_list_with_an_issue, publication_id: pub2.id, seq: 2, issue_count: 2, yr: 2001)
+ 			issuedesc_list = [isdesc2[1], isdesc2[2] , isdesc2[0]] 			 			
+ 			issues_list0 = issuedesc_list.inject([]) { |issues_group, issuedesc| issues_group  <<  issuedesc.issues.sort_by(&:no)[0] }
+ 			issues_list1 = issuedesc_list.inject([]) { |issues_group, issuedesc| issues_group  <<  issuedesc.issues.sort_by(&:no)[1] }
+ 			issues_list = issues_list0 + issues_list1
+ 			
+ 			get :issues, id: pub2
+ 			expect(assigns(:issues).to_a).to eq issues_list
+ 		end
+ 		
+ 		it "redirects to root if publication id parameter not found" do
+ 			get :issues, id: @pub.id + 1
+ 			expect(response).to redirect_to :root
+ 		end
+ 			
 	end
  	
 end
