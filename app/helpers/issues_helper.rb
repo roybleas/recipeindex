@@ -10,7 +10,7 @@ class CurrentYear
 		html_txt = ""
 		
 		if this_year != @current_year
-			html_txt = " </tr>\n" unless @current_year == -1
+			html_txt = " </tr>" unless @current_year == -1
 			html_txt = html_txt + "<tr><th> #{this_year}</th> "
 			@current_year = this_year
 		end

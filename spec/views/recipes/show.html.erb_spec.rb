@@ -23,7 +23,7 @@ RSpec.describe "recipes/show.html.erb", :type => :view do
   		render
   		expect(view).to render_template(:show)
   	end
-  	it "displays a recipe name name" do
+  	it "displays a recipe name" do
   		render
   		expect(rendered).to match /#{@recipe.title}/ 
   	end
