@@ -103,4 +103,40 @@
 		
 		expect(current_path).to eq user_path(user.id)
 	end
+	
+	scenario 'delete the user' do
+				
+		user = @user
+						
+		visit root_path
+		
+		click_link 'Log in'
+		
+		expect(current_path).to eq login_path
+		fill_in "Name",							with: user.name
+		fill_in "Password",					with:	user.password 
+		click_button 'Log in'
+		
+		expect(current_path).to eq user_path(user.id)
+	
+		click_link 'Settings'
+		expect(current_path).to eq edit_user_path(user.id)
+		
+
+		click_link 'Delete'
+		
+		expect(current_path).to eq root_path
+		expect(page).to have_content("User deleted")
+		
+		
+		click_link 'Log in'
+		
+		expect(current_path).to eq login_path
+		fill_in "Name",							with: user.name
+		fill_in "Password",					with:	user.password 
+		click_button 'Log in'
+		
+		expect(current_path).to eq login_path
+		expect(page).to have_content 'Invalid name/password combination'
+	end
 end
