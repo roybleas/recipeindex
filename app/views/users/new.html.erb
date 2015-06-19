@@ -1,32 +1,7 @@
 <div class="login">
-	<%= form_for(@user)  do |f| %>
-		<fieldset class="login" >
-			<h2 class="login" >Sign up</h2>
-			<%= render 'shared/error_messages', object: f.object %>
-			<ul class="login">
-			
-				<li>
-					<%= f.label :name %>
-					<%= f.text_field :name, class: "loginwidth" %>
-				</li>
-				<li>	
-					<%= f.label :screen_name %>
-					<%= f.text_field :screen_name %>
-				</li>			
-				<li>
-					<%= f.label :password %>
-					<%= f.password_field :password %>
-				</li>
-				<li>
-					<%= f.label :password_confirmation, "Confirm password" %>
-					<%= f.password_field :password_confirmation,  class: "loginwidth" %>
-				</li>			
-				<li>
-					<%= f.submit "Create account", class: "btn btn-primary" %>
-				</li>		
-			</ul>	
-		</fieldset>
-	<% end %>
+	<% @action_header = "Sign Up" %>
+	<% @button_title = "Create Account" %>
+	<%= render "layouts/user" , locals: {user: @user, action_header: @action_header, button_title: @button_title} %>
 </div>
 <p> Already have an account. <%= link_to "Log in now", login_path %></p>
 

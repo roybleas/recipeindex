@@ -15,7 +15,7 @@
 }
 
 /* Form login */
-fieldset.login  {
+.login fieldset, .login div {
 	background-color: #f1f1f1;
 	border: none;
 	border-radius: 2px;
@@ -24,6 +24,8 @@ fieldset.login  {
 	width: 600px;
 	padding: 0,50px,20px,20px;
 }
+
+
 ul.login {
 	background-color: #fff;
 	border: 1px solid #eaeaea;
@@ -37,8 +39,6 @@ ul.login {
 .login li input {
 	font-size: 100%;
 }
-
-
 .login label {
 	/* display: inline-block; */
 	padding: 3px 6px;
@@ -56,6 +56,23 @@ input.loginwidth {
 .login li label + input {
 	width:15em;
 	font-size: 100%;
+}
+
+div.login_footer {
+	width: 600px;
+	background-color: #f1f1f1;
+}
+
+.login_footer a {
+	display: block;
+	float: right;
+	margin-bottom: 20px;
+}
+
+p.login_footer {
+	margin: 20px;
+	padding: 30px;
+	background-color: #fff;
 }
 
 
