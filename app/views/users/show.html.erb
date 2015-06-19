@@ -1,7 +1,4 @@
-<p>Name: <%= @user.name %> </p>
-<p>Screen Name: <%= @user.screen_name %></p>
-<p> 
-<%= link_to "Delete", @user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-your user login.                                   
-</p>
+<div class="container">
+<h3><small>Name: </small> <%= @user.name %>  </h3>
+<h3><small>Screen Name: </small><%= @user.screen_name %></strong></h3>
+</div>
