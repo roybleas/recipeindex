@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 	validates :screen_name, presence: true, length: { maximum: 20 }
 		
 	has_secure_password
-	validates :password, length: { minimum: 6 }
+	validates :password, length: { minimum: 6 }, allow_nil: true
 
 	# Returns the hash digest of the given string.
   def User.digest(string)
