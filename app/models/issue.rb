@@ -16,6 +16,8 @@ class Issue < ActiveRecord::Base
   belongs_to :issuedescription
   has_many :recipes
   has_one :publication, through: :issuedescription
+  has_many :user_issues
+  has_many :users, through: :user_issues
 
   
   validates :year, presence: true

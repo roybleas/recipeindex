@@ -15,6 +15,9 @@
 class User < ActiveRecord::Base
 	attr_accessor :remember_token
 	
+	has_many :user_issues
+  has_many :issues, through: :user_issues
+	
 	validates :name, presence: true, uniqueness: true, length: { maximum: 50 }
 	validates :screen_name, presence: true, length: { maximum: 20 }
 		

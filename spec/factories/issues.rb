@@ -33,6 +33,7 @@ FactoryGirl.define do
 	factory :issue_with_descriptiontitle, class: Issue_and_description, parent: :issue_without_description do
   	issuedescription_title "Aug"
   	publication_title "Delicious"
+  	sequence(:year, 1998)
 	end
 	
 	

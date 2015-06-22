@@ -2,6 +2,7 @@ class PublicationsController < ApplicationController
 include Admin
 
 before_action :admin_user?, only: [:edit]
+before_action :logged_in_user, only: [:userissues]
 
 rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 
@@ -32,7 +33,14 @@ rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   	render 'issues'
 	end
 
-
+	def userissues
+  	publication_id = params[:id]
+  	user_id = current_user
+		@publication = Publication.find(publication_id)
+		@issuedescriptions = Issuedescription.where("issuedescriptions.publication_id = ?" , publication_id).order(seq: :asc).all
+  	@issues = Issue.joins(:issuedescription).includes(:user_issues).where("issuedescriptions.publication_id = ? AND ( user_issues.user_id = ? OR user_issues.user_id Is NULL)", publication_id, user_id).references(:user_issues).order("issues.year asc", "issuedescriptions.seq asc").all
+  	render 'userissues'
+	end
 
 private 
   

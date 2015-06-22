@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :publications, only: [:show, :edit, :update ] do
   	member do
   		get 'issues'
+  		get 'userissues'
   	end
   end
   
