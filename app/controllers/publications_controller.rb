@@ -1,6 +1,6 @@
 class PublicationsController < ApplicationController
 include Admin
-
+include Userlogin
 before_action :admin_user?, only: [:edit]
 before_action :logged_in_user, only: [:userissues]
 
