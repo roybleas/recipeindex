@@ -18,5 +18,7 @@ class CurrentYear
 	end
 end
 
-		
+	def true_when_has_user_id(issue)
+		not issue.user_id.nil?
+	end
 end

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   	member do
   		get 'issues'
   		get 'userissues'
+  		patch 'userissuesupdate' 
   	end
   end
   

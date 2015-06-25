@@ -148,72 +148,77 @@ RSpec.describe PublicationsController, :type => :controller do
 	end
  	
  	describe 'issues by user' do
+ 		
  		before(:each) do
 			@pub = create(:publication)
 			@isdesc = []
-			3.times do
-				@isdesc << create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 2, yr: 2001)
-			end
-			@user = create(:user)
 		end
-		it "returns http success" do	
- 			get :userissues, id: @pub
-      expect(response).to have_http_status(:success)
-    end
- 			
- 		it "renders the :userissues template" do
-			get :userissues, id: @pub
- 			expect(response).to render_template :userissues
- 		end
  		
- 		it "assigns the requested publication to publication" do
- 			get :userissues, id: @pub
- 			expect(assigns(:publication)).to eq @pub
- 		end
- 		
- 		it "assigns the requested issuedescriptions to issuedescription" do
- 			get :userissues, id: @pub
- 			expect(assigns(:issuedescriptions)).to eq @isdesc
- 		end
- 		
- 		it "assigns requested issues to issues" do
- 			get :userissues, id: @pub
- 			issues_list = @isdesc.inject([]) { |issues_group, issuedesc| issues_group  +  issuedesc.issues }
- 			expect(assigns(:issues).to_a).to match_array issues_list
- 		end
- 		
- 		it "finds the issue linked to a user" do
- 			allow(controller).to receive(:logged_in_user).and_return(true)
- 			allow(controller).to receive(:current_user).and_return(@user)
-
- 			issue = @isdesc[2].issues[0]
- 			issue2 = @isdesc[1].issues[0]
- 			userissue1 = create(:user_issue, user_id: @user.id, issue_id: issue.id)
- 			
- 			get :userissues,id: @pub
- 			expect(assigns(:issues).find(issue.id).user_issues.first).to eq(userissue1)
- 			expect(assigns(:issues).find(issue2.id).user_issues.first).to be_nil
- 		end
- 		
- 		it "finds the issue linked to correct user when multiple users linked to the same issue" do
- 			allow(controller).to receive(:logged_in_user).and_return(true)
- 			allow(controller).to receive(:current_user).and_return(@user)
-
-			user2 = create(:user, name: "Test user 2")
+ 		context 'render form for publication parameter' do
+ 			before(:each) do
+				get :userissues, id: @pub  	
+			end
 			
- 			issue = @isdesc[2].issues[0]
- 			userissue1 = create(:user_issue, user_id: @user.id, issue_id: issue.id)
+			it {expect(response).to have_http_status(:success)}
+			it {expect(response).to render_template :userissues}
+			it {expect(assigns(:publication)).to eq @pub}
+			
+ 		end
+ 		
+ 		context 'when publication does not exit' do
+ 			it 'redirects to root' do
+ 				get :userissues, id: @pub.id + 2
+ 				expect(response).to redirect_to :root
+ 			end
+ 		end 
+ 		
+ 		context 'when issuedescriptions exist' do
+ 			before(:each) do
+ 				@isdesc << create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 2, yr: 2001)
+ 			end
  			
- 			issue2 = @isdesc[2].issues[0]
- 			userissue2 = create(:user_issue, user_id: user2.id, issue_id: issue.id)
+ 			it "assigns to @issuedescriptions" do
+ 				get :userissues, id: @pub  	
+ 				expect(assigns(:issuedescriptions)).to_not be_empty
+ 				expect(assigns(:issuedescriptions)).to eq @isdesc
+ 			end
  			
- 			get :userissues,id: @pub
- 			expect(assigns(:issues).find(issue.id).user_issues.first).to eq(userissue1)
- 			expect(assigns(:issues).find(issue.id).user_issues.last).to eq(userissue1)
+ 			it "only assigns issue descriptions for current publication" do
+ 				pub2 = create(:publication, title: "test publication two")
+ 				create(:issuedescription_list_with_an_issue, publication_id: pub2.id, issue_count: 6, yr: 2001)
+ 				get :userissues, id: @pub  	
+ 				expect(assigns(:issuedescriptions)).to eq @isdesc
+ 			end
+ 		end
+ 		
+ 		context "when issues exist" do 			
+ 			it "finds the issues" do	
+ 				@isdesc << create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 2, yr: 2001)
+ 				get :userissues, id: @pub  	
+ 				issues_list = @isdesc.inject([]) { |issues_group, issuedesc| issues_group  +  issuedesc.issues }
+ 				expect(assigns(:issues).to_a).to match_array issues_list
+ 			end
+ 		end
+ 		
+ 		context "when user logged in " do
+ 			before(:each) do
+ 				@user = create(:user)
+ 				allow(controller).to receive(:logged_in_user).and_return(true)
+ 				allow(controller).to receive(:current_user).and_return(@user)
+ 				
+ 				@isdesc << create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 2, yr: 2001)
+ 				puts @isdesc.inspect
+ 				@issue = @isdesc[0].issues[0]
+ 				@userissue1 = create(:user_issue, user_id: @user.id, issue_id: @issue.id)
+ 			end
  			
- 			allow(controller).to receive(:current_user).and_return(user2)
- 			get :userissues,id: @pub
- 			expect(assigns(:issues).find(issue.id).user_issues.first).to eq(userissue2)
+ 			it "fetches issues for current user" do
+				get :userissues,id: @pub 		
+				puts assigns(:issues).each { |x| puts "#{x.user_id.inspect} #{x.inspect}"		}
+			  issue = assigns(:issues).find(@issue.id)
+ 				expect(issue.user_ids).to include(@user.id)
+ 			end
  		end
  	end
+ 	
 end
