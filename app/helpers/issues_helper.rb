@@ -21,4 +21,14 @@ end
 	def true_when_has_user_id(issue)
 		not issue.user_id.nil?
 	end
+	
+	def user_has_copy_of_issue(issue)
+		own_copy = ""
+		if logged_in?
+			own_copy = " <span class=\"glyphicon glyphicon-ok\"></span> ".html_safe unless current_user.user_issues.find_by(issue_id: issue.id).nil? 
+		end
+		return own_copy
+	end
+			
+	
 end

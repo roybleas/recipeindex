@@ -207,18 +207,111 @@ RSpec.describe PublicationsController, :type => :controller do
  				allow(controller).to receive(:current_user).and_return(@user)
  				
  				@isdesc << create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 2, yr: 2001)
- 				puts @isdesc.inspect
  				@issue = @isdesc[0].issues[0]
  				@userissue1 = create(:user_issue, user_id: @user.id, issue_id: @issue.id)
  			end
  			
- 			it "fetches issues for current user" do
+ 			it "fetches issue with current user id" do
 				get :userissues,id: @pub 		
-				puts assigns(:issues).each { |x| puts "#{x.user_id.inspect} #{x.inspect}"		}
+				
 			  issue = assigns(:issues).find(@issue.id)
- 				expect(issue.user_ids).to include(@user.id)
+ 				expect(issue.user_id).to eq(@user.id)
+ 			end
+ 			
+ 			it "does not fetch user_id for other issue" do
+ 				issue_without_user = @isdesc[0].issues[1]
+ 				get :userissues,id: @pub 
+ 				
+ 				issue = assigns(:issues).find(issue_without_user.id)
+ 				expect(issue.user_id).to be_nil
+ 			end
+ 			
+ 			it "does not fetch other user_id when linked to same issue" do
+ 				user2 = create(:user, name: "Test user 2")
+ 				userissue2 = create(:user_issue, user_id: user2.id, issue_id: @issue.id)				
+ 				get :userissues,id: @pub 
+ 				
+				issue = assigns(:issues).find(@issue.id)
+ 				expect(issue.user_id).to eq(@user.id)
  			end
  		end
  	end
  	
+ 	describe 'patch user issues ' do
+ 		before(:each) do
+			@pub = create(:publication)
+		end
+		
+ 		context 'redirection' do
+ 			it ' redirects back to user issues when nothing changed' do
+ 				patch :userissuesupdate, id: @pub.id 
+ 				expect(response).to redirect_to :action => :userissues, :id => @pub.id
+ 			end
+
+ 			it ' redirects to issues when updated' do
+ 				isdesc =  create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 2, yr: 2001)
+ 				issue = isdesc.issues.first
+ 				userissue_ids = [issue.id]
+ 				patch :userissuesupdate, id: @pub.id , userissue: userissue_ids
+ 				expect(response).to redirect_to :action => :issues, :id => @pub.id
+ 			end
+ 		end 
+ 		
+ 		context 'updating ' do
+ 			before(:each) do
+ 				@isdesc = []
+ 				@isdesc << create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 3, yr: 2001)
+ 				@isdesc << create(:issuedescription_list_with_an_issue, publication_id: @pub.id, issue_count: 3, yr: 2002)
+ 				@issue = @isdesc[1].issues.first
+ 				@userissue_ids = [@issue.id]
+ 				@user = create(:user)
+ 				allow(controller).to receive(:current_user).and_return(@user)
+ 			end
+ 			
+ 			it "creates a new user issue" do	
+ 				patch :userissuesupdate, id: @pub.id , userissue: @userissue_ids
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: @issue.id).to_not be_nil
+ 			end
+ 			
+ 			it "keeps existing user issue" do
+ 				userissue = create(:user_issue, user_id: @user.id, issue_id: @issue.id)				
+ 				
+ 				patch :userissuesupdate, id: @pub.id , userissue: @userissue_ids
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: @issue.id).to_not be_nil
+ 			end
+
+ 			it "removes existing user issue" do
+ 				userissue = create(:user_issue, user_id: @user.id, issue_id: @issue.id)				
+ 				empty_userissue_ids = []
+ 				patch :userissuesupdate, id: @pub.id , userissue: empty_userissue_ids
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: @issue.id).to be_nil
+ 			end
+ 			
+ 			it "adds one removes one and keeps one user issue" do
+ 				
+ 				issue2 = @isdesc[0].issues.last
+ 				userissue2 = create(:user_issue, user_id: @user.id, issue_id: issue2.id)				
+ 				issue3 = @isdesc[0].issues.first
+ 				userissue3 = create(:user_issue, user_id: @user.id, issue_id: issue3.id)				
+ 				
+ 				@userissue_ids << issue3.id
+ 				
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: @issue.id).to be_nil
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: issue2.id).to_not be_nil
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: issue3.id).to_not be_nil
+ 				
+ 				patch :userissuesupdate, id: @pub.id , userissue: @userissue_ids
+ 				
+ 				#add
+				expect(UserIssue.find_by user_id: @user.id, issue_id: @issue.id).to_not be_nil
+ 				#delete
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: issue2.id).to be_nil
+ 				#keep
+ 				expect(UserIssue.find_by user_id: @user.id, issue_id: issue3.id).to_not be_nil
+
+ 			end
+
+
+ 		end
+ 	end
 end

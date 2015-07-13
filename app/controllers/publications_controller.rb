@@ -28,9 +28,14 @@ rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   	publication_id = params[:id]
 		@publication = Publication.find(publication_id)
 		@issuedescriptions = Issuedescription.where("issuedescriptions.publication_id = ?" , publication_id).order(seq: :asc).all
-		@issues = Issue.joins(:issuedescription).where("issuedescriptions.publication_id = ?" , publication_id).order("issues.year asc", "issuedescriptions.seq asc").all
+		
   	
-  	render 'issues'
+  	if logged_in?
+  		@issues = Issue.with_linked_user(publication_id,current_user.id)
+  	else
+  		@issues = Issue.by_publication(publication_id)
+  		#@issues = Issue.joins(:issuedescription).where("issuedescriptions.publication_id = ?" , publication_id).order("issues.year asc", "issuedescriptions.seq asc").all
+  	end
 	end
 
 	def userissues
@@ -39,7 +44,7 @@ rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   	  	
 		@publication = Publication.find(publication_id)
 		@issuedescriptions = Issuedescription.where("issuedescriptions.publication_id = ?" , publication_id).order(seq: :asc).all
-  	@issues = Issue.select("issues.id, issues.no, issues.year, user_issues.user_id as user_id").joins("INNER JOIN issuedescriptions ON issues.issuedescription_id = issuedescriptions.id LEFT OUTER JOIN user_issues ON issues.id = user_issues.issue_id and user_issues.user_id = #{user_id}").where("publication_id = ? ", publication_id).order("issues.year asc", "issuedescriptions.seq asc").all
+  	@issues = Issue.with_linked_user(publication_id,user_id)
 	end
 	
 	def userissuesupdate
@@ -51,8 +56,6 @@ rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 		userissues = UserIssue.joins(issue: :issuedescription).where("issuedescriptions.publication_id = ? AND ( user_issues.user_id = ? )",publication_id,user_id).all
 		db_issue_ids = userissues.inject([]){ |id_list, issue| id_list << issue.issue_id}
 			
-		logger.debug "Debugging #{ view_issue_ids.inspect} and #{db_issue_ids.inspect}"
-		
 		remove_ids = db_issue_ids - view_issue_ids
 		insert_ids = view_issue_ids - db_issue_ids
 		
@@ -65,8 +68,13 @@ rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 			insert_ids.each {	| id |	user.user_issues.create(issue_id: id)}
 		end
 		
-		flash[:success] = "Saved issue selection."
-		redirect_to action: "userissues", id: publication_id
+		if (remove_ids.size + insert_ids.size) == 0
+			#nothing to save so stay where we are
+			redirect_to action: "userissues", id: publication_id
+		else
+			flash[:success] = "Saved issue selection." 
+			redirect_to action: "issues", id: publication_id
+		end
 	end
 	
 

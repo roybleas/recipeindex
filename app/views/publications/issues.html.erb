@@ -1,21 +1,4 @@
 <div class="container">
   <h1><%= @publication.title %> </h1>
-   <table class="table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th>Year</th>
-        <% @issuedescriptions.each do |issuedescription| %>
-        	<th> <%= issuedescription.title %> </th>
-        <% end %>
-      </tr>
-    </thead>
-   	<tbody>
- 			<% issue_year = IssuesHelper::CurrentYear.new() %>
- 			<% @issues.each do |issue| %>
-				<%= issue_year.add_new_row_on_change_of_year(issue.year) %>
- 				<td> <%= link_to issue.no, issue_path(issue) %></td>
- 			<% end %>
-   		</tr>
-   	</tbody>
-  </table>
+  <%= render partial: 'issues_table' %>
 </div>

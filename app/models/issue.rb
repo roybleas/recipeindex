@@ -34,5 +34,13 @@ class Issue < ActiveRecord::Base
   def self.and_description_title_for_recipe(recipe_id)
 		select("issues.*,issuedescriptions.title as issuedescription_title, publications.title as publication_title").joins(:recipes, {issuedescription: :publication}).where("recipes.id = ?",recipe_id)
 	end
+	
+	def self.by_publication(publication_id)
+		joins(:issuedescription).where("issuedescriptions.publication_id = ?" , publication_id).order("issues.year asc", "issuedescriptions.seq asc").all
+	end
+	
+	def self.with_linked_user(publication_id,user_id)
+		select("issues.id, issues.no, issues.year, user_issues.user_id as user_id").joins("INNER JOIN issuedescriptions ON issues.issuedescription_id = issuedescriptions.id LEFT OUTER JOIN user_issues ON issues.id = user_issues.issue_id and user_issues.user_id = #{user_id}").where("publication_id = ? ", publication_id).order("issues.year asc", "issuedescriptions.seq asc").all
+	end
 end
 

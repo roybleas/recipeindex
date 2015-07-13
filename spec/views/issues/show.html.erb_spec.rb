@@ -49,6 +49,9 @@ RSpec.describe "issues/show.html.erb", :type => :view do
 	  	expect(rendered).to match /href="www.awebsite.com.au\/recipe1.html"/
 	  end
 	  
+	  it "displays a tick to show user owns it" do
+	  	
+	  end
 	  
 	end
 end
