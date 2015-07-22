@@ -44,6 +44,13 @@ module CategoriesHelper
 		return formated_recipe
 	end
 	
-
+	def user_owned_issue(recipe)
+		html_txt = ""
+		if logged_in?
+			html_txt =  " <span class=\"glyphicon glyphicon-ok\"></span> ".html_safe  unless recipe.user_owned.nil?
+		end
+		return html_txt.html_safe
+	
+	end
 	
 end

@@ -24,4 +24,7 @@ class Recipe < ActiveRecord::Base
   def self.by_category(category)
   	select('recipes.* , publications.title as pub, issuedescriptions.title as desc , issues.year as year').joins(:categories).joins(issue: { issuedescription: :publication}).where('categories.id = ?',category.id).order(title: :asc).all 	
   end
+  def self.by_category_and_user(category,user_id)
+  	select('recipes.* , publications.title as pub, issuedescriptions.title as desc , issues.year as year, user_issues.id as user_owned').joins(:categories).joins(issue: { issuedescription: :publication}).joins("LEFT OUTER JOIN user_issues ON issues.id = user_issues.issue_id and user_issues.user_id = #{user_id}").where('categories.id = ?',category.id).order(title: :asc).all 	
+  end
 end

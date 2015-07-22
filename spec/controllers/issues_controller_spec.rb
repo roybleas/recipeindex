@@ -16,33 +16,33 @@ RSpec.describe IssuesController, :type => :controller do
 
   describe "GET show" do
     it "returns http success" do
-    	issue = create(:issue)
+    	issue = create(:issue, year: 1990)
       get :show, id:issue
       expect(response).to have_http_status(:success)
     end
     
     it "assigns the requested issues to @issue" do
-    	issue = create(:issue)
+    	issue = create(:issue, year: 1991)
     	get :show, id:issue
     	expect(assigns(:issue)).to eq issue
     end
     
     it "assigns the requested issuedescription to @issuedesc" do
-    	issue = create(:issue)
+    	issue = create(:issue, year: 1992)
     	issuedesc = Issuedescription.find(issue.issuedescription_id)
     	get :show, id:issue
     	expect(assigns(:issuedesc)).to eq issuedesc
     end
     
     it "assigns the requested publications to @pub" do
-    	issue = create(:issue)
+    	issue = create(:issue, year: 1993)
     	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
     	get :show, id:issue
     	expect(assigns(:pub)).to eq pub
     end
     
     it "redirects to root when id not found" do
-    	issue = create(:issue)
+    	issue = create(:issue, year: 1994)
     	get :show, id: (issue.id) + 1
     	expect(response).to redirect_to :root
     end
@@ -190,7 +190,7 @@ RSpec.describe IssuesController, :type => :controller do
     
     it "renders the :years template" do
     	
-			issue = create(:issue)
+			issue = create(:issue, year: 1996)
 			get :years, id: issue
 			expect(response).to render_template :years
 		end

@@ -1,4 +1,15 @@
 <div class="container">
-<h3><small>Name: </small> <%= @user.name %>  </h3>
+<h3><small>Name: </small><%= @user.name %>  </h3>
 <h3><small>Screen Name: </small><%= @user.screen_name %></strong></h3>
+<% if @issuecounts.nil? || @issuecounts.empty? %>
+	<p>No issues owned.</p>
+<% else %>
+	<ul>
+	<% @issuecounts.each do |publication, cnt| %>
+		<li> <%= publication %> Issues Owned: <%= cnt %> </li>
+	<% end %>
+	
+	</ul>
+<% end %>
+
 </div>

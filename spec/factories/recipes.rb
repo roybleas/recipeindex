@@ -15,7 +15,7 @@
 
 FactoryGirl.define do
   factory :recipe do
-    title "Baked Alaska "
+    title "Baked Alaska"
     sequence(:page)
     sequence(:issue_id)
   end

@@ -54,12 +54,33 @@ RSpec.describe "recipes/show.html.erb", :type => :view do
 			assign(:categories,categories)
 			columns = 3
   		assign(:columnheight,( categories.size / columns) + (@categories.size % columns == 0 ? 0 : 1))
-			#pear = create(:category, name: 'pears', :categorytype => cattype )
-			#egg = create(:category, name: 'eggs', :categorytype => cattype )
+			
   		render 
   		expect(rendered).to match /#{@apple.name}/
   		expect(rendered).to match /#{banana.name}/
   		expect(rendered).to match /#{zucchini.name}/
   	end
+  	context "user logged in" do
+  		before(:each) do
+  			@user = create(:user)
+  			allow(view).to receive_messages(:logged_in? => true)
+  			allow(view).to receive_messages(:current_user => @user)
+  		end
+  				
+  		it "shows the issue is owned by user" do
+  			user_issue = create(:user_issue, issue_id: @issue_with_desc.id, user_id: @user.id)
+  			render
+  			expect(rendered).to include("<span class=\"glyphicon glyphicon-ok\"></span>")
+  		end
+  		it "shows the issue is not owned by user" do
+  			render
+  			expect(rendered).to_not include("<span class=\"glyphicon glyphicon-ok\"></span>")
+  		end
+
+
+  	end
+  			
+  			
+  			
   end
 end

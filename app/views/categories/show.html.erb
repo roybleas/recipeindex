@@ -1,9 +1,9 @@
 <div class="container">
   <h1><%= link_to @category.name, byletter_categories_path(@category.name.slice(0,1))  %></h1>
   
-  <%= render 'layouts/recipesfull' %>
+  <%= render partial: 'categories/recipesfull' %>
   
   <% if @recipes.size == 0 %>
-  	<p> No recipes available. </p>
+  	<p>No recipes available.</p>
   <% end %>
 </div>

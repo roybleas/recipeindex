@@ -35,6 +35,26 @@ FactoryGirl.define do
 	    	create_list(:issue, evaluator.issues_count, issuedescription: issuedescription)
 	    end
 	   end
+	   
+	   factory :issuedescription_with_years_and_user, class: Issuedescription do
+	  	title "Jun-Jul"
+    	full_title "June-July"
+    	seq 10
+    	
+	  	ignore do
+    		issues_count 5
+    		user_name "UserIssueOwner"
+    	end
+    	
+	   	after(:create) do |issuedescription , evaluator|
+	   		user1 = User.find_by_name(evaluator.user_name) || FactoryGirl.create(:user, name: evaluator.user_name)
+	   			   			
+	    	issue_list = create_list(:issue, evaluator.issues_count, issuedescription: issuedescription)
+	    	issue_list.each do |issue| 
+	    		ui = create(:user_issue, user_id: user1.id, issue_id: issue.id)
+	    	end
+	    end
+	   end
 	end
 	
 	factory :issuedescription_with_single_issue, class: Issuedescription do

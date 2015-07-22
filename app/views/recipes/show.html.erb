@@ -7,7 +7,9 @@
 			<%= link_to(issue_path(@issue_with_desc)) do %>
   		<%= concat_issue_description_with_year(@issue_with_desc.issuedescription_title, @issue_with_desc.year) %>
 			<% end %>
-  		<small>Page: <%= @recipe.page %> </small>
+  		<small>Page: <%= @recipe.page %> 
+  		<%= user_has_copy_of_issue(@issue_with_desc) %>
+  		</small>
 	</h3>
 	<% if @categories.size > 0 %><h4>Categories</h4> <% end %>
 	<div class="row" >

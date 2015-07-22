@@ -10,14 +10,14 @@
 <body>
 <nav role="navigation" >
 <ul class="nav nav-pills">
-  <li role="presentation" class="active"> <%= link_to "Home", root_path %>  </li>
+  <li role="presentation" > <%= link_to "Home", root_path %>  </li>
   <li role="presentation"><a href="#">This Month</a></li>
   <li role="presentation"><%= link_to "Categories", categories_path %></li>
   <li role="presentation" class="dropdown">
   	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="menu" aria-expanded="false">
   	Issues <span class="caret"></span>
   	</a>
-  	<% if publications.size > 0 %> <ul class="dropdown-menu" role="menu"> <% end %>
+  	<% if publications.size > 0 %> <ul class="dropdown-menu" role="menu" id="issuesmenu"> <% end %>
   		<% publications.each do |publication| %>
   			<li role="presentation"> <%= link_to publication.title, issues_publication_path(publication.id) %> </li>
   		<% end %>
@@ -28,7 +28,7 @@
 	      User:           
 	        <%= current_user.screen_name %> <span class="caret"></span>
 	    </a>
-	    <ul class="dropdown-menu" role="menu">
+	    <ul class="dropdown-menu" role="menu" id="usermenu">
 	    	<li role="presentation"> <%= link_to "Profile", current_user %> </li>
 	    	<li role="presentation"> <%= link_to "Settings", edit_user_path(current_user) %> </li>
 	    	<li class="divider"></li>

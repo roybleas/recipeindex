@@ -20,7 +20,7 @@ end
 
 FactoryGirl.define do
   factory :issue do
-    sequence(:year, 2001)
+    sequence(:year, 1990)
   	sequence(:no)
     issuedescription
   end
@@ -36,6 +36,8 @@ FactoryGirl.define do
   	sequence(:year, 1998)
 	end
 	
+	
+		
 	
 end
 

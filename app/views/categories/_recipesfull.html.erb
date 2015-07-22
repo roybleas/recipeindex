@@ -16,7 +16,9 @@
 	        	<%= raw format_recipe_title(recipe, @catrec, @category.id) %>
 	        </td>
 	        <td><%= recipe.pub %></td>
-	        <td><%= link_to recipe.desc, issue_path(recipe.issue_id) %></td>
+	        <td><%= link_to recipe.desc, issue_path(recipe.issue_id) %>
+	        <%= raw user_owned_issue(recipe) %>
+	        </td>
 	        <td><%= recipe.year %></td>
 	        <td class="recipepage"><%= recipe.page %></td>
 	      </tr>
