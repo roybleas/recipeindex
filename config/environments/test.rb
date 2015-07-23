@@ -12,12 +12,8 @@ Rails.application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
-  # Configure static asset server for tests with Cache-Control for performance.
-  #DEPRECATION WARNING: The configuration option `config.serve_static_assets` has
-	# been renamed to `config.serve_static_files` to clarify its role (it merely enables
-	# serving everything in the `public` folder and is unrelated to the asset pipeline
-  #config.serve_static_assets  = true
   config.serve_static_files = true
+ 
   config.static_cache_control = 'public, max-age=3600'
 
   # Show full error reports and disable caching.
