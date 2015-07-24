@@ -17,7 +17,7 @@ RSpec.describe "categories/index.html.erb", :type => :view do
   	end
   	it "displays a title" do
   		render
-  		expect(rendered).to match /Categories/ 
+  		expect(rendered).to match /Indexes/ 
   	end
   end
   	
@@ -41,7 +41,7 @@ RSpec.describe "categories/index.html.erb", :type => :view do
 	  
 	  it "displays a message if no categories found " do
 	  	render
-	  	expect(rendered).to match /No categories found/
+	  	expect(rendered).to match /No indexes found/
 	  end
 	end
    	

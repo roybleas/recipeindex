@@ -16,7 +16,7 @@ RSpec.describe "layouts/application.html.erb", :type => :view do
 		end
 		it "has a Categories tab" do
 			render
-			assert_select 'li', "Categories"
+			assert_select 'li', "Indexes"
 			assert_select "a[href=?]", "/categories"
 		end
 		it "has an Issues tab" do			

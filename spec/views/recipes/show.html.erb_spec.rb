@@ -37,11 +37,11 @@ RSpec.describe "recipes/show.html.erb", :type => :view do
   	it "does not display a category title when there are no categories " do
   		assign(:categories,[])
   		render 
-  		expect(rendered).not_to match /Categories/
+  		expect(rendered).not_to match /Indexes/
   	end
   	it "does display a category title when there are categories " do
   		render 
-  		expect(rendered).to match /Categories/
+  		expect(rendered).to match /Indexes/
   	end
   	it "displays the name of a category " do
   		render 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619080609) do
+ActiveRecord::Schema.define(version: 20150724015552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,7 +101,21 @@ ActiveRecord::Schema.define(version: 20150619080609) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "user_issues", ["user_id", "issue_id"], name: "index_user_issues_on_user_id_and_issue_id", unique: true, using: :btree
+  add_index "user_issues", ["issue_id"], name: "index_user_issues_on_issue_id", using: :btree
+  add_index "user_issues", ["user_id"], name: "index_user_issues_on_user_id", using: :btree
+
+  create_table "user_recipes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "recipe_id"
+    t.integer  "rating"
+    t.integer  "like",       default: 0
+    t.string   "comment"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "user_recipes", ["recipe_id"], name: "index_user_recipes_on_recipe_id", using: :btree
+  add_index "user_recipes", ["user_id"], name: "index_user_recipes_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -117,4 +131,6 @@ ActiveRecord::Schema.define(version: 20150619080609) do
   add_foreign_key "category_recipes", "recipes"
   add_foreign_key "user_issues", "issues"
   add_foreign_key "user_issues", "users"
+  add_foreign_key "user_recipes", "recipes"
+  add_foreign_key "user_recipes", "users"
 end
