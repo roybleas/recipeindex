@@ -101,8 +101,7 @@ ActiveRecord::Schema.define(version: 20150724015552) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "user_issues", ["issue_id"], name: "index_user_issues_on_issue_id", using: :btree
-  add_index "user_issues", ["user_id"], name: "index_user_issues_on_user_id", using: :btree
+  add_index "user_issues", ["user_id", "issue_id"], name: "index_user_issues_on_user_id_and_issue_id", unique: true, using: :btree
 
   create_table "user_recipes", force: :cascade do |t|
     t.integer  "user_id"

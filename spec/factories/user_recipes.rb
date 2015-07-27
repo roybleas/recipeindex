@@ -19,6 +19,7 @@ FactoryGirl.define do
     user nil
     recipe nil
     rating 1
-    comment "MyString"
+    comment "Comment for user_recipe"
+
   end
 end

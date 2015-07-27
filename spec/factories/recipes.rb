@@ -17,6 +17,11 @@ FactoryGirl.define do
   factory :recipe do
     title "Baked Alaska"
     sequence(:page)
-    sequence(:issue_id)
+  end
+  
+  factory :recipe_with_issue, class: Recipe do
+  	sequence(:page)
+  	sequence(:title) { |n| "RecipeTitle#{n}" }
+  	association :issue, factory: :issue_without_description, year: 2002
   end
 end

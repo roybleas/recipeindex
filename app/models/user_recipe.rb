@@ -16,5 +16,6 @@ class UserRecipe < ActiveRecord::Base
   belongs_to :user
   belongs_to :recipe
   
-  validates_inclusion_of :rating, in: 0..5
+  validates_inclusion_of :rating, in: 1..5, :message => "is outside the valid range."
+  validates_inclusion_of :like, in: -1..1, :message => "is outside the valid range."
 end
