@@ -34,7 +34,6 @@ rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   		@issues = Issue.with_linked_user(publication_id,current_user.id)
   	else
   		@issues = Issue.by_publication(publication_id)
-  		#@issues = Issue.joins(:issuedescription).where("issuedescriptions.publication_id = ?" , publication_id).order("issues.year asc", "issuedescriptions.seq asc").all
   	end
 	end
 
