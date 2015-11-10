@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   
 
   
+  get 'userrecipes/new'
+
+  get 'userrecipes/edit'
+
   get 'admin_pages/home'
 
 	resources :users

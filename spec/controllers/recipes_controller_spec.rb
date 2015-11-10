@@ -27,6 +27,14 @@ RSpec.describe RecipesController, :type => :controller do
     	get :show, id:@recipe
     	expect(assigns(:categories)).to match_array(cat)
     end
+    it "set the column height for single category" do
+    	cattype = create(:categorytype, code: 'I')
+			cat = create(:category, categorytype: cattype )
+    	catrec = create(:category_recipe, category_id: cat.id, recipe_id: @recipe.id)
+    	get :show, id:@recipe
+    	expect(assigns(:columnheight)).to eq(1)
+    end
+    	
     it "assigns no user comments when not logged in" do
     	allow(controller).to receive_messages(:logged_in? => false)
     	get :show, id:@recipe
@@ -54,6 +62,6 @@ RSpec.describe RecipesController, :type => :controller do
 	    	get :show, id:@recipe
 	    	expect(assigns(:user_recipe).like).to eq(-1)
 	    end
-	   end
+	  end
   end
 end
