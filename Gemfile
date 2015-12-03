@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
- ruby '2.1.4'
+ ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '4.1.4'
@@ -10,11 +10,8 @@ source 'https://rubygems.org'
 
 group :development, :test do
 
-	#in place of debugger trying byebug
+	#in place of debugger using byebug
 	gem 'byebug'
-	
-	#gem 'sqlite3'
-	
 	
 	gem 'guard'
   gem 'rspec-rails', "~> 3.1.0"
