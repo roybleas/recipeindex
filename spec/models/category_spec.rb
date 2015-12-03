@@ -3,7 +3,7 @@
 # Table name: categories
 #
 #  id              :integer          not null, primary key
-#  name            :string(255)
+#  name            :string
 #  seq             :integer
 #  categorytype_id :integer
 #  created_at      :datetime

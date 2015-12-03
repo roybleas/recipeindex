@@ -3,8 +3,8 @@
 # Table name: categorytypes
 #
 #  id         :integer          not null, primary key
-#  code       :string(255)
-#  name       :string(255)
+#  code       :string
+#  name       :string
 #  created_at :datetime
 #  updated_at :datetime
 #

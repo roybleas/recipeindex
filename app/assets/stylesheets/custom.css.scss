@@ -137,10 +137,31 @@ td.recipepage {
 	text-align: right;
 	}
 	
-h2.recipe {
-    margin-left: 0.5em;
+h2.recipe, h4.recipe {
+    margin-left: 1.5rem;
 	} 
 h3.recipe {
-	margin-left: 0.5em;
+	margin-left: 1.5rem;
 	margin-top: 0em;
 	}
+span.pubtitle {
+	font-weight: bolder;
+	font-size: larger;
+	padding-right: 0.5em;
+	
+}
+span.rating {
+	color: DodgerBlue;
+	font-size: smaller;
+	}
+span.like {
+	margin-right: 0.4em;
+}
+
+p.comment_title {
+	font-weight: bold;
+	}
+div.comment {
+	margin-top : -2.2em;
+	margin-left : 6em;
+}

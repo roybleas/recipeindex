@@ -3,8 +3,8 @@
 # Table name: issuedescriptions
 #
 #  id             :integer          not null, primary key
-#  title          :string(255)
-#  full_title     :string(255)
+#  title          :string
+#  full_title     :string
 #  seq            :integer
 #  publication_id :integer
 #  created_at     :datetime

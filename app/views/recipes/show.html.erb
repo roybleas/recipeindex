@@ -2,8 +2,8 @@
 	<h1>
 		<%= capitalise_first_letter(@recipe.title) %>
 	</h1>
-	<h2 class="recipe"><%=@issue_with_desc.publication_title %></h2>
-	<h3 class="recipe">Issue: 
+	<h3 class="recipe"><span class="pubtitle"><%=@issue_with_desc.publication_title %></span>
+	Issue: 
 			<%= link_to(issue_path(@issue_with_desc)) do %>
   		<%= concat_issue_description_with_year(@issue_with_desc.issuedescription_title, @issue_with_desc.year) %>
 			<% end %>
@@ -11,8 +11,39 @@
   		<%= user_has_copy_of_issue(@issue_with_desc) %>
   		</small>
 	</h3>
+	<% if logged_in? %>
+		<%  unless @user_recipe.nil? %>
+			<% if @user_recipe.rating > 0 || @user_recipe.like != 0  %>
+				<h4 class="recipe"> Personal Rating:
+					<%= recipe_has_user_rating(@user_recipe) %>
+				</h4>
+			<% end %>
+			<% if not @user_recipe.lastused.nil? %>
+				<h4 class="recipe"> Last Used: <%= @user_recipe.lastused.strftime("%d %B %Y") %> </h4>
+			<% end %>
+		<% end %>
+	<% end %>
 	<% if @categories.size > 0 %><h4>Indexes</h4> <% end %>
 	<div class="row" >
 		<%= render 'layouts/categories_list' %>
 	</div>
+	<% if logged_in? %>
+		<% if @user_recipe.nil? %>
+		<%=		
+   		link_to("Add Notes",new_recipe_userrecipe_path(@recipe) , class:"btn btn-primary" )
+   	%>
+   	<% else %>
+   		
+   		<% if @user_recipe.comment != ""%>
+				<p class="comment_title" >Comment:</strong> </p>
+				<div class="comment" >
+				 <%= simple_format(@user_recipe.comment) %>  
+				</div>
+			<% end %>
+
+   	<%=
+   		link_to("Edit Note",edit_userrecipe_path(@user_recipe.id) , class:"btn btn-primary"  )
+   	%>
+   	<% end %>
+	<% end %>
 </div>

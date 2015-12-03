@@ -1,0 +1,35 @@
+<div class="container">
+	<h1>
+		<%= @recipe.title %>
+	</h1>
+	
+	<%= form_for @userrecipe, this_url  do |f| %>
+  <div class="radio,form-group">
+  	<%= f.collection_radio_buttons( :like, [[1,like_glyph.html_safe],[0, "OK"],[-1,dislike_glyph.html_safe]], :first, :last)  do |b|
+  			b.label(class: "radio-inline") { b.radio_button(class: "radio") + b.text}
+		end %>
+	</div>
+  <div class="form-group">
+  <%= label_tag(:rating, ("Rating " + star_glyph).html_safe) %> <br>
+  <%= f.select(:rating, [['None', 0], ['1',1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]] ) %>
+
+  </div>
+  <div class="form-group">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment, rows: 5, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  	<% today_minus2 =  Time.new.year - 2 %>
+  	<%= f.label :lastused, "Last Used" %> 
+  	<% if @userrecipe.lastused.nil? %>
+  		<%= date_select("user_recipe","lastused", :include_blank => true, order: [:day, :month, :year], start_year: today_minus2) %>
+  	<% else %>
+  		<%= select_date(@userrecipe.lastused , :include_blank => true, order: [:day, :month, :year], start_year: today_minus2) %>
+  	<% end %>
+
+  </div>
+  <p>
+    <%= f.submit button_caption, class: "btn btn-primary" %>
+  </p>
+	<% end %>	
+</div>

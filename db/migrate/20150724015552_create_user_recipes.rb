@@ -3,9 +3,10 @@ class CreateUserRecipes < ActiveRecord::Migration
     create_table :user_recipes do |t|
       t.references :user, index: true
       t.references :recipe, index: true
-      t.integer :rating
+      t.integer :rating, :default => 0
       t.integer :like, :default => 0
       t.string :comment
+      t.date :lastused
 
       t.timestamps null: false
     end

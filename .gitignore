@@ -20,7 +20,8 @@
 
 #ultra edit project file
 recipeindex.pui
-recipeindex.ROY-PC.Roy.pui
+*.Roy.pui
+*.roy.pui
 
 #my workfile
 mywork.log

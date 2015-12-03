@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150724015552) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",            limit: 255
+    t.string   "name"
     t.integer  "seq"
     t.integer  "categorytype_id"
     t.datetime "created_at"
@@ -38,15 +38,15 @@ ActiveRecord::Schema.define(version: 20150724015552) do
   add_index "category_recipes", ["recipe_id"], name: "index_category_recipes_on_recipe_id", using: :btree
 
   create_table "categorytypes", force: :cascade do |t|
-    t.string   "code",       limit: 255
-    t.string   "name",       limit: 255
+    t.string   "code"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "issuedescriptions", force: :cascade do |t|
-    t.string   "title",          limit: 255
-    t.string   "full_title",     limit: 255
+    t.string   "title"
+    t.string   "full_title"
     t.integer  "seq"
     t.integer  "publication_id"
     t.datetime "created_at"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20150724015552) do
   add_index "issuemonths", ["issuedescription_id"], name: "index_issuemonths_on_issuedescription_id", using: :btree
 
   create_table "issues", force: :cascade do |t|
-    t.string   "title",               limit: 255
+    t.string   "title"
     t.integer  "issuedescription_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -76,17 +76,17 @@ ActiveRecord::Schema.define(version: 20150724015552) do
   add_index "issues", ["issuedescription_id"], name: "index_issues_on_issuedescription_id", using: :btree
 
   create_table "publications", force: :cascade do |t|
-    t.string   "title",       limit: 255
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "published",   limit: 255
-    t.string   "description", limit: 255
+    t.string   "published"
+    t.string   "description"
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string   "title",      limit: 255
+    t.string   "title"
     t.integer  "page"
-    t.string   "url",        limit: 255
+    t.string   "url"
     t.integer  "issue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -106,9 +106,10 @@ ActiveRecord::Schema.define(version: 20150724015552) do
   create_table "user_recipes", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "recipe_id"
-    t.integer  "rating"
+    t.integer  "rating",     default: 0
     t.integer  "like",       default: 0
     t.string   "comment"
+    t.date     "lastused"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -117,12 +118,12 @@ ActiveRecord::Schema.define(version: 20150724015552) do
   add_index "user_recipes", ["user_id"], name: "index_user_recipes_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",            limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "screen_name",     limit: 255
-    t.string   "password_digest", limit: 255
-    t.string   "remember_digest", limit: 255
+    t.string   "screen_name"
+    t.string   "password_digest"
+    t.string   "remember_digest"
     t.boolean  "admin"
   end
 

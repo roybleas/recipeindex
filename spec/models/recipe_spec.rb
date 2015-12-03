@@ -3,9 +3,9 @@
 # Table name: recipes
 #
 #  id         :integer          not null, primary key
-#  title      :string(255)
+#  title      :string
 #  page       :integer
-#  url        :string(255)
+#  url        :string
 #  issue_id   :integer
 #  created_at :datetime
 #  updated_at :datetime

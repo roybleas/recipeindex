@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
 
   
-
-  
-  get 'userrecipes/new'
-
-  get 'userrecipes/edit'
-
   get 'admin_pages/home'
 
 	resources :users
@@ -39,12 +33,17 @@ Rails.application.routes.draw do
 	
 	get 'categories/byletter/:letter', to: 'categories#byletter',  as: 'byletter_categories'
 	
-	resources :recipes, only:[:show] 
+	resources :recipes, only:[:show] do
+		resources :userrecipes, only: [:new, :create]
+
+	end
+	
+	resources :userrecipes, only:[:edit, :update]
 	
   
     
   
-
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

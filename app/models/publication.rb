@@ -3,11 +3,11 @@
 # Table name: publications
 #
 #  id          :integer          not null, primary key
-#  title       :string(255)
+#  title       :string
 #  created_at  :datetime
 #  updated_at  :datetime
-#  published   :string(255)
-#  description :string(255)
+#  published   :string
+#  description :string
 #
 
 class Publication < ActiveRecord::Base

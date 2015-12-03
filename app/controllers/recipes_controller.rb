@@ -12,7 +12,7 @@ include Layoutcalculations
   	@categories = Category.joins(:category_recipes).where("category_recipes.recipe_id = ?",recipe_id).order("categories.name asc")
   	@columnheight = column_height(@categories.count,1)
   	if logged_in?
-  		@user_recipe = UserRecipe.where("user_id = ? and recipe_id = ?",current_user.id,recipe_id).take
+  		@user_recipe = UserRecipe.where("user_id = ? and recipe_id = ?",current_user.id,recipe_id).first
   	end
 	end
 	

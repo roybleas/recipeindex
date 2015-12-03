@@ -1,2 +1,6 @@
-<h1>Userrecipes#edit</h1>
-<p>Find me in app/views/userrecipes/edit.html.erb</p>
+<% button_caption = "Edit Rating" %>
+<% this_url = {url: userrecipe_path} %>
+
+<%= render 'form', button_caption: button_caption, this_url: this_url %>
+
+

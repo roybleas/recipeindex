@@ -5,9 +5,10 @@
 #  id         :integer          not null, primary key
 #  user_id    :integer
 #  recipe_id  :integer
-#  rating     :integer
+#  rating     :integer          default("0")
 #  like       :integer          default("0")
 #  comment    :string
+#  lastused   :date
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -49,8 +50,8 @@ RSpec.describe UserRecipe, :type => :model do
 		user_recipe.valid?
 		expect(user_recipe.errors[:rating]).to include("is outside the valid range.")
 	end
-	it "cannot have a rating value less than 1" do
-		user_recipe = build(:user_recipe, rating: 0)
+	it "cannot have a rating value less than 0" do
+		user_recipe = build(:user_recipe, rating: -1)
 		user_recipe.valid?
 		expect(user_recipe.errors[:rating]).to include("is outside the valid range.")
 	end
