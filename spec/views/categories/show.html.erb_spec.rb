@@ -44,24 +44,50 @@ RSpec.describe "categories/show.html.erb", :type => :view do
 			before(:each) do
 				@issue = create(:issue, year: 1999)
 				@issue2 = create(:issue, year: 2000)
-				recipe = create(:recipe, issue_id: @issue.id )
-				catrec = create(:category_recipe, category_id: @category.id, recipe_id: recipe.id)
+				@recipe = create(:recipe, issue_id: @issue.id )
+				catrec = create(:category_recipe, category_id: @category.id, recipe_id: @recipe.id)
 				@user = create(:user)
 				@catrec = [catrec]				
 			end
 			
 			it "displays a recipe from an issue user does not own" do
 				user_issue = create(:user_issue, issue_id: @issue2.id, user_id: @user.id)
-				@recipes = Recipe.by_category_and_user(@category,@user.id)
+				@recipes = Recipe.by_category_and_user_and_userrecipe(@category,@user.id)
 				allow(view).to receive_messages(:logged_in? => true)
+				render
 				expect(render).to_not include("<span class=\"glyphicon glyphicon-ok\"></span>")
 			end
 			it "displays a recipe from an issue user does own" do
 				user_issue = create(:user_issue, issue_id: @issue.id, user_id: @user.id)
-				@recipes = Recipe.by_category_and_user(@category,@user.id)
+				@recipes = Recipe.by_category_and_user_and_userrecipe(@category,@user.id)
 				allow(view).to receive_messages(:logged_in? => true)
 				expect(render).to include("<span class=\"glyphicon glyphicon-ok\"></span>")
 			end
+			it "displays a recipe from an issue user has no opinion" do
+				user_recipe = create(:user_recipe, recipe_id: @recipe.id, user_id: @user.id, like: 0, rating: 0)
+				@recipes = Recipe.by_category_and_user_and_userrecipe(@category,@user.id)
+				allow(view).to receive_messages(:logged_in? => true)
+				render
+				expect(rendered).to_not include("glyphicon-heart")
+				expect(rendered).to_not include("glyphicon-thumbs-down")
+			end
+			it "displays a recipe a user likes and rated" do
+				user_recipe = create(:user_recipe, recipe_id: @recipe.id, user_id: @user.id, like: 1, rating: 1)
+				@recipes = Recipe.by_category_and_user_and_userrecipe(@category,@user.id)
+				allow(view).to receive_messages(:logged_in? => true)
+				render
+				expect(rendered).to include("glyphicon-heart")
+				expect(rendered).to include("glyphicon-star")
+			end
+			it "displays a recipe a user dislikes and rated" do
+				user_recipe = create(:user_recipe, recipe_id: @recipe.id, user_id: @user.id, like: -1, rating: 1)
+				@recipes = Recipe.by_category_and_user_and_userrecipe(@category,@user.id)
+				allow(view).to receive_messages(:logged_in? => true)
+				render
+				expect(rendered).to include("glyphicon-thumbs-down")
+				expect(rendered).to include("glyphicon-star")
+			end
+
 		end
 	end
 end

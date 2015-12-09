@@ -10,8 +10,10 @@ RSpec.describe "issues/show.html.erb", :type => :view do
    		assign(:issuedesc,Issuedescription.new(title: "April"))
    		assign(:previous_issuedescription, FactoryGirl.create(:issue_without_description, year: 2000))
    		assign(:next_issuedescription, FactoryGirl.create(:issue_without_description, year: 2002))
-   		this_recipe = FactoryGirl.create(:recipe , page: 102, title: "Baked kumara with yoghurt dressing", issue_id: @this_issue.id)
+   		this_recipe = create(:recipe , page: 102, title: "Baked kumara with yoghurt dressing", issue_id: @this_issue.id)
    		assign(:recipes, [this_recipe])
+   		@recipe = this_recipe
+   		@user = create(:user)
    	end
 	
 	
@@ -48,10 +50,34 @@ RSpec.describe "issues/show.html.erb", :type => :view do
 	  	expect(rendered).to match /Baked Alaska/
 	  	expect(rendered).to match /href="www.awebsite.com.au\/recipe1.html"/
 	  end
+	  context "logged on" do	  	
+	  	before(:each) do
+	  		session[:user_id] = @user.id
+	  		#recipe = create(:recipe , page: 107, title: " Melon with lemongrass syrup", issue_id: @this_issue.id)
+				@ur = create(:user_recipe, recipe_id: @recipe.id, user_id: @user.id, like: 1)
+				@this_user_recipe = Recipe.by_issue_and_user_ratings(@this_issue.id , @user.id).all
+			end
+			
+			it "displays a tick to show user owns it" do	  	
+		  	ui = create(:user_issue, issue_id: @this_issue.id, user_id: @user.id)
+		  	assign(:recipes, @this_user_recipe)
+				render
+				expect(rendered).to match /glyphicon-ok/
+		  end
 	  
-	  it "displays a tick to show user owns it" do
-	  	
-	  end
-	  
+		  it "displays a like icon when user recipe liked" do
+		  	assign(:recipes, @this_user_recipe)
+				render
+				expect(rendered).to match /glyphicon-heart/
+			end
+		  it "displays a dislike icon when user recipe marked as dislike" do
+		  	@ur.update(like: -1)
+		  	this_user_recipe = Recipe.by_issue_and_user_ratings(@this_issue.id , @user.id).all
+		  	assign(:recipes, this_user_recipe)
+				render
+				expect(rendered).to match /glyphicon-thumbs-down/
+			end
+
+		end
 	end
 end

@@ -41,7 +41,11 @@ rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   	@previous_issuedescription = Issue.joins(:issuedescription).where("issuedescriptions.seq = ? and year = ?",previous_sequence,@issue.year).take
   	@next_issuedescription = Issue.joins(:issuedescription).where("issuedescriptions.seq = ? and year = ?",next_sequence,@issue.year).take
   	
-  	@recipes = Recipe.where("issue_id = ?", issue_id).order('lower(title) asc').all
+  	if logged_in?
+  		@recipes = Recipe.by_issue_and_user_ratings(issue_id, current_user.id).all
+  	else
+  		@recipes = Recipe.where("issue_id = ?", issue_id).order('lower(title) asc').all
+  	end
   	@catrec = CategoryRecipe.keywords_list_by_issue(issue_id).all.to_a
   	
   end

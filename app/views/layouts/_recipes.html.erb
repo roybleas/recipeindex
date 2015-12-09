@@ -3,15 +3,27 @@
     <thead>
       <tr>
         <th>Recipe</th>
+        <% if logged_in? %>
+        	<th>Rating</th>
+        <% end %>
         <th>Page</th>
       </tr>
     </thead>
     <tbody>
     	<% @recipes.each do |recipe| %>
 	      <tr>
-	        <td>
+	      	<td>
+	      	<% if logged_in? %>
+	      		<%= raw(get_user_like_symbol(recipe)) %>
+	      	<% end %>
 	        	<%= raw( format_recipe_title(recipe, @catrec)) %>
 	        </td>
+	      	<% if logged_in? %>
+	      		<td>
+	      		<%= raw(get_user_rating_symbol(recipe)) %>
+	      		</td>
+	      	<% end %>
+	        
 	        <td class="recipepage"><%= recipe.page %></td>
 	      </tr>
 	     <% end %>

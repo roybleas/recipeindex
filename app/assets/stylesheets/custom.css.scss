@@ -154,10 +154,14 @@ span.rating {
 	color: DodgerBlue;
 	font-size: smaller;
 	}
+span.rating_none {
+	color: transparent;
+	font-size: smaller;
+	}
+
 span.like {
 	margin-right: 0.4em;
 }
-
 p.comment_title {
 	font-weight: bold;
 	}

@@ -38,7 +38,7 @@ include Layoutcalculations
   	category_id = params[:id].to_i
   	@category = Category.find(category_id)
   	if logged_in?
-  		@recipes = Recipe.by_category_and_user(@category,current_user.id)
+  		@recipes = Recipe.by_category_and_user_and_userrecipe(@category,current_user.id)
   	else
   		@recipes = Recipe.by_category(@category)
   	end

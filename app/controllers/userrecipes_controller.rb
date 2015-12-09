@@ -16,8 +16,6 @@ before_action :logged_in_user, only: [:new, :edit, :create, :update]
   	@userrecipe.user_id = current_user.id
   	
   	lastused_date = {:yr => user_recipe_params["lastused(1i)"], :mnth => user_recipe_params["lastused(2i)"], :dy => user_recipe_params["lastused(3i)"]} 
-		
-  	logger.info lastused_date.inspect
   	lastused = DateValidation.new(lastused_date)
   						 
   	
@@ -44,28 +42,14 @@ before_action :logged_in_user, only: [:new, :edit, :create, :update]
  	def update
  		@userrecipe = UserRecipe.find(params[:id])
   	@recipe = Recipe.find(@userrecipe.recipe_id)
- 		
- 		logger.info  "Help!!!"
- 		logger.info @userrecipe.lastused.nil?
- 		logger.info @userrecipe.lastused
- 		logger.info user_recipe_params.inspect
- 		logger.info params[:date].inspect
- 		logger.info user_recipe_params[:"lastused(1i)"].inspect
- 		
-		
-  	
-  	
   	
   	if @userrecipe.lastused.nil?					 
   		lastused_date = {:yr => user_recipe_params[:"lastused(1i)"], :mnth => user_recipe_params[:"lastused(2i)"], :dy => user_recipe_params[:"lastused(3i)"]} 
   	else
   		lastused_date = {:yr => params[:date][:"year"], :mnth => params[:date][:"month"], :dy => params[:date][:"day"]} 
   	end	
-
-  	logger.info lastused_date.inspect
-  	lastused = DateValidation.new(lastused_date)
-  	logger.info lastused.inspect				 
   	
+  	lastused = DateValidation.new(lastused_date)
   	
   	if not lastused.valid?
   		flash[:warning] = "Invalid date selected."

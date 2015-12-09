@@ -15,43 +15,38 @@ RSpec.describe IssuesController, :type => :controller do
   end
 
   describe "GET show" do
+  	before(:each) do
+  		@issue = create(:issue, year: 1990)
+  	end
     it "returns http success" do
-    	issue = create(:issue, year: 1990)
-      get :show, id:issue
+      get :show, id: @issue
       expect(response).to have_http_status(:success)
     end
     
     it "assigns the requested issues to @issue" do
-    	issue = create(:issue, year: 1991)
-    	get :show, id:issue
-    	expect(assigns(:issue)).to eq issue
+    	get :show, id: @issue
+    	expect(assigns(:issue)).to eq @issue
     end
     
     it "assigns the requested issuedescription to @issuedesc" do
-    	issue = create(:issue, year: 1992)
-    	issuedesc = Issuedescription.find(issue.issuedescription_id)
-    	get :show, id:issue
+    	issuedesc = Issuedescription.find(@issue.issuedescription_id)
+    	get :show, id: @issue
     	expect(assigns(:issuedesc)).to eq issuedesc
     end
     
     it "assigns the requested publications to @pub" do
-    	issue = create(:issue, year: 1993)
-    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
-    	get :show, id:issue
+    	pub = Publication.joins(:issues).where("issues.id = ?", @issue.id).take
+    	get :show, id: @issue
     	expect(assigns(:pub)).to eq pub
     end
     
     it "redirects to root when id not found" do
-    	issue = create(:issue, year: 1994)
-    	get :show, id: (issue.id) + 1
+    	get :show, id: (@issue.id) + 1
     	expect(response).to redirect_to :root
     end
     
-    it "assigns the previous year and next year to null when only one issue year" do
-    
-    	issue = FactoryGirl.create(:issue, year: 2005)	   	
-			
-    	get :show, id:issue
+    it "assigns the previous year and next year to null when only one issue year" do			
+    	get :show, id: @issue
     	expect(assigns(:year_before)).to eq nil
     	expect(assigns(:year_after)).to eq nil
     	
@@ -59,9 +54,8 @@ RSpec.describe IssuesController, :type => :controller do
     
     it "assigns the previous year to null and next year to following year" do
     
-    	issue = FactoryGirl.create(:issue, year: 2010)
     	# find the publication created
-    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	pub = Publication.joins(:issues).where("issues.id = ?", @issue.id).take
     	# use the publication to create several issue records for different years
     	isdesc = FactoryGirl.create(:issuedescription_with_years, publication: pub, issues_count: 2)
     	issue = isdesc.issues.first
@@ -74,11 +68,10 @@ RSpec.describe IssuesController, :type => :controller do
 
     it "assigns the previous year to earlier year and next year to null when latest year" do
     
-    	issue = FactoryGirl.create(:issue, year: 2010)
     	# find the publication created
-    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	pub = Publication.joins(:issues).where("issues.id = ?", @issue.id).take
     	# use the publication to create several issue records for different years
-    	isdesc = FactoryGirl.create(:issuedescription_with_years, publication: pub, issues_count: 2)
+    	isdesc = create(:issuedescription_with_years, publication: pub, issues_count: 2)
     	issue = isdesc.issues.last
 			
     	get :show, id:issue
@@ -88,9 +81,8 @@ RSpec.describe IssuesController, :type => :controller do
     
     it "assigns the previous year to earlier year and next year to following year when not first or latest year" do
     
-    	issue = FactoryGirl.create(:issue, year: 2010)
     	# find the publication created
-    	pub = Publication.joins(:issues).where("issues.id = ?", issue.id).take
+    	pub = Publication.joins(:issues).where("issues.id = ?", @issue.id).take
     	# use the publication to create several issue records for different years
     	isdesc = FactoryGirl.create(:issuedescription_with_years, publication: pub, issues_count: 5)
     	issue = isdesc.issues[2]
@@ -106,7 +98,7 @@ RSpec.describe IssuesController, :type => :controller do
 			firstyear = 2004
 			lastyear = firstyear + 2
 			(1...lastseq).each { |s|
-				isdesc = FactoryGirl.create(:issuedescription, publication: pub, seq: s)
+				isdesc = create(:issuedescription, publication: pub, seq: s)
 				(firstyear...lastyear).each {|yr| FactoryGirl.create(:issue, issuedescription: isdesc, year: yr) }
     	}
     	isdescs = Issuedescription.where("publication_id = ?",pub.id).order(seq: :asc)
@@ -119,7 +111,6 @@ RSpec.describe IssuesController, :type => :controller do
     	
     	expect(assigns(:previous_issuedescription).id).to eq issue_prev.id
     	expect(assigns(:next_issuedescription).id).to eq issue_next.id
-    	
     	
     	issue = isdescs[-1].issues.last 
     	
@@ -142,11 +133,34 @@ RSpec.describe IssuesController, :type => :controller do
     	expect(assigns(:next_issuedescription).id).to eq issue_next.id
     	
     end
-    	
+		context "recipes" do
+			before(:each) do
+				@recipe = create(:recipe, issue_id: @issue.id )
+			end
+			it "assigns the recipes for the requested issues" do
+				get :show, id: @issue
+				expect(assigns(:recipes)).to match_array(@recipe)
+			end
+			context "user recipes" do
+				before(:each) do
+					@user = create(:user)
+					session[:user_id] = @user.id
+				end
+				it "assigns like and rating to recipe when user logged on and rated recipe" do
+					userrecipe = create(:user_recipe, recipe_id: @recipe.id, user_id: @user.id, like: 1, rating: 1)
+					get :show, id: @issue
+					expect(assigns(:recipes)[0].user_recipes_like).to eq userrecipe.like
+					expect(assigns(:recipes)[0].user_recipes_rating).to eq userrecipe.rating
+				end
+				it "sets like and rating to null when user logged on but not rated the recipe" do
+					get :show, id: @issue
+					expect(assigns(:recipes)[0].user_recipes_like).to be_nil
+					expect(assigns(:recipes)[0].user_recipes_rating).to be_nil
+				end
+			end
+    end	
     it "renders the :show template" do
-    	
-			issue = create(:issue, year: 2001)
-			get :show, id: issue
+			get :show, id: @issue
 			expect(response).to render_template :show
 		end
   end
@@ -165,9 +179,8 @@ RSpec.describe IssuesController, :type => :controller do
     	expect(assigns(:pub)).to eq pub
     end
     
-    it "assigns the an issue record to @yrs" do
+    it "assigns the issue record to @yrs" do
     	issue = create(:issue, year: 2001)
-    	
     	get :years, id:issue
     	expect(assigns(:years).first.year).to eq issue.year
     end

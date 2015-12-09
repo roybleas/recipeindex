@@ -3,6 +3,9 @@
     <thead>
       <tr>
         <th>Recipe</th>
+        <% if logged_in? %>
+        	<th>Rating</th>
+        <% end %>
         <th>Publication</th>
         <th>Issue</th>
         <th>Year</th>
@@ -13,7 +16,15 @@
     	<% @recipes.each do |recipe| %>
 	      <tr>
 	        <td>
+ 	      		<% if logged_in? %>
+	      			<%= raw(get_user_like_symbol(recipe)) %>
+	      		<% end %>
 	        	<%= raw format_recipe_title(recipe, @catrec, @category.id) %>
+	        	<% if logged_in? %>
+	        		<td>
+	        		<%= raw(get_user_rating_symbol(recipe)) %>
+	        		</td>
+	        	<% end %>	
 	        </td>
 	        <td><%= recipe.pub %></td>
 	        <td><%= link_to recipe.desc, issue_path(recipe.issue_id) %>
