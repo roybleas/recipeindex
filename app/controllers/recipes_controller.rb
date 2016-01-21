@@ -16,6 +16,25 @@ include Layoutcalculations
   	end
 	end
 	
+	def bymonth
+		if logged_in?
+			@month_index = params[:id].to_i			
+			@previous_month_index = @month_index == 1 ? 12 : @month_index - 1
+			@next_month_index = @month_index == 12 ? 1 : @month_index + 1
+			#Month is set for the session
+			session[:user_favourite_month] = @month_index
+			@recipes = Recipe.favourites_by_month_and_user(@month_index,current_user.id)
+			@category_id = -1 
+			@catrec = CategoryRecipe.distinct.joins(:user_recipes, :issuemonths).by_liked_by_month(@month_index,current_user.id).all.to_a
+
+		else
+			redirect_to login_url
+		end
+	end
+	
+	def selectmonth
+		@month_index = params[:id].to_i			
+	end
 	private 
   
   def recipes_params

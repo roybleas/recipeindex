@@ -12,4 +12,9 @@ module ApplicationHelper
 	def publications
 		return  Publication.distinct.joins(:issuedescriptions).order(title: :asc).all
 	end
+	
+	def user_current_month
+		session[:user_favourite_month] ||= 	Time.now.month
+		return session[:user_favourite_month]
+	end
 end

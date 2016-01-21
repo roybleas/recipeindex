@@ -98,10 +98,12 @@ RSpec.describe Publication, :type => :model do
 		it "can seed bi-monthly issue descriptions excluding January" do
   		publication = Publication.new(title:	'A publication title')
   		publication.save
-  		id = IssuedescriptionsGenerator.new(publication)
-			id.gen_bimonthly(excludeJan = true)
+  		id_gen = IssuedescriptionsGenerator.new(publication)
+			id_gen.gen_bimonthly(excludeJan = true)
 	
 			expect(publication.issuedescriptions.count).to eq 6
+			expect(Issuemonth.joins(:issuedescription).where("issuedescriptions.publication_id = ?",publication.id).count).to eq 12
+
 		
 			pd =  publication.issuedescriptions.find_by_title("Feb-Mar")
 			expect(pd).not_to be_nil
@@ -112,11 +114,13 @@ RSpec.describe Publication, :type => :model do
 			expect(pd).not_to be_nil
 			expect(pd.issuemonths[0].monthindex).to eq 12
 			expect(pd.issuemonths[1].monthindex).to eq 1
+			
+			expect(Issuemonth.joins(:issuedescription).where("issuedescriptions.publication_id = ?",publication.id).count).to eq 12
 
 			
 		end
 		
-		it "can seed bi-monthly issue descriptions excluding January" do
+		it "can seed bi-monthly issue descriptions including January" do
   		publication = Publication.new(title:	'A publication title')
   		publication.save
   		id = IssuedescriptionsGenerator.new(publication)
@@ -133,6 +137,9 @@ RSpec.describe Publication, :type => :model do
 			expect(pd).not_to be_nil
 			expect(pd.issuemonths[0].monthindex).to eq 11
 			expect(pd.issuemonths[1].monthindex).to eq 12
+			
+			expect(Issuemonth.joins(:issuedescription).where("issuedescriptions.publication_id = ?",publication.id).count).to eq 12
+
 		end
 		
 		it "can find correct issue description for a given month" do

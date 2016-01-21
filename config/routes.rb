@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'admin_pages/home'
 
 	resources :users
-  get 'signup' => 'users#new'
+  get   'signup'  => 'users#new'
   get 	'login'		=> 'sessions#new'
   post 	'login'		=> 'sessions#create'
   delete 'logout'	=> 'sessions#destroy'
@@ -35,12 +35,13 @@ Rails.application.routes.draw do
 	
 	resources :recipes, only:[:show] do
 		resources :userrecipes, only: [:new, :create]
-
 	end
 	
 	resources :userrecipes, only:[:edit, :update]
 	
-  
+  get 'bymonth/:id', to: 'recipes#bymonth', constraints: { id: /([1-9]|([1-9][0-2]))/ }, as: 'bymonth'
+	get 'selectmonth/:id', to: 'recipes#selectmonth', constraints: { id: /([1-9]|([1-9][0-2]))/ }, as: 'selectmonth'
+
     
   
  

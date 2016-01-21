@@ -15,7 +15,6 @@
 class Issue_and_description < Issue 
 	attr_accessor :issuedescription_title
 	attr_accessor :publication_title
-	
 end
 
 FactoryGirl.define do

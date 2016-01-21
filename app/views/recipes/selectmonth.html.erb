@@ -1,0 +1,12 @@
+<div class="container">
+	
+	<% (1..12).each do |index| %>
+	<% 	if index == @month_index %>
+	<% 		btn_type = "btn btn-primary" %>
+	<%	else %>
+	<% 		btn_type = "btn btn-default" %>
+	<% 	end %>
+			<a href="<%= bymonth_path(index) %>" ><button type="button" class="<%= btn_type %>"><%= Date::MONTHNAMES[index] %></button></a>
+	<% end %>
+</div>
+

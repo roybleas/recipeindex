@@ -35,14 +35,14 @@ include Layoutcalculations
 
   def show
   	
-  	category_id = params[:id].to_i
-  	@category = Category.find(category_id)
+  	@category_id = params[:id].to_i
+  	@category = Category.find(@category_id)
   	if logged_in?
   		@recipes = Recipe.by_category_and_user_and_userrecipe(@category,current_user.id)
   	else
   		@recipes = Recipe.by_category(@category)
   	end
-  	@catrec = CategoryRecipe.keywords_list_by_category(category_id).all.to_a
+  	@catrec = CategoryRecipe.keywords_list_by_category(@category_id).all.to_a
   
   end
   

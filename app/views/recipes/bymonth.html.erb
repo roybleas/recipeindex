@@ -1,0 +1,11 @@
+<div class="container">
+	<h1>
+		Favourites for  
+		<a href="<%= bymonth_path(@previous_month_index)%>"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<a href="<%= selectmonth_path(@month_index) %>" ><%= Date::MONTHNAMES[@month_index] %></a>
+		<a href="<%= bymonth_path(@next_month_index)%>"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	</h1>
+	
+	<%= render partial: 'layouts/recipesfull' %>
+</div>
+

@@ -13,7 +13,8 @@
 class CategoryRecipe < ActiveRecord::Base
   belongs_to :category
   belongs_to :recipe
-  
+  has_many :issuemonths, through: :recipe
+  has_many :user_recipes, through: :recipe
   #has_many :category_recipes, class_name: "CategoryRecipe", foreign_key: "recipe_id"
   #belongs_to :category_recipes, class_name: "CategoryRecipe"
   
@@ -24,4 +25,16 @@ class CategoryRecipe < ActiveRecord::Base
   def self.keywords_list_by_issue(issue_id)
   	joins(:recipe ).where('recipes.issue_id = ? and category_recipes.keyword is not null',issue_id)
   end
+  
+  def self.keywords_list_by_month(mnth)
+  	joins(:issuemonths, :user_recipes ).where('issuemonths.monthindex = ? and category_recipes.keyword is not null',mnth)
+  end
+  # NB Extract function is postgres
+  def self.by_lastused_by_month(mnth, user_id)
+  	where("(EXTRACT(MONTH from user_recipes.lastused) = ? and user_recipes.like = 1) and user_recipes.user_id = ?", mnth, user_id)
+  end
+  def self.by_liked_by_month(mnth, user_id)
+  	where("(issuemonths.monthindex = ? and user_recipes.like = 1) and user_recipes.user_id = ?", mnth, user_id)
+  end
+  
 end

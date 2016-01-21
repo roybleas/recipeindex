@@ -11,7 +11,6 @@
 <nav role="navigation" >
 <ul class="nav nav-pills">
   <li role="presentation" > <%= link_to "Home", root_path %>  </li>
-  <li role="presentation"><a href="#">This Month</a></li>
   <li role="presentation"><%= link_to "Indexes", categories_path %></li>
   <li role="presentation" class="dropdown">
   	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="menu" aria-expanded="false">
@@ -23,6 +22,7 @@
   		<% end %>
   	<% if publications.size > 0 %> </ul> <% end %>
   <% if logged_in? %>
+  	<li role="presentation"><%= link_to "Favourites By Month", bymonth_path(user_current_month) %></li>
 	  <li role="presentation" class="dropdown">
 	    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="true">
 	      User:           

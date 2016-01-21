@@ -41,6 +41,10 @@ RSpec.describe "layouts/application.html.erb", :type => :view do
 			assert_select 'li', "Log in"
 			assert_select "a[href=?]", "/login"
 		end
+		it "has no Favourites By Month tab" do
+			render
+			assert_select 'li', {:text=> "Favourites By Month", :count=> 0 }
+		end
 	end
 	context "navigate when logged in" do
 		before(:each) do
@@ -68,6 +72,12 @@ RSpec.describe "layouts/application.html.erb", :type => :view do
 			assert_select "a[href=?]", "/logout" 
 			assert_select "a[data-method=?]", "delete"
 		end
+		it "has a Favourites By Month tab" do
+			render
+			assert_select 'li', "Favourites By Month"
+			assert_select "a[href=?]", "/bymonth/" + Time.now.month.to_s
+		end
+			
 	end
 	context "navigate when logged in as admin" do
 		before(:each) do

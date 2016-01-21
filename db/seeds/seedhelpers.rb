@@ -75,7 +75,6 @@ class IssuedescriptionsGenerator
 				d.issuemonths.create(monthindex: Date::MONTHNAMES.index(m) ) unless !Date::MONTHNAMES.include?(m) }
 		end
 		
-		add_issuemonths(excludeJan, seqidx)		
 	end
 	
 	private

@@ -38,7 +38,7 @@ group :test do
   
   gem 'database_cleaner',github: 'bmabey/database_cleaner'
   gem "launchy", "~> 2.4.2"
-  
+
   # Uncomment these lines on Windows.
   gem 'rb-notifu', '0.0.4'
   #gem 'wdm', '0.1.0'

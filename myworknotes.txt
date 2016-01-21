@@ -1,1 +1,2 @@
 add ratings to recipies#show
+include FactoryGirl::Syntax::Methods

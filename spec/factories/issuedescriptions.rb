@@ -80,7 +80,7 @@ FactoryGirl.define do
   	factory :issuedescription_list_with_an_issue, class: Issuedescription do
     	
 	  	ignore do
-    		yr 1989
+    		yr 1990
     		issue_count 3
     	end
     	
@@ -94,4 +94,25 @@ FactoryGirl.define do
 	    end
 	   end
   end
+  factory :issuedescription_with_single_issue_multi_issuemonths, class: Issuedescription do
+		title "Feb-Mar"
+    full_title "February-March"
+    seq 1
+    
+    ignore do
+    	month_index 2
+    	issue_month_count 2
+    end
+    
+    after(:create) do |issuedescription, evaluator|
+    	this_monthindex = evaluator.month_index
+    	this_monthindex.to_i
+    	evaluator.issue_month_count.to_i.times do
+	  		create(:issuemonth_with_description, monthindex: this_monthindex, issuedescription: issuedescription)
+	  		this_monthindex += 1
+	  	end
+	  	
+	  end
+	end
+	
 end

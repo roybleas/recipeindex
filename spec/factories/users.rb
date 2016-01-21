@@ -18,6 +18,11 @@ FactoryGirl.define do
 		screen_name "Fred F"
 		password "foobar"
 		password_confirmation "foobar"
+		
+		factory :alternative_user do
+			name "Wilma Flintstone"
+			screen_name "Wima F"
+		end
 	end
 	
 	factory :admin_user, class: User do
@@ -27,5 +32,5 @@ FactoryGirl.define do
 		password_confirmation "password"
 		admin true
 	end
-	
+		
 end

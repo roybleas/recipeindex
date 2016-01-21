@@ -16,4 +16,8 @@ FactoryGirl.define do
     monthindex 1
     issuedescription nil
   end
+  
+  factory :issuemonth_with_description, class: Issuemonth do
+  	issuedescription
+	end
 end

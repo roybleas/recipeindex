@@ -19,7 +19,7 @@
  	      		<% if logged_in? %>
 	      			<%= raw(get_user_like_symbol(recipe)) %>
 	      		<% end %>
-	        	<%= raw format_recipe_title(recipe, @catrec, @category.id) %>
+	        	<%= raw format_recipe_title(recipe, @catrec, @category_id) %>
 	        	<% if logged_in? %>
 	        		<td>
 	        		<%= raw(get_user_rating_symbol(recipe)) %>
@@ -36,3 +36,6 @@
 	     <% end %>
     </tbody>
   </table>
+   <% if @recipes.size == 0 %>
+  	<p>No recipes available.</p>
+  <% end %>
